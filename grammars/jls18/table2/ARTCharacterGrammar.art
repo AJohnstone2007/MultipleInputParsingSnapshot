@@ -1,0 +1,1870 @@
+(* Character grammar *)
+!paraterminal dummy // Switch off automatic whitespace
+
+!start CompilationUnit
+
+ART_CSP__SHREIK ::= `! ( `\n | `\r | `\t | ` )*
+
+ART_CSP__SHREIK_EQUAL ::= `! `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PERCENT ::= `% ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PERCENT_EQUAL ::= `% `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__AMPERSAND ::= `& ( `\n | `\r | `\t | ` )*
+
+ART_CSP__AMPERSAND_AMPERSAND ::= `& `& ( `\n | `\r | `\t | ` )*
+
+ART_CSP__AMPERSAND_EQUAL ::= `& `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LPAR ::= `( ( `\n | `\r | `\t | ` )*
+
+ART_CSP__RPAR ::= `) ( `\n | `\r | `\t | ` )*
+
+ART_CSP__STAR ::= `* ( `\n | `\r | `\t | ` )*
+
+ART_CSP__STAR_EQUAL ::= `* `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PLUS ::= `+ ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PLUS_PLUS ::= `+ `+ ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PLUS_EQUAL ::= `+ `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__COMMA ::= `, ( `\n | `\r | `\t | ` )*
+
+ART_CSP__MINUS ::= `- ( `\n | `\r | `\t | ` )*
+
+ART_CSP__MINUS_MINUS ::= `- `- ( `\n | `\r | `\t | ` )*
+
+ART_CSP__MINUS_EQUAL ::= `- `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__MINUS_GT ::= `- `> ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PERIOD ::= `. ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PERIOD_PERIOD_PERIOD ::= `. `. `. ( `\n | `\r | `\t | ` )*
+
+ART_CSP__SLASH ::= `/ ( `\n | `\r | `\t | ` )*
+
+ART_CSP__SLASH_EQUAL ::= `/ `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__COLON ::= `: ( `\n | `\r | `\t | ` )*
+
+ART_CSP__COLON_COLON ::= `: `: ( `\n | `\r | `\t | ` )*
+
+ART_CSP__SEMICOLON ::= `; ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LT ::= `< ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LT_LT ::= `< `< ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LT_LT_EQUAL ::= `< `< `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LT_EQUAL ::= `< `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LT_GT ::= `< `> ( `\n | `\r | `\t | ` )*
+
+ART_CSP__EQUAL ::= `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__EQUAL_EQUAL ::= `= `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__GT ::= `> ( `\n | `\r | `\t | ` )*
+
+ART_CSP__GT_EQUAL ::= `> `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__GT_GT ::= `> `> ( `\n | `\r | `\t | ` )*
+
+ART_CSP__GT_GT_EQUAL ::= `> `> `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__GT_GT_GT ::= `> `> `> ( `\n | `\r | `\t | ` )*
+
+ART_CSP__GT_GT_GT_EQUAL ::= `> `> `> `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__QUERY ::= `? ( `\n | `\r | `\t | ` )*
+
+ART_CSP__AT ::= `@ ( `\n | `\r | `\t | ` )*
+
+ART_CSP_VariableAccess ::= `V `a `r `i `a `b `l `e `A `c `c `e `s `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LBRACK ::= `[ ( `\n | `\r | `\t | ` )*
+
+ART_CSP__RBRACK ::= `] ( `\n | `\r | `\t | ` )*
+
+ART_CSP__UPARROW ::= `^ ( `\n | `\r | `\t | ` )*
+
+ART_CSP__UPARROW_EQUAL ::= `^ `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP_abstract ::= `a `b `s `t `r `a `c `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_assert ::= `a `s `s `e `r `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_boolean ::= `b `o `o `l `e `a `n ( `\n | `\r | `\t | ` )*
+
+ART_CSP_break ::= `b `r `e `a `k ( `\n | `\r | `\t | ` )*
+
+ART_CSP_byte ::= `b `y `t `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_case ::= `c `a `s `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_catch ::= `c `a `t `c `h ( `\n | `\r | `\t | ` )*
+
+ART_CSP_char ::= `c `h `a `r ( `\n | `\r | `\t | ` )*
+
+ART_CSP_class ::= `c `l `a `s `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_const ::= `c `o `n `s `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_continue ::= `c `o `n `t `i `n `u `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_default ::= `d `e `f `a `u `l `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_do ::= `d `o ( `\n | `\r | `\t | ` )*
+
+ART_CSP_double ::= `d `o `u `b `l `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_else ::= `e `l `s `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_enum ::= `e `n `u `m ( `\n | `\r | `\t | ` )*
+
+ART_CSP_exports ::= `e `x `p `o `r `t `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_extends ::= `e `x `t `e `n `d `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_final ::= `f `i `n `a `l ( `\n | `\r | `\t | ` )*
+
+ART_CSP_finally ::= `f `i `n `a `l `l `y ( `\n | `\r | `\t | ` )*
+
+ART_CSP_float ::= `f `l `o `a `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_for ::= `f `o `r ( `\n | `\r | `\t | ` )*
+
+ART_CSP_goto ::= `g `o `t `o ( `\n | `\r | `\t | ` )*
+
+ART_CSP_if ::= `i `f ( `\n | `\r | `\t | ` )*
+
+ART_CSP_implements ::= `i `m `p `l `e `m `e `n `t `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_import ::= `i `m `p `o `r `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_instanceof ::= `i `n `s `t `a `n `c `e `o `f ( `\n | `\r | `\t | ` )*
+
+ART_CSP_int ::= `i `n `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_interface ::= `i `n `t `e `r `f `a `c `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_long ::= `l `o `n `g ( `\n | `\r | `\t | ` )*
+
+ART_CSP_module ::= `m `o `d `u `l `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_native ::= `n `a `t `i `v `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_new ::= `n `e `w ( `\n | `\r | `\t | ` )*
+
+ART_CSP_non_MINUSsealed ::= `n `o `n `- `s `e `a `l `e `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP_open ::= `o `p `e `n ( `\n | `\r | `\t | ` )*
+
+ART_CSP_opens ::= `o `p `e `n `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_package ::= `p `a `c `k `a `g `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_permits ::= `p `e `r `m `i `t `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_private ::= `p `r `i `v `a `t `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_protected ::= `p `r `o `t `e `c `t `e `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP_provides ::= `p `r `o `v `i `d `e `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_public ::= `p `u `b `l `i `c ( `\n | `\r | `\t | ` )*
+
+ART_CSP_record ::= `r `e `c `o `r `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP_requires ::= `r `e `q `u `i `r `e `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_return ::= `r `e `t `u `r `n ( `\n | `\r | `\t | ` )*
+
+ART_CSP_sealed ::= `s `e `a `l `e `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP_short ::= `s `h `o `r `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_static ::= `s `t `a `t `i `c ( `\n | `\r | `\t | ` )*
+
+ART_CSP_strictfp ::= `s `t `r `i `c `t `f `p ( `\n | `\r | `\t | ` )*
+
+ART_CSP_super ::= `s `u `p `e `r ( `\n | `\r | `\t | ` )*
+
+ART_CSP_switch ::= `s `w `i `t `c `h ( `\n | `\r | `\t | ` )*
+
+ART_CSP_synchronized ::= `s `y `n `c `h `r `o `n `i `z `e `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP_this ::= `t `h `i `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_throw ::= `t `h `r `o `w ( `\n | `\r | `\t | ` )*
+
+ART_CSP_throws ::= `t `h `r `o `w `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_to ::= `t `o ( `\n | `\r | `\t | ` )*
+
+ART_CSP_transient ::= `t `r `a `n `s `i `e `n `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_transitive ::= `t `r `a `n `s `i `t `i `v `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_try ::= `t `r `y ( `\n | `\r | `\t | ` )*
+
+ART_CSP_uses ::= `u `s `e `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_var ::= `v `a `r ( `\n | `\r | `\t | ` )*
+
+ART_CSP_void ::= `v `o `i `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP_volatile ::= `v `o `l `a `t `i `l `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_while ::= `w `h `i `l `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_with ::= `w `i `t `h ( `\n | `\r | `\t | ` )*
+
+ART_CSP_yield ::= `y `i `e `l `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LBRACE ::= `{ ( `\n | `\r | `\t | ` )*
+
+ART_CSP__BAR ::= `| ( `\n | `\r | `\t | ` )*
+
+ART_CSP__BAR_EQUAL ::= `| `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__BAR_BAR ::= `| `| ( `\n | `\r | `\t | ` )*
+
+ART_CSP__RBRACE ::= `} ( `\n | `\r | `\t | ` )*
+
+ART_CSP__TILDE ::= `~ ( `\n | `\r | `\t | ` )*
+
+AdditionalBound ::= ART_CSP__AMPERSAND  InterfaceType  
+
+AdditionalBoundStar ::= AdditionalBound AdditionalBoundStar  
+    |  #  
+
+AdditiveExpression ::= MultiplicativeExpression  
+    |  AdditiveExpression ART_CSP__PLUS  MultiplicativeExpression  
+    |  AdditiveExpression ART_CSP__MINUS  MultiplicativeExpression  
+
+AmbiguousName ::= Identifier   
+    |  AmbiguousName ART_CSP__PERIOD  Identifier   
+
+AndExpression ::= EqualityExpression  
+    |  AndExpression ART_CSP__AMPERSAND  EqualityExpression  
+
+Annotation ::= NormalAnnotation  
+    |  MarkerAnnotation  
+    |  SingleElementAnnotation  
+
+AnnotationInterfaceBody ::= ART_CSP__LBRACE  AnnotationInterfaceMemberDeclarationStar ART_CSP__RBRACE   
+
+AnnotationInterfaceDeclaration ::= InterfaceModifierStar ART_CSP__AT  ART_CSP_interface  TypeIdentifier  AnnotationInterfaceBody  
+
+AnnotationInterfaceElementDeclaration ::= AnnotationInterfaceElementModifierStar UnannType Identifier  ART_CSP__LPAR  ART_CSP__RPAR  DimsOpt DefaultValueOpt ART_CSP__SEMICOLON   
+
+AnnotationInterfaceElementModifier ::= Annotation  
+    |  ART_CSP_public   
+    |  ART_CSP_abstract   
+
+AnnotationInterfaceElementModifierStar ::= AnnotationInterfaceElementModifier AnnotationInterfaceElementModifierStar  
+    |  #  
+
+AnnotationInterfaceMemberDeclaration ::= AnnotationInterfaceElementDeclaration  
+    |  ConstantDeclaration  
+    |  ClassDeclaration  
+    |  InterfaceDeclaration  
+    |  ART_CSP__SEMICOLON   
+
+AnnotationInterfaceMemberDeclarationStar ::= AnnotationInterfaceMemberDeclaration AnnotationInterfaceMemberDeclarationStar  
+    |  #  
+
+AnnotationStar ::= Annotation AnnotationStar  
+    |  #  
+
+AnnotationStarBracketStar ::= AnnotationStar ART_CSP__LBRACK  ART_CSP__RBRACK  AnnotationStarBracketStar  
+    |  #  
+
+ArgumentList ::= Expression CommaExpressionStar  
+
+ArgumentListOpt ::= ArgumentList  
+    |  #  
+
+ArrayAccess ::= ExpressionName ART_CSP__LBRACK  Expression ART_CSP__RBRACK   
+    |  PrimaryNoNewArray ART_CSP__LBRACK  Expression ART_CSP__RBRACK   
+    |  ArrayCreationExpressionWithInitializer ART_CSP__LBRACK  Expression ART_CSP__RBRACK   
+
+ArrayCreationExpression ::= ArrayCreationExpressionWithoutInitializer  
+    |  ArrayCreationExpressionWithInitializer  
+
+ArrayCreationExpressionWithInitializer ::= ART_CSP_new  PrimitiveType Dims ArrayInitializer  
+    |  ART_CSP_new  ClassOrInterfaceType Dims ArrayInitializer  
+
+ArrayCreationExpressionWithoutInitializer ::= ART_CSP_new  PrimitiveType DimExprs DimsOpt  
+    |  ART_CSP_new  ClassOrInterfaceType DimExprs DimsOpt  
+
+ArrayInitializer ::= ART_CSP__LBRACE  VariableInitializerListOpt CommaOpt ART_CSP__RBRACE   
+
+ArrayType ::= PrimitiveType Dims  
+    |  ClassOrInterfaceType Dims  
+    |  TypeVariable Dims  
+
+AssertStatement ::= ART_CSP_assert  Expression ART_CSP__SEMICOLON   
+    |  ART_CSP_assert  Expression ART_CSP__COLON  Expression ART_CSP__SEMICOLON   
+
+Assignment ::= LeftHandSide AssignmentOperator Expression  
+
+AssignmentExpression ::= ConditionalExpression  
+    |  Assignment  
+
+AssignmentOperator ::= ART_CSP__EQUAL   
+    |  ART_CSP__STAR_EQUAL   
+    |  ART_CSP__SLASH_EQUAL   
+    |  ART_CSP__PERCENT_EQUAL   
+    |  ART_CSP__PLUS_EQUAL   
+    |  ART_CSP__MINUS_EQUAL   
+    |  ART_CSP__LT_LT_EQUAL   
+    |  ART_CSP__GT_GT_EQUAL   
+    |  ART_CSP__GT_GT_GT_EQUAL   
+    |  ART_CSP__AMPERSAND_EQUAL   
+    |  ART_CSP__UPARROW_EQUAL   
+    |  ART_CSP__BAR_EQUAL   
+
+BarClassTypeStar ::= ART_CSP__BAR  ClassType BarClassTypeStar  
+    |  #  
+
+BasicForStatement ::= ART_CSP_for  ART_CSP__LPAR  ForInitOpt ART_CSP__SEMICOLON  ExpressionOpt ART_CSP__SEMICOLON  ForUpdateOpt ART_CSP__RPAR  Statement  
+
+BasicForStatementNoShortIf ::= ART_CSP_for  ART_CSP__LPAR  ForInitOpt ART_CSP__SEMICOLON  ExpressionOpt ART_CSP__SEMICOLON  ForUpdateOpt ART_CSP__RPAR  StatementNoShortIf  
+
+BinaryDigit ::= `0   
+    |  `1   
+
+BinaryDigitOrUnderscore ::= BinaryDigit  
+    |  `_   
+
+BinaryDigits ::= BinaryDigit  
+    |  BinaryDigit ( BinaryDigitsAndUnderscores )? BinaryDigit  
+
+BinaryDigitsAndUnderscores ::= BinaryDigitOrUnderscore ( BinaryDigitOrUnderscore )*  
+
+BinaryExponent ::= BinaryExponentIndicator SignedInteger  
+
+BinaryExponentIndicator ::= `p   
+    |  `P   
+
+BinaryIntegerLiteral ::= BinaryNumeral ( IntegerTypeSuffix )?  
+
+BinaryNumeral ::= `0  `b  BinaryDigits  
+    |  `0  `B  BinaryDigits  
+
+Block ::= ART_CSP__LBRACE  BlockStatementsOpt ART_CSP__RBRACE   
+
+BlockStatement ::= LocalClassOrInterfaceDeclaration  
+    |  LocalVariableDeclarationStatement  
+    |  Statement  
+
+BlockStatementStar ::= BlockStatement BlockStatementStar  
+    |  #  
+
+BlockStatements ::= BlockStatement BlockStatementStar  
+
+BlockStatementsOpt ::= BlockStatements  
+    |  #  
+
+BooleanLiteral ::= `t  `r  `u  `e   ( `\n | `\r | `\t | ` )*
+    |  `f  `a  `l  `s  `e   ( `\n | `\r | `\t | ` )*
+
+BracketsStar ::= ART_CSP__LBRACK  ART_CSP__RBRACK  BracketsStar  
+    |  #  
+
+BreakStatement ::= ART_CSP_break  IdentifierOpt ART_CSP__SEMICOLON   
+
+CaseConstant ::= ConditionalExpression  
+
+CastExpression ::= ART_CSP__LPAR  PrimitiveType ART_CSP__RPAR  UnaryExpression  
+    |  ART_CSP__LPAR  ReferenceType AdditionalBoundStar ART_CSP__RPAR  UnaryExpressionNotPlusMinus  
+    |  ART_CSP__LPAR  ReferenceType AdditionalBoundStar ART_CSP__RPAR  LambdaExpression  
+
+CatchClause ::= ART_CSP_catch  ART_CSP__LPAR  CatchFormalParameter ART_CSP__RPAR  Block  
+
+CatchClauseStar ::= CatchClause CatchClauseStar  
+    |  #  
+
+CatchFormalParameter ::= VariableModifierStar CatchType VariableDeclaratorId  
+
+CatchType ::= UnannClassType BarClassTypeStar  
+
+Catches ::= CatchClause CatchClauseStar  
+
+CatchesOpt ::= Catches  
+    |  #  
+
+CharacterLiteral ::= `'  SingleCharacter `'   ( `\n | `\r | `\t | ` )*
+    |  `'  EscapeSequence `'   ( `\n | `\r | `\t | ` )*
+
+ClassBody ::= ART_CSP__LBRACE  ClassBodyDeclarationStar ART_CSP__RBRACE   
+
+ClassBodyDeclaration ::= ClassMemberDeclaration  
+    |  InstanceInitializer  
+    |  StaticInitializer  
+    |  ConstructorDeclaration  
+
+ClassBodyDeclarationStar ::= ClassBodyDeclaration ClassBodyDeclarationStar  
+    |  #  
+
+ClassBodyOpt ::= ClassBody  
+    |  #  
+
+ClassDeclaration ::= NormalClassDeclaration  
+    |  EnumDeclaration  
+    |  RecordDeclaration  
+
+ClassExtends ::= ART_CSP_extends  ClassType  
+
+ClassExtendsOpt ::= ClassExtends  
+    |  #  
+
+ClassImplements ::= ART_CSP_implements  InterfaceTypeList  
+
+ClassImplementsOpt ::= ClassImplements  
+    |  #  
+
+ClassInstanceCreationExpression ::= UnqualifiedClassInstanceCreationExpression  
+    |  ExpressionName ART_CSP__PERIOD  UnqualifiedClassInstanceCreationExpression  
+    |  Primary ART_CSP__PERIOD  UnqualifiedClassInstanceCreationExpression  
+
+ClassLiteral ::= TypeName BracketsStar ART_CSP__PERIOD  ART_CSP_class   
+    |  NumericType BracketsStar ART_CSP__PERIOD  ART_CSP_class   
+    |  ART_CSP_boolean  BracketsStar ART_CSP__PERIOD  ART_CSP_class   
+    |  ART_CSP_void  ART_CSP__PERIOD  ART_CSP_class   
+
+ClassMemberDeclaration ::= FieldDeclaration  
+    |  MethodDeclaration  
+    |  ClassDeclaration  
+    |  InterfaceDeclaration  
+    |  ART_CSP__SEMICOLON   
+
+ClassModifier ::= Annotation  
+    |  ART_CSP_public   
+    |  ART_CSP_protected   
+    |  ART_CSP_private   
+    |  ART_CSP_abstract   
+    |  ART_CSP_static   
+    |  ART_CSP_final   
+    |  ART_CSP_sealed   
+    |  ART_CSP_non_MINUSsealed   
+    |  ART_CSP_strictfp   
+
+ClassModifierStar ::= ClassModifier ClassModifierStar  
+    |  #  
+
+ClassOrInterfaceType ::= ClassType  
+    |  InterfaceType  
+
+ClassOrInterfaceTypeToInstantiate ::= AnnotationStar Identifier  DotAnnotationStarIdentifierStar TypeArgumentsOrDiamondOpt  
+
+ClassPermits ::= ART_CSP_permits  TypeName CommaTypeNameStar  
+
+ClassPermitsOpt ::= ClassPermits  
+    |  #  
+
+ClassType ::= AnnotationStar TypeIdentifier  TypeArgumentsOpt  
+    |  PackageName ART_CSP__PERIOD  AnnotationStar TypeIdentifier  TypeArgumentsOpt  
+    |  ClassOrInterfaceType ART_CSP__PERIOD  AnnotationStar TypeIdentifier  TypeArgumentsOpt  
+
+CommaCaseConstantStar ::= ART_CSP__COMMA  CaseConstant CommaCaseConstantStar  
+    |  #  
+
+CommaElementValuePairStar ::= ART_CSP__COMMA  ElementValuePair CommaElementValuePairStar  
+    |  #  
+
+CommaElementValueStar ::= ART_CSP__COMMA  ElementValue CommaElementValueStar  
+    |  #  
+
+CommaEnumConstantStar ::= ART_CSP__COMMA  EnumConstant CommaEnumConstantStar  
+    |  #  
+
+CommaExceptionTypeStar ::= ART_CSP__COMMA  ExceptionType CommaExceptionTypeStar  
+    |  #  
+
+CommaExpressionStar ::= ART_CSP__COMMA  Expression CommaExpressionStar  
+    |  #  
+
+CommaFormalParameterStar ::= ART_CSP__COMMA  FormalParameter CommaFormalParameterStar  
+    |  #  
+
+CommaIdentifierStar ::= ART_CSP__COMMA  Identifier  CommaIdentifierStar  
+    |  #  
+
+CommaInterfaceTypeStar ::= ART_CSP__COMMA  InterfaceType CommaInterfaceTypeStar  
+    |  #  
+
+CommaLambdaParameterStar ::= ART_CSP__COMMA  LambdaParameter CommaLambdaParameterStar  
+    |  #  
+
+CommaModuleNameOpt ::= ART_CSP__COMMA  ModuleName  
+    |  #  
+
+CommaOpt ::= ART_CSP__COMMA   
+    |  #  
+
+CommaRecordComponentStar ::= ART_CSP__COMMA  RecordComponent CommaRecordComponentStar  
+    |  #  
+
+CommaStatementExpressionStar ::= ART_CSP__COMMA  StatementExpression CommaStatementExpressionStar  
+    |  #  
+
+CommaTypeArgumentStar ::= ART_CSP__COMMA  TypeArgument CommaTypeArgumentStar  
+    |  #  
+
+CommaTypeNameStar ::= ART_CSP__COMMA  TypeName CommaTypeNameStar  
+    |  #  
+
+CommaTypeParameterStar ::= ART_CSP__COMMA  TypeParameter CommaTypeParameterStar  
+    |  #  
+
+CommaVariableDeclaratorStar ::= ART_CSP__COMMA  VariableDeclarator CommaVariableDeclaratorStar  
+    |  #  
+
+CommaVariableInitializerStar ::= ART_CSP__COMMA  VariableInitializer CommaVariableInitializerStar  
+    |  #  
+
+CompactConstructorDeclaration ::= ConstructorModifierStar SimpleTypeName ConstructorBody  
+
+CompilationUnit ::= OrdinaryCompilationUnit  
+    |  ModularCompilationUnit  
+    |  DummyRuleEAS  
+
+ConditionalAndExpression ::= InclusiveOrExpression  
+    |  ConditionalAndExpression ART_CSP__AMPERSAND_AMPERSAND  InclusiveOrExpression  
+
+ConditionalExpression ::= ConditionalOrExpression  
+    |  ConditionalOrExpression ART_CSP__QUERY  Expression ART_CSP__COLON  ConditionalExpression  
+    |  ConditionalOrExpression ART_CSP__QUERY  Expression ART_CSP__COLON  LambdaExpression  
+
+ConditionalOrExpression ::= ConditionalAndExpression  
+    |  ConditionalOrExpression ART_CSP__BAR_BAR  ConditionalAndExpression  
+
+ConstantDeclaration ::= ConstantModifierStar UnannType VariableDeclaratorList ART_CSP__SEMICOLON   
+
+ConstantModifier ::= Annotation  
+    |  ART_CSP_public   
+    |  ART_CSP_static   
+    |  ART_CSP_final   
+
+ConstantModifierStar ::= ConstantModifier ConstantModifierStar  
+    |  #  
+
+ConstructorBody ::= ART_CSP__LBRACE  ExplicitConstructorInvocationOpt BlockStatementsOpt ART_CSP__RBRACE   
+
+ConstructorDeclaration ::= ConstructorModifierStar ConstructorDeclarator ThrowsOpt ConstructorBody  
+
+ConstructorDeclarator ::= TypeParametersOpt SimpleTypeName ART_CSP__LPAR  ReceiverParameterCommaOpt FormalParameterListOpt ART_CSP__RPAR   
+
+ConstructorModifier ::= Annotation  
+    |  ART_CSP_public   
+    |  ART_CSP_protected   
+    |  ART_CSP_private   
+
+ConstructorModifierStar ::= ConstructorModifier ConstructorModifierStar  
+    |  #  
+
+ContinueStatement ::= ART_CSP_continue  IdentifierOpt ART_CSP__SEMICOLON   
+
+DecimalFloatingPointLiteral ::= Digits `.  ( Digits )? ( ExponentPart )? ( FloatTypeSuffix )?  
+    |  `.  Digits ( ExponentPart )? ( FloatTypeSuffix )?  
+    |  Digits ExponentPart ( FloatTypeSuffix )?  
+    |  Digits ( ExponentPart )? FloatTypeSuffix  
+
+DecimalIntegerLiteral ::= DecimalNumeral ( IntegerTypeSuffix )?  
+
+DecimalNumeral ::= `0   
+    |  NonZeroDigit ( Digits )?  
+    |  NonZeroDigit Underscores Digits  
+
+DefaultValue ::= ART_CSP_default  ElementValue  
+
+DefaultValueOpt ::= DefaultValue  
+    |  #  
+
+Digit ::= `0   
+    |  NonZeroDigit  
+
+DigitOrUnderscore ::= Digit  
+    |  `_   
+
+Digits ::= Digit  
+    |  Digit ( DigitsAndUnderscores )? Digit  
+
+DigitsAndUnderscores ::= DigitOrUnderscore ( DigitOrUnderscore )*  
+
+DimExpr ::= AnnotationStar ART_CSP__LBRACK  Expression ART_CSP__RBRACK   
+
+DimExprStar ::= DimExpr DimExprStar  
+    |  #  
+
+DimExprs ::= DimExpr DimExprStar  
+
+Dims ::= AnnotationStar ART_CSP__LBRACK  ART_CSP__RBRACK  AnnotationStarBracketStar  
+
+DimsOpt ::= Dims  
+    |  #  
+
+DoStatement ::= ART_CSP_do  Statement ART_CSP_while  ART_CSP__LPAR  Expression ART_CSP__RPAR  ART_CSP__SEMICOLON   
+
+DotAnnotationStarIdentifierStar ::= ART_CSP__PERIOD  AnnotationStar Identifier  DotAnnotationStarIdentifierStar  
+    |  #  
+
+DotIdentifierStar ::= ART_CSP__PERIOD  Identifier  DotIdentifierStar  
+    |  #  
+
+DummyRuleEAS ::= ART_CSP_goto   
+    |  ART_CSP_const   
+
+ElementValue ::= ConditionalExpression  
+    |  ElementValueArrayInitializer  
+    |  Annotation  
+
+ElementValueArrayInitializer ::= ART_CSP__LBRACE  ElementValueListOpt CommaOpt ART_CSP__RBRACE   
+
+ElementValueList ::= ElementValue CommaElementValueStar  
+
+ElementValueListOpt ::= ElementValueList  
+    |  #  
+
+ElementValuePair ::= Identifier  ART_CSP__EQUAL  ElementValue  
+
+ElementValuePairList ::= ElementValuePair CommaElementValuePairStar  
+
+ElementValuePairListOpt ::= ElementValuePairList  
+    |  #  
+
+EmptyStatement ::= ART_CSP__SEMICOLON   
+
+EnhancedForStatement ::= ART_CSP_for  ART_CSP__LPAR  LocalVariableDeclaration ART_CSP__COLON  Expression ART_CSP__RPAR  Statement  
+
+EnhancedForStatementNoShortIf ::= ART_CSP_for  ART_CSP__LPAR  LocalVariableDeclaration ART_CSP__COLON  Expression ART_CSP__RPAR  StatementNoShortIf  
+
+EnumBody ::= ART_CSP__LBRACE  EnumConstantListOpt CommaOpt EnumBodyDeclarationsOpt ART_CSP__RBRACE   
+
+EnumBodyDeclarations ::= ART_CSP__SEMICOLON  ClassBodyDeclarationStar  
+
+EnumBodyDeclarationsOpt ::= EnumBodyDeclarations  
+    |  #  
+
+EnumConstant ::= EnumConstantModifierStar Identifier  ParanArgumentListOptStar ClassBodyOpt  
+
+EnumConstantList ::= EnumConstant CommaEnumConstantStar  
+
+EnumConstantListOpt ::= EnumConstantList  
+    |  #  
+
+EnumConstantModifier ::= Annotation  
+
+EnumConstantModifierStar ::= EnumConstantModifier EnumConstantModifierStar  
+    |  #  
+
+EnumDeclaration ::= ClassModifierStar ART_CSP_enum  TypeIdentifier  ClassImplementsOpt EnumBody  
+
+EqualVariableInitializerOpt ::= ART_CSP__EQUAL  VariableInitializer  
+    |  #  
+
+EqualityExpression ::= RelationalExpression  
+    |  EqualityExpression ART_CSP__EQUAL_EQUAL  RelationalExpression  
+    |  EqualityExpression ART_CSP__SHREIK_EQUAL  RelationalExpression  
+
+EscapeSequence ::= `\\  `b   
+    |  `\\  `s   
+    |  `\\  `t   
+    |  `\\  `n   
+    |  `\\  `f   
+    |  `\\  `r   
+    |  `\\  LineTerminator  
+    |  `\\  `\"   
+    |  `\\  `'   
+    |  `\\  `\\   
+    |  OctalEscape  
+
+ExceptionType ::= ClassType  
+    |  TypeVariable  
+
+ExceptionTypeList ::= ExceptionType CommaExceptionTypeStar  
+
+ExclusiveOrExpression ::= AndExpression  
+    |  ExclusiveOrExpression ART_CSP__UPARROW  AndExpression  
+
+ExplicitConstructorInvocation ::= TypeArgumentsOpt ART_CSP_this  ART_CSP__LPAR  ArgumentListOpt ART_CSP__RPAR  ART_CSP__SEMICOLON   
+    |  TypeArgumentsOpt ART_CSP_super  ART_CSP__LPAR  ArgumentListOpt ART_CSP__RPAR  ART_CSP__SEMICOLON   
+    |  ExpressionName ART_CSP__PERIOD  TypeArgumentsOpt ART_CSP_super  ART_CSP__LPAR  ArgumentListOpt ART_CSP__RPAR  ART_CSP__SEMICOLON   
+    |  Primary ART_CSP__PERIOD  TypeArgumentsOpt ART_CSP_super  ART_CSP__LPAR  ArgumentListOpt ART_CSP__RPAR  ART_CSP__SEMICOLON   
+
+ExplicitConstructorInvocationOpt ::= ExplicitConstructorInvocation  
+    |  #  
+
+ExponentIndicator ::= `e   
+    |  `E   
+
+ExponentPart ::= ExponentIndicator SignedInteger  
+
+Expression ::= LambdaExpression  
+    |  AssignmentExpression  
+
+ExpressionName ::= Identifier   
+    |  AmbiguousName ART_CSP__PERIOD  Identifier   
+
+ExpressionOpt ::= Expression  
+    |  #  
+
+ExpressionStatement ::= StatementExpression ART_CSP__SEMICOLON   
+
+FieldAccess ::= Primary ART_CSP__PERIOD  Identifier   
+    |  ART_CSP_super  ART_CSP__PERIOD  Identifier   
+    |  TypeName ART_CSP__PERIOD  ART_CSP_super  ART_CSP__PERIOD  Identifier   
+
+FieldDeclaration ::= FieldModifierStar UnannType VariableDeclaratorList ART_CSP__SEMICOLON   
+
+FieldModifier ::= Annotation  
+    |  ART_CSP_public   
+    |  ART_CSP_protected   
+    |  ART_CSP_private   
+    |  ART_CSP_static   
+    |  ART_CSP_final   
+    |  ART_CSP_transient   
+    |  ART_CSP_volatile   
+
+FieldModifierStar ::= FieldModifier FieldModifierStar  
+    |  #  
+
+Finally ::= ART_CSP_finally  Block  
+
+FinallyOpt ::= Finally  
+    |  #  
+
+FloatTypeSuffix ::= `f   
+    |  `F   
+    |  `d   
+    |  `D   
+
+FloatingPointLiteral ::= DecimalFloatingPointLiteral  ( `\n | `\r | `\t | ` )*
+    |  HexadecimalFloatingPointLiteral  ( `\n | `\r | `\t | ` )*
+
+FloatingPointType ::= ART_CSP_float   
+    |  ART_CSP_double   
+
+ForInit ::= StatementExpressionList  
+    |  LocalVariableDeclaration  
+
+ForInitOpt ::= ForInit  
+    |  #  
+
+ForStatement ::= BasicForStatement  
+    |  EnhancedForStatement  
+
+ForStatementNoShortIf ::= BasicForStatementNoShortIf  
+    |  EnhancedForStatementNoShortIf  
+
+ForUpdate ::= StatementExpressionList  
+
+ForUpdateOpt ::= ForUpdate  
+    |  #  
+
+FormalParameter ::= VariableModifierStar UnannType VariableDeclaratorId  
+    |  VariableArityParameter  
+
+FormalParameterList ::= FormalParameter CommaFormalParameterStar  
+
+FormalParameterListOpt ::= FormalParameterList  
+    |  #  
+
+HexDigit ::= `0   
+    |  `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+    |  `8   
+    |  `9   
+    |  `a   
+    |  `b   
+    |  `c   
+    |  `d   
+    |  `e   
+    |  `f   
+    |  `A   
+    |  `B   
+    |  `C   
+    |  `D   
+    |  `E   
+    |  `F   
+
+HexDigitOrUnderscore ::= HexDigit  
+    |  `_   
+
+HexDigits ::= HexDigit  
+    |  HexDigit ( HexDigitsAndUnderscores )? HexDigit  
+
+HexDigitsAndUnderscores ::= HexDigitOrUnderscore ( HexDigitOrUnderscore )*  
+
+HexIntegerLiteral ::= HexNumeral ( IntegerTypeSuffix )?  
+
+HexNumeral ::= `0  `x  HexDigits  
+    |  `0  `X  HexDigits  
+
+HexSignificand ::= HexNumeral ( `.  )?  
+    |  `0  `x  ( HexDigits )? `.  HexDigits  
+    |  `0  `X  ( HexDigits )? `.  HexDigits  
+
+HexadecimalFloatingPointLiteral ::= HexSignificand BinaryExponent ( FloatTypeSuffix )?  
+
+Identifier ::= IdentifierChars  ( `\n | `\r | `\t | ` )*
+
+IdentifierChars ::= JavaLetterNoUS ( JavaLetterOrDigit )*  
+    |  `_  JavaLetterOrDigit ( JavaLetterOrDigit )*  
+
+IdentifierDotOpt ::= Identifier  ART_CSP__PERIOD   
+    |  #  
+
+IdentifierOpt ::= Identifier   
+    |  #  
+
+IfThenElseStatement ::= ART_CSP_if  ART_CSP__LPAR  Expression ART_CSP__RPAR  StatementNoShortIf ART_CSP_else  Statement  
+
+IfThenElseStatementNoShortIf ::= ART_CSP_if  ART_CSP__LPAR  Expression ART_CSP__RPAR  StatementNoShortIf ART_CSP_else  StatementNoShortIf  
+
+IfThenStatement ::= ART_CSP_if  ART_CSP__LPAR  Expression ART_CSP__RPAR  Statement  
+
+ImportDeclaration ::= SingleTypeImportDeclaration  
+    |  TypeImportOnDemandDeclaration  
+    |  SingleStaticImportDeclaration  
+    |  StaticImportOnDemandDeclaration  
+
+ImportDeclarationStar ::= ImportDeclaration ImportDeclarationStar  
+    |  #  
+
+InclusiveOrExpression ::= ExclusiveOrExpression  
+    |  InclusiveOrExpression ART_CSP__BAR  ExclusiveOrExpression  
+
+InstanceInitializer ::= Block  
+
+InstanceofExpression ::= RelationalExpression ART_CSP_instanceof  ReferenceType  
+    |  RelationalExpression ART_CSP_instanceof  Pattern  
+
+IntegerLiteral ::= DecimalIntegerLiteral  ( `\n | `\r | `\t | ` )*
+    |  HexIntegerLiteral  ( `\n | `\r | `\t | ` )*
+    |  OctalIntegerLiteral  ( `\n | `\r | `\t | ` )*
+    |  BinaryIntegerLiteral  ( `\n | `\r | `\t | ` )*
+
+IntegerTypeSuffix ::= `l   
+    |  `L   
+
+IntegralType ::= ART_CSP_byte   
+    |  ART_CSP_short   
+    |  ART_CSP_int   
+    |  ART_CSP_long   
+    |  ART_CSP_char   
+
+InterfaceBody ::= ART_CSP__LBRACE  InterfaceMemberDeclarationStar ART_CSP__RBRACE   
+
+InterfaceDeclaration ::= NormalInterfaceDeclaration  
+    |  AnnotationInterfaceDeclaration  
+
+InterfaceExtends ::= ART_CSP_extends  InterfaceTypeList  
+
+InterfaceExtendsOpt ::= InterfaceExtends  
+    |  #  
+
+InterfaceMemberDeclaration ::= ConstantDeclaration  
+    |  InterfaceMethodDeclaration  
+    |  ClassDeclaration  
+    |  InterfaceDeclaration  
+    |  ART_CSP__SEMICOLON   
+
+InterfaceMemberDeclarationStar ::= InterfaceMemberDeclaration InterfaceMemberDeclarationStar  
+    |  #  
+
+InterfaceMethodDeclaration ::= InterfaceMethodModifierStar MethodHeader MethodBody  
+
+InterfaceMethodModifier ::= Annotation  
+    |  ART_CSP_public   
+    |  ART_CSP_private   
+    |  ART_CSP_abstract   
+    |  ART_CSP_default   
+    |  ART_CSP_static   
+    |  ART_CSP_strictfp   
+
+InterfaceMethodModifierStar ::= InterfaceMethodModifier InterfaceMethodModifierStar  
+    |  #  
+
+InterfaceModifier ::= Annotation  
+    |  ART_CSP_public   
+    |  ART_CSP_protected   
+    |  ART_CSP_private   
+    |  ART_CSP_abstract   
+    |  ART_CSP_static   
+    |  ART_CSP_sealed   
+    |  ART_CSP_non_MINUSsealed   
+    |  ART_CSP_strictfp   
+
+InterfaceModifierStar ::= InterfaceModifier InterfaceModifierStar  
+    |  #  
+
+InterfacePermits ::= ART_CSP_permits  TypeName CommaTypeNameStar  
+
+InterfacePermitsOpt ::= InterfacePermits  
+    |  #  
+
+InterfaceType ::= ClassType  
+
+InterfaceTypeList ::= InterfaceType CommaInterfaceTypeStar  
+
+JavaLetterNoUS ::= `$   
+    |  `A   
+    |  `B   
+    |  `C   
+    |  `D   
+    |  `E   
+    |  `F   
+    |  `G   
+    |  `H   
+    |  `I   
+    |  `J   
+    |  `K   
+    |  `L   
+    |  `M   
+    |  `N   
+    |  `O   
+    |  `P   
+    |  `Q   
+    |  `R   
+    |  `S   
+    |  `T   
+    |  `U   
+    |  `V   
+    |  `W   
+    |  `X   
+    |  `Y   
+    |  `Z   
+    |  `a   
+    |  `b   
+    |  `c   
+    |  `d   
+    |  `e   
+    |  `f   
+    |  `g   
+    |  `h   
+    |  `i   
+    |  `j   
+    |  `k   
+    |  `l   
+    |  `m   
+    |  `n   
+    |  `o   
+    |  `p   
+    |  `q   
+    |  `r   
+    |  `s   
+    |  `t   
+    |  `u   
+    |  `v   
+    |  `w   
+    |  `x   
+    |  `y   
+    |  `z   
+
+JavaLetterOrDigit ::= `$   
+    |  `0   
+    |  `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+    |  `8   
+    |  `9   
+    |  `A   
+    |  `B   
+    |  `C   
+    |  `D   
+    |  `E   
+    |  `F   
+    |  `G   
+    |  `H   
+    |  `I   
+    |  `J   
+    |  `K   
+    |  `L   
+    |  `M   
+    |  `N   
+    |  `O   
+    |  `P   
+    |  `Q   
+    |  `R   
+    |  `S   
+    |  `T   
+    |  `U   
+    |  `V   
+    |  `W   
+    |  `X   
+    |  `Y   
+    |  `Z   
+    |  `_   
+    |  `a   
+    |  `b   
+    |  `c   
+    |  `d   
+    |  `e   
+    |  `f   
+    |  `g   
+    |  `h   
+    |  `i   
+    |  `j   
+    |  `k   
+    |  `l   
+    |  `m   
+    |  `n   
+    |  `o   
+    |  `p   
+    |  `q   
+    |  `r   
+    |  `s   
+    |  `t   
+    |  `u   
+    |  `v   
+    |  `w   
+    |  `x   
+    |  `y   
+    |  `z   
+
+LabeledStatement ::= Identifier  ART_CSP__COLON  Statement  
+
+LabeledStatementNoShortIf ::= Identifier  ART_CSP__COLON  StatementNoShortIf  
+
+LambdaBody ::= Expression  
+    |  Block  
+
+LambdaExpression ::= LambdaParameters ART_CSP__MINUS_GT  LambdaBody  
+
+LambdaParameter ::= VariableModifierStar LambdaParameterType VariableDeclaratorId  
+    |  VariableArityParameter  
+
+LambdaParameterList ::= LambdaParameter CommaLambdaParameterStar  
+    |  Identifier  CommaIdentifierStar  
+
+LambdaParameterListOpt ::= LambdaParameterList  
+    |  #  
+
+LambdaParameterType ::= UnannType  
+    |  ART_CSP_var   
+
+LambdaParameters ::= ART_CSP__LPAR  LambdaParameterListOpt ART_CSP__RPAR   
+    |  Identifier   
+
+LeftHandSide ::= ExpressionName  
+    |  FieldAccess  
+    |  ArrayAccess  
+
+LineTerminator ::= `\n   
+    |  `\r   
+    |  `\r  `\n   
+
+Literal ::= IntegerLiteral   
+    |  FloatingPointLiteral   
+    |  BooleanLiteral   
+    |  CharacterLiteral   
+    |  StringLiteral   
+    |  TextBlock   
+    |  NullLiteral   
+
+LocalClassOrInterfaceDeclaration ::= ClassDeclaration  
+    |  NormalInterfaceDeclaration  
+
+LocalVariableDeclaration ::= VariableModifierStar LocalVariableType VariableDeclaratorList  
+
+LocalVariableDeclarationStatement ::= LocalVariableDeclaration ART_CSP__SEMICOLON   
+
+LocalVariableType ::= UnannType  
+    |  ART_CSP_var   
+
+MarkerAnnotation ::= ART_CSP__AT  TypeName  
+
+MethodBody ::= Block  
+    |  ART_CSP__SEMICOLON   
+
+MethodDeclaration ::= MethodModifierStar MethodHeader MethodBody  
+
+MethodDeclarator ::= Identifier  ART_CSP__LPAR  ReceiverParameterCommaOpt FormalParameterListOpt ART_CSP__RPAR  DimsOpt  
+
+MethodHeader ::= Result MethodDeclarator ThrowsOpt  
+    |  TypeParameters AnnotationStar Result MethodDeclarator ThrowsOpt  
+
+MethodInvocation ::= MethodName ART_CSP__LPAR  ArgumentListOpt ART_CSP__RPAR   
+    |  TypeName ART_CSP__PERIOD  TypeArgumentsOpt Identifier  ART_CSP__LPAR  ArgumentListOpt ART_CSP__RPAR   
+    |  ExpressionName ART_CSP__PERIOD  TypeArgumentsOpt Identifier  ART_CSP__LPAR  ArgumentListOpt ART_CSP__RPAR   
+    |  Primary ART_CSP__PERIOD  TypeArgumentsOpt Identifier  ART_CSP__LPAR  ArgumentListOpt ART_CSP__RPAR   
+    |  ART_CSP_super  ART_CSP__PERIOD  TypeArgumentsOpt Identifier  ART_CSP__LPAR  ArgumentListOpt ART_CSP__RPAR   
+    |  TypeName ART_CSP__PERIOD  ART_CSP_super  ART_CSP__PERIOD  TypeArgumentsOpt Identifier  ART_CSP__LPAR  ArgumentListOpt ART_CSP__RPAR   
+
+MethodModifier ::= Annotation  
+    |  ART_CSP_public   
+    |  ART_CSP_protected   
+    |  ART_CSP_private   
+    |  ART_CSP_abstract   
+    |  ART_CSP_static   
+    |  ART_CSP_final   
+    |  ART_CSP_synchronized   
+    |  ART_CSP_native   
+    |  ART_CSP_strictfp   
+
+MethodModifierStar ::= MethodModifier MethodModifierStar  
+    |  #  
+
+MethodName ::= UnqualifiedMethodIdentifier   
+
+MethodReference ::= ExpressionName ART_CSP__COLON_COLON  TypeArgumentsOpt Identifier   
+    |  Primary ART_CSP__COLON_COLON  TypeArgumentsOpt Identifier   
+    |  ReferenceType ART_CSP__COLON_COLON  TypeArgumentsOpt Identifier   
+    |  ART_CSP_super  ART_CSP__COLON_COLON  TypeArgumentsOpt Identifier   
+    |  TypeName ART_CSP__PERIOD  ART_CSP_super  ART_CSP__COLON_COLON  TypeArgumentsOpt Identifier   
+    |  ClassType ART_CSP__COLON_COLON  TypeArgumentsOpt ART_CSP_new   
+    |  ArrayType ART_CSP__COLON_COLON  ART_CSP_new   
+
+ModularCompilationUnit ::= ImportDeclarationStar ModuleDeclaration  
+
+ModuleDeclaration ::= AnnotationStar openOpt ART_CSP_module  Identifier  DotIdentifierStar ART_CSP__LBRACE  ModuleDirectiveStar ART_CSP__RBRACE   
+
+ModuleDirective ::= ART_CSP_requires  RequiresModifierStar ModuleName ART_CSP__SEMICOLON   
+    |  ART_CSP_exports  PackageName ToModuleNameCommaModuleNameOptStar ART_CSP__SEMICOLON   
+    |  ART_CSP_opens  PackageName ToModuleNameCommaModuleNameOptStar ART_CSP__SEMICOLON   
+    |  ART_CSP_uses  TypeName ART_CSP__SEMICOLON   
+    |  ART_CSP_provides  TypeName ART_CSP_with  TypeName CommaTypeNameStar ART_CSP__SEMICOLON   
+
+ModuleDirectiveStar ::= ModuleDirective ModuleDirectiveStar  
+    |  #  
+
+ModuleName ::= Identifier   
+    |  ModuleName ART_CSP__PERIOD  Identifier   
+
+MultiplicativeExpression ::= UnaryExpression  
+    |  MultiplicativeExpression ART_CSP__STAR  UnaryExpression  
+    |  MultiplicativeExpression ART_CSP__SLASH  UnaryExpression  
+    |  MultiplicativeExpression ART_CSP__PERCENT  UnaryExpression  
+
+NonZeroDigit ::= `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+    |  `8   
+    |  `9   
+
+NormalAnnotation ::= ART_CSP__AT  TypeName ART_CSP__LPAR  ElementValuePairListOpt ART_CSP__RPAR   
+
+NormalClassDeclaration ::= ClassModifierStar ART_CSP_class  TypeIdentifier  TypeParametersOpt ClassExtendsOpt ClassImplementsOpt ClassPermitsOpt ClassBody  
+
+NormalInterfaceDeclaration ::= InterfaceModifierStar ART_CSP_interface  TypeIdentifier  TypeParametersOpt InterfaceExtendsOpt InterfacePermitsOpt InterfaceBody  
+
+NullLiteral ::= `n  `u  `l  `l   ( `\n | `\r | `\t | ` )*
+
+NumericType ::= IntegralType  
+    |  FloatingPointType  
+
+OctalDigit ::= `0   
+    |  `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+
+OctalDigitOrUnderscore ::= OctalDigit  
+    |  `_   
+
+OctalDigits ::= OctalDigit  
+    |  OctalDigit ( OctalDigitsAndUnderscores )? OctalDigit  
+
+OctalDigitsAndUnderscores ::= OctalDigitOrUnderscore ( OctalDigitOrUnderscore )*  
+
+OctalEscape ::= `\\  OctalDigit  
+    |  `\\  OctalDigit OctalDigit  
+    |  `\\  ZeroToThree OctalDigit OctalDigit  
+
+OctalIntegerLiteral ::= OctalNumeral ( IntegerTypeSuffix )?  
+
+OctalNumeral ::= `0  OctalDigits  
+    |  `0  Underscores OctalDigits  
+
+OrdinaryCompilationUnit ::= PackageDeclarationOpt ImportDeclarationStar TopLevelClassOrInterfaceDeclarationStar  
+
+PackageDeclaration ::= PackageModifierStar ART_CSP_package  Identifier  DotIdentifierStar ART_CSP__SEMICOLON   
+
+PackageDeclarationOpt ::= PackageDeclaration  
+    |  #  
+
+PackageModifier ::= Annotation  
+
+PackageModifierStar ::= PackageModifier PackageModifierStar  
+    |  #  
+
+PackageName ::= Identifier   
+    |  PackageName ART_CSP__PERIOD  Identifier   
+
+PackageOrTypeName ::= Identifier   
+    |  PackageOrTypeName ART_CSP__PERIOD  Identifier   
+
+ParanArgumentListOptStar ::= ART_CSP__LPAR  ArgumentListOpt ART_CSP__RPAR  ParanArgumentListOptStar  
+    |  #  
+
+Pattern ::= TypePattern  
+
+PostDecrementExpression ::= PostfixExpression ART_CSP__MINUS_MINUS   
+
+PostIncrementExpression ::= PostfixExpression ART_CSP__PLUS_PLUS   
+
+PostfixExpression ::= Primary  
+    |  ExpressionName  
+    |  PostIncrementExpression  
+    |  PostDecrementExpression  
+
+PreDecrementExpression ::= ART_CSP__MINUS_MINUS  UnaryExpression  
+
+PreIncrementExpression ::= ART_CSP__PLUS_PLUS  UnaryExpression  
+
+Primary ::= PrimaryNoNewArray  
+    |  ArrayCreationExpression  
+
+PrimaryNoNewArray ::= Literal  
+    |  ClassLiteral  
+    |  ART_CSP_this   
+    |  TypeName ART_CSP__PERIOD  ART_CSP_this   
+    |  ART_CSP__LPAR  Expression ART_CSP__RPAR   
+    |  ClassInstanceCreationExpression  
+    |  FieldAccess  
+    |  ArrayAccess  
+    |  MethodInvocation  
+    |  MethodReference  
+
+PrimitiveType ::= AnnotationStar NumericType  
+    |  AnnotationStar ART_CSP_boolean   
+
+ReceiverParameter ::= AnnotationStar UnannType IdentifierDotOpt ART_CSP_this   
+
+ReceiverParameterCommaOpt ::= ReceiverParameter ART_CSP__COMMA   
+    |  #  
+
+RecordBody ::= ART_CSP__LBRACE  RecordBodyDeclarationStar ART_CSP__RBRACE   
+
+RecordBodyDeclaration ::= ClassBodyDeclaration  
+    |  CompactConstructorDeclaration  
+
+RecordBodyDeclarationStar ::= RecordBodyDeclaration RecordBodyDeclarationStar  
+    |  #  
+
+RecordComponent ::= RecordComponentModifierStar UnannType Identifier   
+    |  VariableArityRecordComponent  
+
+RecordComponentList ::= RecordComponent CommaRecordComponentStar  
+
+RecordComponentListOpt ::= RecordComponentList  
+    |  #  
+
+RecordComponentModifier ::= Annotation  
+
+RecordComponentModifierStar ::= RecordComponentModifier RecordComponentModifierStar  
+    |  #  
+
+RecordDeclaration ::= ClassModifierStar ART_CSP_record  TypeIdentifier  TypeParametersOpt RecordHeader ClassImplementsOpt RecordBody  
+
+RecordHeader ::= ART_CSP__LPAR  RecordComponentListOpt ART_CSP__RPAR   
+
+ReferenceType ::= ClassOrInterfaceType  
+    |  TypeVariable  
+    |  ArrayType  
+
+RelationalExpression ::= ShiftExpression  
+    |  RelationalExpression ART_CSP__LT  ShiftExpression  
+    |  RelationalExpression ART_CSP__GT  ShiftExpression  
+    |  RelationalExpression ART_CSP__LT_EQUAL  ShiftExpression  
+    |  RelationalExpression ART_CSP__GT_EQUAL  ShiftExpression  
+    |  InstanceofExpression  
+
+RequiresModifier ::= ART_CSP_transitive   
+    |  ART_CSP_static   
+
+RequiresModifierStar ::= RequiresModifier RequiresModifierStar  
+    |  #  
+
+Resource ::= LocalVariableDeclaration  
+    |  ART_CSP_VariableAccess   
+
+ResourceList ::= Resource SemicolonResourceStar  
+
+ResourceSpecification ::= ART_CSP__LPAR  ResourceList SemicolonOpt ART_CSP__RPAR   
+
+Result ::= UnannType  
+    |  ART_CSP_void   
+
+ReturnStatement ::= ART_CSP_return  ExpressionOpt ART_CSP__SEMICOLON   
+
+SemicolonOpt ::= ART_CSP__SEMICOLON   
+    |  #  
+
+SemicolonResourceStar ::= ART_CSP__SEMICOLON  Resource SemicolonResourceStar  
+    |  #  
+
+ShiftExpression ::= AdditiveExpression  
+    |  ShiftExpression ART_CSP__LT_LT  AdditiveExpression  
+    |  ShiftExpression ART_CSP__GT_GT  AdditiveExpression  
+    |  ShiftExpression ART_CSP__GT_GT_GT  AdditiveExpression  
+
+Sign ::= `+   
+    |  `-   
+
+SignedInteger ::= ( Sign )? Digits  
+
+SimpleTypeName ::= TypeIdentifier   
+
+SingleCharacter ::= `    
+    |  `!   
+    |  `\"   
+    |  `#   
+    |  `$   
+    |  `%   
+    |  `&   
+    |  `(   
+    |  `)   
+    |  `*   
+    |  `+   
+    |  `,   
+    |  `-   
+    |  `.   
+    |  `/   
+    |  `0   
+    |  `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+    |  `8   
+    |  `9   
+    |  `:   
+    |  `;   
+    |  `<   
+    |  `=   
+    |  `>   
+    |  `?   
+    |  `@   
+    |  `A   
+    |  `B   
+    |  `C   
+    |  `D   
+    |  `E   
+    |  `F   
+    |  `G   
+    |  `H   
+    |  `I   
+    |  `J   
+    |  `K   
+    |  `L   
+    |  `M   
+    |  `N   
+    |  `O   
+    |  `P   
+    |  `Q   
+    |  `R   
+    |  `S   
+    |  `T   
+    |  `U   
+    |  `V   
+    |  `W   
+    |  `X   
+    |  `Y   
+    |  `Z   
+    |  `[   
+    |  `]   
+    |  `^   
+    |  `_   
+    |  ``   
+    |  `a   
+    |  `b   
+    |  `c   
+    |  `d   
+    |  `e   
+    |  `f   
+    |  `g   
+    |  `h   
+    |  `i   
+    |  `j   
+    |  `k   
+    |  `l   
+    |  `m   
+    |  `n   
+    |  `o   
+    |  `p   
+    |  `q   
+    |  `r   
+    |  `s   
+    |  `t   
+    |  `u   
+    |  `v   
+    |  `w   
+    |  `x   
+    |  `y   
+    |  `z   
+    |  `{   
+    |  `|   
+    |  `}   
+    |  `~   
+    |  EscapeSequence  
+    |  UnicodeEscape  
+
+SingleElementAnnotation ::= ART_CSP__AT  TypeName ART_CSP__LPAR  ElementValue ART_CSP__RPAR   
+
+SingleStaticImportDeclaration ::= ART_CSP_import  ART_CSP_static  TypeName ART_CSP__PERIOD  Identifier  ART_CSP__SEMICOLON   
+
+SingleTypeImportDeclaration ::= ART_CSP_import  TypeName ART_CSP__SEMICOLON   
+
+Statement ::= StatementWithoutTrailingSubstatement  
+    |  LabeledStatement  
+    |  IfThenStatement  
+    |  IfThenElseStatement  
+    |  WhileStatement  
+    |  ForStatement  
+
+StatementExpression ::= Assignment  
+    |  PreIncrementExpression  
+    |  PreDecrementExpression  
+    |  PostIncrementExpression  
+    |  PostDecrementExpression  
+    |  MethodInvocation  
+    |  ClassInstanceCreationExpression  
+
+StatementExpressionList ::= StatementExpression CommaStatementExpressionStar  
+
+StatementNoShortIf ::= StatementWithoutTrailingSubstatement  
+    |  LabeledStatementNoShortIf  
+    |  IfThenElseStatementNoShortIf  
+    |  WhileStatementNoShortIf  
+    |  ForStatementNoShortIf  
+
+StatementWithoutTrailingSubstatement ::= Block  
+    |  EmptyStatement  
+    |  ExpressionStatement  
+    |  AssertStatement  
+    |  SwitchStatement  
+    |  DoStatement  
+    |  BreakStatement  
+    |  ContinueStatement  
+    |  ReturnStatement  
+    |  SynchronizedStatement  
+    |  ThrowStatement  
+    |  TryStatement  
+    |  YieldStatement  
+
+StaticImportOnDemandDeclaration ::= ART_CSP_import  ART_CSP_static  TypeName ART_CSP__PERIOD  ART_CSP__STAR  ART_CSP__SEMICOLON   
+
+StaticInitializer ::= ART_CSP_static  Block  
+
+StringCharacter ::= `    
+    |  `!   
+    |  `#   
+    |  `$   
+    |  `%   
+    |  `&   
+    |  `'   
+    |  `(   
+    |  `)   
+    |  `*   
+    |  `+   
+    |  `,   
+    |  `-   
+    |  `.   
+    |  `/   
+    |  `0   
+    |  `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+    |  `8   
+    |  `9   
+    |  `:   
+    |  `;   
+    |  `<   
+    |  `=   
+    |  `>   
+    |  `?   
+    |  `@   
+    |  `A   
+    |  `B   
+    |  `C   
+    |  `D   
+    |  `E   
+    |  `F   
+    |  `G   
+    |  `H   
+    |  `I   
+    |  `J   
+    |  `K   
+    |  `L   
+    |  `M   
+    |  `N   
+    |  `O   
+    |  `P   
+    |  `Q   
+    |  `R   
+    |  `S   
+    |  `T   
+    |  `U   
+    |  `V   
+    |  `W   
+    |  `X   
+    |  `Y   
+    |  `Z   
+    |  `[   
+    |  `]   
+    |  `^   
+    |  `_   
+    |  ``   
+    |  `a   
+    |  `b   
+    |  `c   
+    |  `d   
+    |  `e   
+    |  `f   
+    |  `g   
+    |  `h   
+    |  `i   
+    |  `j   
+    |  `k   
+    |  `l   
+    |  `m   
+    |  `n   
+    |  `o   
+    |  `p   
+    |  `q   
+    |  `r   
+    |  `s   
+    |  `t   
+    |  `u   
+    |  `v   
+    |  `w   
+    |  `x   
+    |  `y   
+    |  `z   
+    |  `{   
+    |  `|   
+    |  `}   
+    |  `~   
+    |  EscapeSequence  
+    |  UnicodeEscape  
+
+StringLiteral ::= `\"  ( StringCharacter )* `\"   ( `\n | `\r | `\t | ` )*
+
+SwitchBlock ::= ART_CSP__LBRACE  SwitchRule SwitchRuleStar ART_CSP__RBRACE   
+    |  ART_CSP__LBRACE  SwitchBlockStatementGroupStar SwitchLabelColonStar ART_CSP__RBRACE   
+
+SwitchBlockStatementGroup ::= SwitchLabel ART_CSP__COLON  SwitchLabelColonStar BlockStatements  
+
+SwitchBlockStatementGroupStar ::= SwitchBlockStatementGroup SwitchBlockStatementGroupStar  
+    |  #  
+
+SwitchExpression ::= ART_CSP_switch  ART_CSP__LPAR  Expression ART_CSP__RPAR  SwitchBlock  
+
+SwitchLabel ::= ART_CSP_case  CaseConstant CommaCaseConstantStar  
+    |  ART_CSP_default   
+
+SwitchLabelColonStar ::= SwitchLabel ART_CSP__COLON  SwitchLabelColonStar  
+    |  #  
+
+SwitchRule ::= SwitchLabel ART_CSP__MINUS_GT  Expression ART_CSP__SEMICOLON   
+    |  SwitchLabel ART_CSP__MINUS_GT  Block  
+    |  SwitchLabel ART_CSP__MINUS_GT  ThrowStatement  
+
+SwitchRuleStar ::= SwitchRule SwitchRuleStar  
+    |  #  
+
+SwitchStatement ::= ART_CSP_switch  ART_CSP__LPAR  Expression ART_CSP__RPAR  SwitchBlock  
+
+SynchronizedStatement ::= ART_CSP_synchronized  ART_CSP__LPAR  Expression ART_CSP__RPAR  Block  
+
+TextBlock ::= `\"  `\"  `\"  ( TextBlockWhiteSpace )* LineTerminator ( TextBlockCharacter )* `\"  `\"  `\"   ( `\n | `\r | `\t | ` )*
+
+TextBlockCharacter ::= `    
+    |  `!   
+    |  `\"   
+    |  `#   
+    |  `$   
+    |  `%   
+    |  `&   
+    |  `'   
+    |  `(   
+    |  `)   
+    |  `*   
+    |  `+   
+    |  `,   
+    |  `-   
+    |  `.   
+    |  `/   
+    |  `0   
+    |  `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+    |  `8   
+    |  `9   
+    |  `:   
+    |  `;   
+    |  `<   
+    |  `=   
+    |  `>   
+    |  `?   
+    |  `@   
+    |  `A   
+    |  `B   
+    |  `C   
+    |  `D   
+    |  `E   
+    |  `F   
+    |  `G   
+    |  `H   
+    |  `I   
+    |  `J   
+    |  `K   
+    |  `L   
+    |  `M   
+    |  `N   
+    |  `O   
+    |  `P   
+    |  `Q   
+    |  `R   
+    |  `S   
+    |  `T   
+    |  `U   
+    |  `V   
+    |  `W   
+    |  `X   
+    |  `Y   
+    |  `Z   
+    |  `[   
+    |  `]   
+    |  `^   
+    |  `_   
+    |  ``   
+    |  `a   
+    |  `b   
+    |  `c   
+    |  `d   
+    |  `e   
+    |  `f   
+    |  `g   
+    |  `h   
+    |  `i   
+    |  `j   
+    |  `k   
+    |  `l   
+    |  `m   
+    |  `n   
+    |  `o   
+    |  `p   
+    |  `q   
+    |  `r   
+    |  `s   
+    |  `t   
+    |  `u   
+    |  `v   
+    |  `w   
+    |  `x   
+    |  `y   
+    |  `z   
+    |  `{   
+    |  `|   
+    |  `}   
+    |  `~   
+    |  EscapeSequence  
+    |  LineTerminator  
+    |  UnicodeEscape  
+
+TextBlockWhiteSpace ::= WhiteSpace  
+
+ThrowStatement ::= ART_CSP_throw  Expression ART_CSP__SEMICOLON   
+
+Throws ::= ART_CSP_throws  ExceptionTypeList  
+
+ThrowsOpt ::= Throws  
+    |  #  
+
+ToModuleNameCommaModuleNameOptStar ::= ART_CSP_to  ModuleName CommaModuleNameOpt ToModuleNameCommaModuleNameOptStar  
+    |  #  
+
+TopLevelClassOrInterfaceDeclaration ::= ClassDeclaration  
+    |  InterfaceDeclaration  
+    |  ART_CSP__SEMICOLON   
+
+TopLevelClassOrInterfaceDeclarationStar ::= TopLevelClassOrInterfaceDeclaration TopLevelClassOrInterfaceDeclarationStar  
+    |  #  
+
+TryStatement ::= ART_CSP_try  Block Catches  
+    |  ART_CSP_try  Block CatchesOpt Finally  
+    |  TryWithResourcesStatement  
+
+TryWithResourcesStatement ::= ART_CSP_try  ResourceSpecification Block CatchesOpt FinallyOpt  
+
+TypeArgument ::= ReferenceType  
+    |  Wildcard  
+
+TypeArgumentList ::= TypeArgument CommaTypeArgumentStar  
+
+TypeArguments ::= ART_CSP__LT  TypeArgumentList ART_CSP__GT   
+
+TypeArgumentsOpt ::= TypeArguments  
+    |  #  
+
+TypeArgumentsOrDiamond ::= TypeArguments  
+    |  ART_CSP__LT_GT   
+
+TypeArgumentsOrDiamondOpt ::= TypeArgumentsOrDiamond  
+    |  #  
+
+TypeBound ::= ART_CSP_extends  TypeVariable  
+    |  ART_CSP_extends  ClassOrInterfaceType AdditionalBoundStar  
+
+TypeBoundOpt ::= TypeBound  
+    |  #  
+
+TypeIdentifier ::= IdentifierChars  ( `\n | `\r | `\t | ` )*
+
+TypeImportOnDemandDeclaration ::= ART_CSP_import  PackageOrTypeName ART_CSP__PERIOD  ART_CSP__STAR  ART_CSP__SEMICOLON   
+
+TypeName ::= TypeIdentifier   
+    |  PackageOrTypeName ART_CSP__PERIOD  TypeIdentifier   
+
+TypeParameter ::= TypeParameterModifierStar TypeIdentifier  TypeBoundOpt  
+
+TypeParameterList ::= TypeParameter CommaTypeParameterStar  
+
+TypeParameterModifier ::= Annotation  
+
+TypeParameterModifierStar ::= TypeParameterModifier TypeParameterModifierStar  
+    |  #  
+
+TypeParameters ::= ART_CSP__LT  TypeParameterList ART_CSP__GT   
+
+TypeParametersOpt ::= TypeParameters  
+    |  #  
+
+TypePattern ::= LocalVariableDeclaration  
+
+TypeVariable ::= AnnotationStar TypeIdentifier   
+
+UnannArrayType ::= UnannPrimitiveType Dims  
+    |  UnannClassOrInterfaceType Dims  
+    |  UnannTypeVariable Dims  
+
+UnannClassOrInterfaceType ::= UnannClassType  
+    |  UnannInterfaceType  
+
+UnannClassType ::= TypeIdentifier  TypeArgumentsOpt  
+    |  PackageName ART_CSP__PERIOD  AnnotationStar TypeIdentifier  TypeArgumentsOpt  
+    |  UnannClassOrInterfaceType ART_CSP__PERIOD  AnnotationStar TypeIdentifier  TypeArgumentsOpt  
+
+UnannInterfaceType ::= UnannClassType  
+
+UnannPrimitiveType ::= NumericType  
+    |  ART_CSP_boolean   
+
+UnannReferenceType ::= UnannClassOrInterfaceType  
+    |  UnannTypeVariable  
+    |  UnannArrayType  
+
+UnannType ::= UnannPrimitiveType  
+    |  UnannReferenceType  
+
+UnannTypeVariable ::= TypeIdentifier   
+
+UnaryExpression ::= PreIncrementExpression  
+    |  PreDecrementExpression  
+    |  ART_CSP__PLUS  UnaryExpression  
+    |  ART_CSP__MINUS  UnaryExpression  
+    |  UnaryExpressionNotPlusMinus  
+
+UnaryExpressionNotPlusMinus ::= PostfixExpression  
+    |  ART_CSP__TILDE  UnaryExpression  
+    |  ART_CSP__SHREIK  UnaryExpression  
+    |  CastExpression  
+    |  SwitchExpression  
+
+Underscores ::= `_  ( `_  )*  
+
+UnicodeEscape ::= `\\  UnicodeMarker HexDigit HexDigit HexDigit HexDigit  
+
+UnicodeMarker ::= `u  ( `u  )*  
+
+UnqualifiedClassInstanceCreationExpression ::= ART_CSP_new  TypeArgumentsOpt ClassOrInterfaceTypeToInstantiate ART_CSP__LPAR  ArgumentListOpt ART_CSP__RPAR  ClassBodyOpt  
+
+UnqualifiedMethodIdentifier ::= IdentifierChars  ( `\n | `\r | `\t | ` )*
+
+VariableArityParameter ::= VariableModifierStar UnannType AnnotationStar ART_CSP__PERIOD_PERIOD_PERIOD  Identifier   
+
+VariableArityRecordComponent ::= RecordComponentModifierStar UnannType AnnotationStar ART_CSP__PERIOD_PERIOD_PERIOD  Identifier   
+
+VariableDeclarator ::= VariableDeclaratorId EqualVariableInitializerOpt  
+
+VariableDeclaratorId ::= Identifier  DimsOpt  
+
+VariableDeclaratorList ::= VariableDeclarator CommaVariableDeclaratorStar  
+
+VariableInitializer ::= Expression  
+    |  ArrayInitializer  
+
+VariableInitializerList ::= VariableInitializer CommaVariableInitializerStar  
+
+VariableInitializerListOpt ::= VariableInitializerList  
+    |  #  
+
+VariableModifier ::= Annotation  
+    |  ART_CSP_final   
+
+VariableModifierStar ::= VariableModifier VariableModifierStar  
+    |  #  
+
+WhileStatement ::= ART_CSP_while  ART_CSP__LPAR  Expression ART_CSP__RPAR  Statement  
+
+WhileStatementNoShortIf ::= ART_CSP_while  ART_CSP__LPAR  Expression ART_CSP__RPAR  StatementNoShortIf  
+
+WhiteSpace ::= `    
+    |  `\t   
+    |  `f   
+    |  LineTerminator  
+
+Wildcard ::= AnnotationStar ART_CSP__QUERY  WildcardBoundsOpt  
+
+WildcardBounds ::= ART_CSP_extends  ReferenceType  
+    |  ART_CSP_super  ReferenceType  
+
+WildcardBoundsOpt ::= WildcardBounds  
+    |  #  
+
+YieldStatement ::= ART_CSP_yield  Expression ART_CSP__SEMICOLON   
+
+ZeroToThree ::= `0   
+    |  `1   
+    |  `2   
+    |  `3   
+
+openOpt ::= ART_CSP_open   
+    | #  

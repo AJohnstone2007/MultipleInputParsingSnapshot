@@ -1,0 +1,1022 @@
+(* Token grammar *)
+
+!start CompilationUnit
+
+AdditionalBound ::= '&'  InterfaceType  
+
+AdditionalBoundStar ::= AdditionalBound AdditionalBoundStar  
+    |  #  
+
+AdditiveExpression ::= MultiplicativeExpression  
+    |  AdditiveExpression '+'  MultiplicativeExpression  
+    |  AdditiveExpression '-'  MultiplicativeExpression  
+
+AmbiguousName ::= 'Identifier'   
+    |  AmbiguousName '.'  'Identifier'   
+
+AndExpression ::= EqualityExpression  
+    |  AndExpression '&'  EqualityExpression  
+
+Annotation ::= NormalAnnotation  
+    |  MarkerAnnotation  
+    |  SingleElementAnnotation  
+
+AnnotationInterfaceBody ::= '{'  AnnotationInterfaceMemberDeclarationStar '}'   
+
+AnnotationInterfaceDeclaration ::= InterfaceModifierStar '@'  'interface'  'TypeIdentifier'  AnnotationInterfaceBody  
+
+AnnotationInterfaceElementDeclaration ::= AnnotationInterfaceElementModifierStar UnannType 'Identifier'  '('  ')'  DimsOpt DefaultValueOpt ';'   
+
+AnnotationInterfaceElementModifier ::= Annotation  
+    |  'public'   
+    |  'abstract'   
+
+AnnotationInterfaceElementModifierStar ::= AnnotationInterfaceElementModifier AnnotationInterfaceElementModifierStar  
+    |  #  
+
+AnnotationInterfaceMemberDeclaration ::= AnnotationInterfaceElementDeclaration  
+    |  ConstantDeclaration  
+    |  ClassDeclaration  
+    |  InterfaceDeclaration  
+    |  ';'   
+
+AnnotationInterfaceMemberDeclarationStar ::= AnnotationInterfaceMemberDeclaration AnnotationInterfaceMemberDeclarationStar  
+    |  #  
+
+AnnotationStar ::= Annotation AnnotationStar  
+    |  #  
+
+AnnotationStarBracketStar ::= AnnotationStar '['  ']'  AnnotationStarBracketStar  
+    |  #  
+
+ArgumentList ::= Expression CommaExpressionStar  
+
+ArgumentListOpt ::= ArgumentList  
+    |  #  
+
+ArrayAccess ::= ExpressionName '['  Expression ']'   
+    |  PrimaryNoNewArray '['  Expression ']'   
+    |  ArrayCreationExpressionWithInitializer '['  Expression ']'   
+
+ArrayCreationExpression ::= ArrayCreationExpressionWithoutInitializer  
+    |  ArrayCreationExpressionWithInitializer  
+
+ArrayCreationExpressionWithInitializer ::= 'new'  PrimitiveType Dims ArrayInitializer  
+    |  'new'  ClassOrInterfaceType Dims ArrayInitializer  
+
+ArrayCreationExpressionWithoutInitializer ::= 'new'  PrimitiveType DimExprs DimsOpt  
+    |  'new'  ClassOrInterfaceType DimExprs DimsOpt  
+
+ArrayInitializer ::= '{'  VariableInitializerListOpt CommaOpt '}'   
+
+ArrayType ::= PrimitiveType Dims  
+    |  ClassOrInterfaceType Dims  
+    |  TypeVariable Dims  
+
+AssertStatement ::= 'assert'  Expression ';'   
+    |  'assert'  Expression ':'  Expression ';'   
+
+Assignment ::= LeftHandSide AssignmentOperator Expression  
+
+AssignmentExpression ::= ConditionalExpression  
+    |  Assignment  
+
+AssignmentOperator ::= '='   
+    |  '*='   
+    |  '/='   
+    |  '%='   
+    |  '+='   
+    |  '-='   
+    |  '<<='   
+    |  '>>='   
+    |  '>>>='   
+    |  '&='   
+    |  '^='   
+    |  '|='   
+
+BarClassTypeStar ::= '|'  ClassType BarClassTypeStar  
+    |  #  
+
+BasicForStatement ::= 'for'  '('  ForInitOpt ';'  ExpressionOpt ';'  ForUpdateOpt ')'  Statement  
+
+BasicForStatementNoShortIf ::= 'for'  '('  ForInitOpt ';'  ExpressionOpt ';'  ForUpdateOpt ')'  StatementNoShortIf  
+
+Block ::= '{'  BlockStatementsOpt '}'   
+
+BlockStatement ::= LocalClassOrInterfaceDeclaration  
+    |  LocalVariableDeclarationStatement  
+    |  Statement  
+
+BlockStatementStar ::= BlockStatement BlockStatementStar  
+    |  #  
+
+BlockStatements ::= BlockStatement BlockStatementStar  
+
+BlockStatementsOpt ::= BlockStatements  
+    |  #  
+
+BracketsStar ::= '['  ']'  BracketsStar  
+    |  #  
+
+BreakStatement ::= 'break'  IdentifierOpt ';'   
+
+CaseConstant ::= ConditionalExpression  
+
+CastExpression ::= '('  PrimitiveType ')'  UnaryExpression  
+    |  '('  ReferenceType AdditionalBoundStar ')'  UnaryExpressionNotPlusMinus  
+    |  '('  ReferenceType AdditionalBoundStar ')'  LambdaExpression  
+
+CatchClause ::= 'catch'  '('  CatchFormalParameter ')'  Block  
+
+CatchClauseStar ::= CatchClause CatchClauseStar  
+    |  #  
+
+CatchFormalParameter ::= VariableModifierStar CatchType VariableDeclaratorId  
+
+CatchType ::= UnannClassType BarClassTypeStar  
+
+Catches ::= CatchClause CatchClauseStar  
+
+CatchesOpt ::= Catches  
+    |  #  
+
+ClassBody ::= '{'  ClassBodyDeclarationStar '}'   
+
+ClassBodyDeclaration ::= ClassMemberDeclaration  
+    |  InstanceInitializer  
+    |  StaticInitializer  
+    |  ConstructorDeclaration  
+
+ClassBodyDeclarationStar ::= ClassBodyDeclaration ClassBodyDeclarationStar  
+    |  #  
+
+ClassBodyOpt ::= ClassBody  
+    |  #  
+
+ClassDeclaration ::= NormalClassDeclaration  
+    |  EnumDeclaration  
+    |  RecordDeclaration  
+
+ClassExtends ::= 'extends'  ClassType  
+
+ClassExtendsOpt ::= ClassExtends  
+    |  #  
+
+ClassImplements ::= 'implements'  InterfaceTypeList  
+
+ClassImplementsOpt ::= ClassImplements  
+    |  #  
+
+ClassInstanceCreationExpression ::= UnqualifiedClassInstanceCreationExpression  
+    |  ExpressionName '.'  UnqualifiedClassInstanceCreationExpression  
+    |  Primary '.'  UnqualifiedClassInstanceCreationExpression  
+
+ClassLiteral ::= TypeName BracketsStar '.'  'class'   
+    |  NumericType BracketsStar '.'  'class'   
+    |  'boolean'  BracketsStar '.'  'class'   
+    |  'void'  '.'  'class'   
+
+ClassMemberDeclaration ::= FieldDeclaration  
+    |  MethodDeclaration  
+    |  ClassDeclaration  
+    |  InterfaceDeclaration  
+    |  ';'   
+
+ClassModifier ::= Annotation  
+    |  'public'   
+    |  'protected'   
+    |  'private'   
+    |  'abstract'   
+    |  'static'   
+    |  'final'   
+    |  'sealed'   
+    |  'non-sealed'   
+    |  'strictfp'   
+
+ClassModifierStar ::= ClassModifier ClassModifierStar  
+    |  #  
+
+ClassOrInterfaceType ::= ClassType  
+    |  InterfaceType  
+
+ClassOrInterfaceTypeToInstantiate ::= AnnotationStar 'Identifier'  DotAnnotationStarIdentifierStar TypeArgumentsOrDiamondOpt  
+
+ClassPermits ::= 'permits'  TypeName CommaTypeNameStar  
+
+ClassPermitsOpt ::= ClassPermits  
+    |  #  
+
+ClassType ::= AnnotationStar 'TypeIdentifier'  TypeArgumentsOpt  
+    |  PackageName '.'  AnnotationStar 'TypeIdentifier'  TypeArgumentsOpt  
+    |  ClassOrInterfaceType '.'  AnnotationStar 'TypeIdentifier'  TypeArgumentsOpt  
+
+CommaCaseConstantStar ::= ','  CaseConstant CommaCaseConstantStar  
+    |  #  
+
+CommaElementValuePairStar ::= ','  ElementValuePair CommaElementValuePairStar  
+    |  #  
+
+CommaElementValueStar ::= ','  ElementValue CommaElementValueStar  
+    |  #  
+
+CommaEnumConstantStar ::= ','  EnumConstant CommaEnumConstantStar  
+    |  #  
+
+CommaExceptionTypeStar ::= ','  ExceptionType CommaExceptionTypeStar  
+    |  #  
+
+CommaExpressionStar ::= ','  Expression CommaExpressionStar  
+    |  #  
+
+CommaFormalParameterStar ::= ','  FormalParameter CommaFormalParameterStar  
+    |  #  
+
+CommaIdentifierStar ::= ','  'Identifier'  CommaIdentifierStar  
+    |  #  
+
+CommaInterfaceTypeStar ::= ','  InterfaceType CommaInterfaceTypeStar  
+    |  #  
+
+CommaLambdaParameterStar ::= ','  LambdaParameter CommaLambdaParameterStar  
+    |  #  
+
+CommaModuleNameOpt ::= ','  ModuleName  
+    |  #  
+
+CommaOpt ::= ','   
+    |  #  
+
+CommaRecordComponentStar ::= ','  RecordComponent CommaRecordComponentStar  
+    |  #  
+
+CommaStatementExpressionStar ::= ','  StatementExpression CommaStatementExpressionStar  
+    |  #  
+
+CommaTypeArgumentStar ::= ','  TypeArgument CommaTypeArgumentStar  
+    |  #  
+
+CommaTypeNameStar ::= ','  TypeName CommaTypeNameStar  
+    |  #  
+
+CommaTypeParameterStar ::= ','  TypeParameter CommaTypeParameterStar  
+    |  #  
+
+CommaVariableDeclaratorStar ::= ','  VariableDeclarator CommaVariableDeclaratorStar  
+    |  #  
+
+CommaVariableInitializerStar ::= ','  VariableInitializer CommaVariableInitializerStar  
+    |  #  
+
+CompactConstructorDeclaration ::= ConstructorModifierStar SimpleTypeName ConstructorBody  
+
+CompilationUnit ::= OrdinaryCompilationUnit  
+    |  ModularCompilationUnit  
+    |  DummyRuleEAS  
+
+ConditionalAndExpression ::= InclusiveOrExpression  
+    |  ConditionalAndExpression '&&'  InclusiveOrExpression  
+
+ConditionalExpression ::= ConditionalOrExpression  
+    |  ConditionalOrExpression '?'  Expression ':'  ConditionalExpression  
+    |  ConditionalOrExpression '?'  Expression ':'  LambdaExpression  
+
+ConditionalOrExpression ::= ConditionalAndExpression  
+    |  ConditionalOrExpression '||'  ConditionalAndExpression  
+
+ConstantDeclaration ::= ConstantModifierStar UnannType VariableDeclaratorList ';'   
+
+ConstantModifier ::= Annotation  
+    |  'public'   
+    |  'static'   
+    |  'final'   
+
+ConstantModifierStar ::= ConstantModifier ConstantModifierStar  
+    |  #  
+
+ConstructorBody ::= '{'  ExplicitConstructorInvocationOpt BlockStatementsOpt '}'   
+
+ConstructorDeclaration ::= ConstructorModifierStar ConstructorDeclarator ThrowsOpt ConstructorBody  
+
+ConstructorDeclarator ::= TypeParametersOpt SimpleTypeName '('  ReceiverParameterCommaOpt FormalParameterListOpt ')'   
+
+ConstructorModifier ::= Annotation  
+    |  'public'   
+    |  'protected'   
+    |  'private'   
+
+ConstructorModifierStar ::= ConstructorModifier ConstructorModifierStar  
+    |  #  
+
+ContinueStatement ::= 'continue'  IdentifierOpt ';'   
+
+DefaultValue ::= 'default'  ElementValue  
+
+DefaultValueOpt ::= DefaultValue  
+    |  #  
+
+DimExpr ::= AnnotationStar '['  Expression ']'   
+
+DimExprStar ::= DimExpr DimExprStar  
+    |  #  
+
+DimExprs ::= DimExpr DimExprStar  
+
+Dims ::= AnnotationStar '['  ']'  AnnotationStarBracketStar  
+
+DimsOpt ::= Dims  
+    |  #  
+
+DoStatement ::= 'do'  Statement 'while'  '('  Expression ')'  ';'   
+
+DotAnnotationStarIdentifierStar ::= '.'  AnnotationStar 'Identifier'  DotAnnotationStarIdentifierStar  
+    |  #  
+
+DotIdentifierStar ::= '.'  'Identifier'  DotIdentifierStar  
+    |  #  
+
+DummyRuleEAS ::= 'goto'   
+    |  'const'   
+
+ElementValue ::= ConditionalExpression  
+    |  ElementValueArrayInitializer  
+    |  Annotation  
+
+ElementValueArrayInitializer ::= '{'  ElementValueListOpt CommaOpt '}'   
+
+ElementValueList ::= ElementValue CommaElementValueStar  
+
+ElementValueListOpt ::= ElementValueList  
+    |  #  
+
+ElementValuePair ::= 'Identifier'  '='  ElementValue  
+
+ElementValuePairList ::= ElementValuePair CommaElementValuePairStar  
+
+ElementValuePairListOpt ::= ElementValuePairList  
+    |  #  
+
+EmptyStatement ::= ';'   
+
+EnhancedForStatement ::= 'for'  '('  LocalVariableDeclaration ':'  Expression ')'  Statement  
+
+EnhancedForStatementNoShortIf ::= 'for'  '('  LocalVariableDeclaration ':'  Expression ')'  StatementNoShortIf  
+
+EnumBody ::= '{'  EnumConstantListOpt CommaOpt EnumBodyDeclarationsOpt '}'   
+
+EnumBodyDeclarations ::= ';'  ClassBodyDeclarationStar  
+
+EnumBodyDeclarationsOpt ::= EnumBodyDeclarations  
+    |  #  
+
+EnumConstant ::= EnumConstantModifierStar 'Identifier'  ParanArgumentListOptStar ClassBodyOpt  
+
+EnumConstantList ::= EnumConstant CommaEnumConstantStar  
+
+EnumConstantListOpt ::= EnumConstantList  
+    |  #  
+
+EnumConstantModifier ::= Annotation  
+
+EnumConstantModifierStar ::= EnumConstantModifier EnumConstantModifierStar  
+    |  #  
+
+EnumDeclaration ::= ClassModifierStar 'enum'  'TypeIdentifier'  ClassImplementsOpt EnumBody  
+
+EqualVariableInitializerOpt ::= '='  VariableInitializer  
+    |  #  
+
+EqualityExpression ::= RelationalExpression  
+    |  EqualityExpression '=='  RelationalExpression  
+    |  EqualityExpression '!='  RelationalExpression  
+
+ExceptionType ::= ClassType  
+    |  TypeVariable  
+
+ExceptionTypeList ::= ExceptionType CommaExceptionTypeStar  
+
+ExclusiveOrExpression ::= AndExpression  
+    |  ExclusiveOrExpression '^'  AndExpression  
+
+ExplicitConstructorInvocation ::= TypeArgumentsOpt 'this'  '('  ArgumentListOpt ')'  ';'   
+    |  TypeArgumentsOpt 'super'  '('  ArgumentListOpt ')'  ';'   
+    |  ExpressionName '.'  TypeArgumentsOpt 'super'  '('  ArgumentListOpt ')'  ';'   
+    |  Primary '.'  TypeArgumentsOpt 'super'  '('  ArgumentListOpt ')'  ';'   
+
+ExplicitConstructorInvocationOpt ::= ExplicitConstructorInvocation  
+    |  #  
+
+Expression ::= LambdaExpression  
+    |  AssignmentExpression  
+
+ExpressionName ::= 'Identifier'   
+    |  AmbiguousName '.'  'Identifier'   
+
+ExpressionOpt ::= Expression  
+    |  #  
+
+ExpressionStatement ::= StatementExpression ';'   
+
+FieldAccess ::= Primary '.'  'Identifier'   
+    |  'super'  '.'  'Identifier'   
+    |  TypeName '.'  'super'  '.'  'Identifier'   
+
+FieldDeclaration ::= FieldModifierStar UnannType VariableDeclaratorList ';'   
+
+FieldModifier ::= Annotation  
+    |  'public'   
+    |  'protected'   
+    |  'private'   
+    |  'static'   
+    |  'final'   
+    |  'transient'   
+    |  'volatile'   
+
+FieldModifierStar ::= FieldModifier FieldModifierStar  
+    |  #  
+
+Finally ::= 'finally'  Block  
+
+FinallyOpt ::= Finally  
+    |  #  
+
+FloatingPointType ::= 'float'   
+    |  'double'   
+
+ForInit ::= StatementExpressionList  
+    |  LocalVariableDeclaration  
+
+ForInitOpt ::= ForInit  
+    |  #  
+
+ForStatement ::= BasicForStatement  
+    |  EnhancedForStatement  
+
+ForStatementNoShortIf ::= BasicForStatementNoShortIf  
+    |  EnhancedForStatementNoShortIf  
+
+ForUpdate ::= StatementExpressionList  
+
+ForUpdateOpt ::= ForUpdate  
+    |  #  
+
+FormalParameter ::= VariableModifierStar UnannType VariableDeclaratorId  
+    |  VariableArityParameter  
+
+FormalParameterList ::= FormalParameter CommaFormalParameterStar  
+
+FormalParameterListOpt ::= FormalParameterList  
+    |  #  
+
+IdentifierDotOpt ::= 'Identifier'  '.'   
+    |  #  
+
+IdentifierOpt ::= 'Identifier'   
+    |  #  
+
+IfThenElseStatement ::= 'if'  '('  Expression ')'  StatementNoShortIf 'else'  Statement  
+
+IfThenElseStatementNoShortIf ::= 'if'  '('  Expression ')'  StatementNoShortIf 'else'  StatementNoShortIf  
+
+IfThenStatement ::= 'if'  '('  Expression ')'  Statement  
+
+ImportDeclaration ::= SingleTypeImportDeclaration  
+    |  TypeImportOnDemandDeclaration  
+    |  SingleStaticImportDeclaration  
+    |  StaticImportOnDemandDeclaration  
+
+ImportDeclarationStar ::= ImportDeclaration ImportDeclarationStar  
+    |  #  
+
+InclusiveOrExpression ::= ExclusiveOrExpression  
+    |  InclusiveOrExpression '|'  ExclusiveOrExpression  
+
+InstanceInitializer ::= Block  
+
+InstanceofExpression ::= RelationalExpression 'instanceof'  ReferenceType  
+    |  RelationalExpression 'instanceof'  Pattern  
+
+IntegralType ::= 'byte'   
+    |  'short'   
+    |  'int'   
+    |  'long'   
+    |  'char'   
+
+InterfaceBody ::= '{'  InterfaceMemberDeclarationStar '}'   
+
+InterfaceDeclaration ::= NormalInterfaceDeclaration  
+    |  AnnotationInterfaceDeclaration  
+
+InterfaceExtends ::= 'extends'  InterfaceTypeList  
+
+InterfaceExtendsOpt ::= InterfaceExtends  
+    |  #  
+
+InterfaceMemberDeclaration ::= ConstantDeclaration  
+    |  InterfaceMethodDeclaration  
+    |  ClassDeclaration  
+    |  InterfaceDeclaration  
+    |  ';'   
+
+InterfaceMemberDeclarationStar ::= InterfaceMemberDeclaration InterfaceMemberDeclarationStar  
+    |  #  
+
+InterfaceMethodDeclaration ::= InterfaceMethodModifierStar MethodHeader MethodBody  
+
+InterfaceMethodModifier ::= Annotation  
+    |  'public'   
+    |  'private'   
+    |  'abstract'   
+    |  'default'   
+    |  'static'   
+    |  'strictfp'   
+
+InterfaceMethodModifierStar ::= InterfaceMethodModifier InterfaceMethodModifierStar  
+    |  #  
+
+InterfaceModifier ::= Annotation  
+    |  'public'   
+    |  'protected'   
+    |  'private'   
+    |  'abstract'   
+    |  'static'   
+    |  'sealed'   
+    |  'non-sealed'   
+    |  'strictfp'   
+
+InterfaceModifierStar ::= InterfaceModifier InterfaceModifierStar  
+    |  #  
+
+InterfacePermits ::= 'permits'  TypeName CommaTypeNameStar  
+
+InterfacePermitsOpt ::= InterfacePermits  
+    |  #  
+
+InterfaceType ::= ClassType  
+
+InterfaceTypeList ::= InterfaceType CommaInterfaceTypeStar  
+
+LabeledStatement ::= 'Identifier'  ':'  Statement  
+
+LabeledStatementNoShortIf ::= 'Identifier'  ':'  StatementNoShortIf  
+
+LambdaBody ::= Expression  
+    |  Block  
+
+LambdaExpression ::= LambdaParameters '->'  LambdaBody  
+
+LambdaParameter ::= VariableModifierStar LambdaParameterType VariableDeclaratorId  
+    |  VariableArityParameter  
+
+LambdaParameterList ::= LambdaParameter CommaLambdaParameterStar  
+    |  'Identifier'  CommaIdentifierStar  
+
+LambdaParameterListOpt ::= LambdaParameterList  
+    |  #  
+
+LambdaParameterType ::= UnannType  
+    |  'var'   
+
+LambdaParameters ::= '('  LambdaParameterListOpt ')'   
+    |  'Identifier'   
+
+LeftHandSide ::= ExpressionName  
+    |  FieldAccess  
+    |  ArrayAccess  
+
+Literal ::= 'IntegerLiteral'   
+    |  'FloatingPointLiteral'   
+    |  'BooleanLiteral'   
+    |  'CharacterLiteral'   
+    |  'StringLiteral'   
+    |  'TextBlock'   
+    |  'NullLiteral'   
+
+LocalClassOrInterfaceDeclaration ::= ClassDeclaration  
+    |  NormalInterfaceDeclaration  
+
+LocalVariableDeclaration ::= VariableModifierStar LocalVariableType VariableDeclaratorList  
+
+LocalVariableDeclarationStatement ::= LocalVariableDeclaration ';'   
+
+LocalVariableType ::= UnannType  
+    |  'var'   
+
+MarkerAnnotation ::= '@'  TypeName  
+
+MethodBody ::= Block  
+    |  ';'   
+
+MethodDeclaration ::= MethodModifierStar MethodHeader MethodBody  
+
+MethodDeclarator ::= 'Identifier'  '('  ReceiverParameterCommaOpt FormalParameterListOpt ')'  DimsOpt  
+
+MethodHeader ::= Result MethodDeclarator ThrowsOpt  
+    |  TypeParameters AnnotationStar Result MethodDeclarator ThrowsOpt  
+
+MethodInvocation ::= MethodName '('  ArgumentListOpt ')'   
+    |  TypeName '.'  TypeArgumentsOpt 'Identifier'  '('  ArgumentListOpt ')'   
+    |  ExpressionName '.'  TypeArgumentsOpt 'Identifier'  '('  ArgumentListOpt ')'   
+    |  Primary '.'  TypeArgumentsOpt 'Identifier'  '('  ArgumentListOpt ')'   
+    |  'super'  '.'  TypeArgumentsOpt 'Identifier'  '('  ArgumentListOpt ')'   
+    |  TypeName '.'  'super'  '.'  TypeArgumentsOpt 'Identifier'  '('  ArgumentListOpt ')'   
+
+MethodModifier ::= Annotation  
+    |  'public'   
+    |  'protected'   
+    |  'private'   
+    |  'abstract'   
+    |  'static'   
+    |  'final'   
+    |  'synchronized'   
+    |  'native'   
+    |  'strictfp'   
+
+MethodModifierStar ::= MethodModifier MethodModifierStar  
+    |  #  
+
+MethodName ::= 'UnqualifiedMethodIdentifier'   
+
+MethodReference ::= ExpressionName '::'  TypeArgumentsOpt 'Identifier'   
+    |  Primary '::'  TypeArgumentsOpt 'Identifier'   
+    |  ReferenceType '::'  TypeArgumentsOpt 'Identifier'   
+    |  'super'  '::'  TypeArgumentsOpt 'Identifier'   
+    |  TypeName '.'  'super'  '::'  TypeArgumentsOpt 'Identifier'   
+    |  ClassType '::'  TypeArgumentsOpt 'new'   
+    |  ArrayType '::'  'new'   
+
+ModularCompilationUnit ::= ImportDeclarationStar ModuleDeclaration  
+
+ModuleDeclaration ::= AnnotationStar openOpt 'module'  'Identifier'  DotIdentifierStar '{'  ModuleDirectiveStar '}'   
+
+ModuleDirective ::= 'requires'  RequiresModifierStar ModuleName ';'   
+    |  'exports'  PackageName ToModuleNameCommaModuleNameOptStar ';'   
+    |  'opens'  PackageName ToModuleNameCommaModuleNameOptStar ';'   
+    |  'uses'  TypeName ';'   
+    |  'provides'  TypeName 'with'  TypeName CommaTypeNameStar ';'   
+
+ModuleDirectiveStar ::= ModuleDirective ModuleDirectiveStar  
+    |  #  
+
+ModuleName ::= 'Identifier'   
+    |  ModuleName '.'  'Identifier'   
+
+MultiplicativeExpression ::= UnaryExpression  
+    |  MultiplicativeExpression '*'  UnaryExpression  
+    |  MultiplicativeExpression '/'  UnaryExpression  
+    |  MultiplicativeExpression '%'  UnaryExpression  
+
+NormalAnnotation ::= '@'  TypeName '('  ElementValuePairListOpt ')'   
+
+NormalClassDeclaration ::= ClassModifierStar 'class'  'TypeIdentifier'  TypeParametersOpt ClassExtendsOpt ClassImplementsOpt ClassPermitsOpt ClassBody  
+
+NormalInterfaceDeclaration ::= InterfaceModifierStar 'interface'  'TypeIdentifier'  TypeParametersOpt InterfaceExtendsOpt InterfacePermitsOpt InterfaceBody  
+
+NumericType ::= IntegralType  
+    |  FloatingPointType  
+
+OrdinaryCompilationUnit ::= PackageDeclarationOpt ImportDeclarationStar TopLevelClassOrInterfaceDeclarationStar  
+
+PackageDeclaration ::= PackageModifierStar 'package'  'Identifier'  DotIdentifierStar ';'   
+
+PackageDeclarationOpt ::= PackageDeclaration  
+    |  #  
+
+PackageModifier ::= Annotation  
+
+PackageModifierStar ::= PackageModifier PackageModifierStar  
+    |  #  
+
+PackageName ::= 'Identifier'   
+    |  PackageName '.'  'Identifier'   
+
+PackageOrTypeName ::= 'Identifier'   
+    |  PackageOrTypeName '.'  'Identifier'   
+
+ParanArgumentListOptStar ::= '('  ArgumentListOpt ')'  ParanArgumentListOptStar  
+    |  #  
+
+Pattern ::= TypePattern  
+
+PostDecrementExpression ::= PostfixExpression '--'   
+
+PostIncrementExpression ::= PostfixExpression '++'   
+
+PostfixExpression ::= Primary  
+    |  ExpressionName  
+    |  PostIncrementExpression  
+    |  PostDecrementExpression  
+
+PreDecrementExpression ::= '--'  UnaryExpression  
+
+PreIncrementExpression ::= '++'  UnaryExpression  
+
+Primary ::= PrimaryNoNewArray  
+    |  ArrayCreationExpression  
+
+PrimaryNoNewArray ::= Literal  
+    |  ClassLiteral  
+    |  'this'   
+    |  TypeName '.'  'this'   
+    |  '('  Expression ')'   
+    |  ClassInstanceCreationExpression  
+    |  FieldAccess  
+    |  ArrayAccess  
+    |  MethodInvocation  
+    |  MethodReference  
+
+PrimitiveType ::= AnnotationStar NumericType  
+    |  AnnotationStar 'boolean'   
+
+ReceiverParameter ::= AnnotationStar UnannType IdentifierDotOpt 'this'   
+
+ReceiverParameterCommaOpt ::= ReceiverParameter ','   
+    |  #  
+
+RecordBody ::= '{'  RecordBodyDeclarationStar '}'   
+
+RecordBodyDeclaration ::= ClassBodyDeclaration  
+    |  CompactConstructorDeclaration  
+
+RecordBodyDeclarationStar ::= RecordBodyDeclaration RecordBodyDeclarationStar  
+    |  #  
+
+RecordComponent ::= RecordComponentModifierStar UnannType 'Identifier'   
+    |  VariableArityRecordComponent  
+
+RecordComponentList ::= RecordComponent CommaRecordComponentStar  
+
+RecordComponentListOpt ::= RecordComponentList  
+    |  #  
+
+RecordComponentModifier ::= Annotation  
+
+RecordComponentModifierStar ::= RecordComponentModifier RecordComponentModifierStar  
+    |  #  
+
+RecordDeclaration ::= ClassModifierStar 'record'  'TypeIdentifier'  TypeParametersOpt RecordHeader ClassImplementsOpt RecordBody  
+
+RecordHeader ::= '('  RecordComponentListOpt ')'   
+
+ReferenceType ::= ClassOrInterfaceType  
+    |  TypeVariable  
+    |  ArrayType  
+
+RelationalExpression ::= ShiftExpression  
+    |  RelationalExpression '<'  ShiftExpression  
+    |  RelationalExpression '>'  ShiftExpression  
+    |  RelationalExpression '<='  ShiftExpression  
+    |  RelationalExpression '>='  ShiftExpression  
+    |  InstanceofExpression  
+
+RequiresModifier ::= 'transitive'   
+    |  'static'   
+
+RequiresModifierStar ::= RequiresModifier RequiresModifierStar  
+    |  #  
+
+Resource ::= LocalVariableDeclaration  
+    |  'VariableAccess'   
+
+ResourceList ::= Resource SemicolonResourceStar  
+
+ResourceSpecification ::= '('  ResourceList SemicolonOpt ')'   
+
+Result ::= UnannType  
+    |  'void'   
+
+ReturnStatement ::= 'return'  ExpressionOpt ';'   
+
+SemicolonOpt ::= ';'   
+    |  #  
+
+SemicolonResourceStar ::= ';'  Resource SemicolonResourceStar  
+    |  #  
+
+ShiftExpression ::= AdditiveExpression  
+    |  ShiftExpression '<<'  AdditiveExpression  
+    |  ShiftExpression '>>'  AdditiveExpression  
+    |  ShiftExpression '>>>'  AdditiveExpression  
+
+SimpleTypeName ::= 'TypeIdentifier'   
+
+SingleElementAnnotation ::= '@'  TypeName '('  ElementValue ')'   
+
+SingleStaticImportDeclaration ::= 'import'  'static'  TypeName '.'  'Identifier'  ';'   
+
+SingleTypeImportDeclaration ::= 'import'  TypeName ';'   
+
+Statement ::= StatementWithoutTrailingSubstatement  
+    |  LabeledStatement  
+    |  IfThenStatement  
+    |  IfThenElseStatement  
+    |  WhileStatement  
+    |  ForStatement  
+
+StatementExpression ::= Assignment  
+    |  PreIncrementExpression  
+    |  PreDecrementExpression  
+    |  PostIncrementExpression  
+    |  PostDecrementExpression  
+    |  MethodInvocation  
+    |  ClassInstanceCreationExpression  
+
+StatementExpressionList ::= StatementExpression CommaStatementExpressionStar  
+
+StatementNoShortIf ::= StatementWithoutTrailingSubstatement  
+    |  LabeledStatementNoShortIf  
+    |  IfThenElseStatementNoShortIf  
+    |  WhileStatementNoShortIf  
+    |  ForStatementNoShortIf  
+
+StatementWithoutTrailingSubstatement ::= Block  
+    |  EmptyStatement  
+    |  ExpressionStatement  
+    |  AssertStatement  
+    |  SwitchStatement  
+    |  DoStatement  
+    |  BreakStatement  
+    |  ContinueStatement  
+    |  ReturnStatement  
+    |  SynchronizedStatement  
+    |  ThrowStatement  
+    |  TryStatement  
+    |  YieldStatement  
+
+StaticImportOnDemandDeclaration ::= 'import'  'static'  TypeName '.'  '*'  ';'   
+
+StaticInitializer ::= 'static'  Block  
+
+SwitchBlock ::= '{'  SwitchRule SwitchRuleStar '}'   
+    |  '{'  SwitchBlockStatementGroupStar SwitchLabelColonStar '}'   
+
+SwitchBlockStatementGroup ::= SwitchLabel ':'  SwitchLabelColonStar BlockStatements  
+
+SwitchBlockStatementGroupStar ::= SwitchBlockStatementGroup SwitchBlockStatementGroupStar  
+    |  #  
+
+SwitchExpression ::= 'switch'  '('  Expression ')'  SwitchBlock  
+
+SwitchLabel ::= 'case'  CaseConstant CommaCaseConstantStar  
+    |  'default'   
+
+SwitchLabelColonStar ::= SwitchLabel ':'  SwitchLabelColonStar  
+    |  #  
+
+SwitchRule ::= SwitchLabel '->'  Expression ';'   
+    |  SwitchLabel '->'  Block  
+    |  SwitchLabel '->'  ThrowStatement  
+
+SwitchRuleStar ::= SwitchRule SwitchRuleStar  
+    |  #  
+
+SwitchStatement ::= 'switch'  '('  Expression ')'  SwitchBlock  
+
+SynchronizedStatement ::= 'synchronized'  '('  Expression ')'  Block  
+
+ThrowStatement ::= 'throw'  Expression ';'   
+
+Throws ::= 'throws'  ExceptionTypeList  
+
+ThrowsOpt ::= Throws  
+    |  #  
+
+ToModuleNameCommaModuleNameOptStar ::= 'to'  ModuleName CommaModuleNameOpt ToModuleNameCommaModuleNameOptStar  
+    |  #  
+
+TopLevelClassOrInterfaceDeclaration ::= ClassDeclaration  
+    |  InterfaceDeclaration  
+    |  ';'   
+
+TopLevelClassOrInterfaceDeclarationStar ::= TopLevelClassOrInterfaceDeclaration TopLevelClassOrInterfaceDeclarationStar  
+    |  #  
+
+TryStatement ::= 'try'  Block Catches  
+    |  'try'  Block CatchesOpt Finally  
+    |  TryWithResourcesStatement  
+
+TryWithResourcesStatement ::= 'try'  ResourceSpecification Block CatchesOpt FinallyOpt  
+
+TypeArgument ::= ReferenceType  
+    |  Wildcard  
+
+TypeArgumentList ::= TypeArgument CommaTypeArgumentStar  
+
+TypeArguments ::= '<'  TypeArgumentList '>'   
+
+TypeArgumentsOpt ::= TypeArguments  
+    |  #  
+
+TypeArgumentsOrDiamond ::= TypeArguments  
+    |  '<>'   
+
+TypeArgumentsOrDiamondOpt ::= TypeArgumentsOrDiamond  
+    |  #  
+
+TypeBound ::= 'extends'  TypeVariable  
+    |  'extends'  ClassOrInterfaceType AdditionalBoundStar  
+
+TypeBoundOpt ::= TypeBound  
+    |  #  
+
+TypeImportOnDemandDeclaration ::= 'import'  PackageOrTypeName '.'  '*'  ';'   
+
+TypeName ::= 'TypeIdentifier'   
+    |  PackageOrTypeName '.'  'TypeIdentifier'   
+
+TypeParameter ::= TypeParameterModifierStar 'TypeIdentifier'  TypeBoundOpt  
+
+TypeParameterList ::= TypeParameter CommaTypeParameterStar  
+
+TypeParameterModifier ::= Annotation  
+
+TypeParameterModifierStar ::= TypeParameterModifier TypeParameterModifierStar  
+    |  #  
+
+TypeParameters ::= '<'  TypeParameterList '>'   
+
+TypeParametersOpt ::= TypeParameters  
+    |  #  
+
+TypePattern ::= LocalVariableDeclaration  
+
+TypeVariable ::= AnnotationStar 'TypeIdentifier'   
+
+UnannArrayType ::= UnannPrimitiveType Dims  
+    |  UnannClassOrInterfaceType Dims  
+    |  UnannTypeVariable Dims  
+
+UnannClassOrInterfaceType ::= UnannClassType  
+    |  UnannInterfaceType  
+
+UnannClassType ::= 'TypeIdentifier'  TypeArgumentsOpt  
+    |  PackageName '.'  AnnotationStar 'TypeIdentifier'  TypeArgumentsOpt  
+    |  UnannClassOrInterfaceType '.'  AnnotationStar 'TypeIdentifier'  TypeArgumentsOpt  
+
+UnannInterfaceType ::= UnannClassType  
+
+UnannPrimitiveType ::= NumericType  
+    |  'boolean'   
+
+UnannReferenceType ::= UnannClassOrInterfaceType  
+    |  UnannTypeVariable  
+    |  UnannArrayType  
+
+UnannType ::= UnannPrimitiveType  
+    |  UnannReferenceType  
+
+UnannTypeVariable ::= 'TypeIdentifier'   
+
+UnaryExpression ::= PreIncrementExpression  
+    |  PreDecrementExpression  
+    |  '+'  UnaryExpression  
+    |  '-'  UnaryExpression  
+    |  UnaryExpressionNotPlusMinus  
+
+UnaryExpressionNotPlusMinus ::= PostfixExpression  
+    |  '~'  UnaryExpression  
+    |  '!'  UnaryExpression  
+    |  CastExpression  
+    |  SwitchExpression  
+
+UnqualifiedClassInstanceCreationExpression ::= 'new'  TypeArgumentsOpt ClassOrInterfaceTypeToInstantiate '('  ArgumentListOpt ')'  ClassBodyOpt  
+
+VariableArityParameter ::= VariableModifierStar UnannType AnnotationStar '...'  'Identifier'   
+
+VariableArityRecordComponent ::= RecordComponentModifierStar UnannType AnnotationStar '...'  'Identifier'   
+
+VariableDeclarator ::= VariableDeclaratorId EqualVariableInitializerOpt  
+
+VariableDeclaratorId ::= 'Identifier'  DimsOpt  
+
+VariableDeclaratorList ::= VariableDeclarator CommaVariableDeclaratorStar  
+
+VariableInitializer ::= Expression  
+    |  ArrayInitializer  
+
+VariableInitializerList ::= VariableInitializer CommaVariableInitializerStar  
+
+VariableInitializerListOpt ::= VariableInitializerList  
+    |  #  
+
+VariableModifier ::= Annotation  
+    |  'final'   
+
+VariableModifierStar ::= VariableModifier VariableModifierStar  
+    |  #  
+
+WhileStatement ::= 'while'  '('  Expression ')'  Statement  
+
+WhileStatementNoShortIf ::= 'while'  '('  Expression ')'  StatementNoShortIf  
+
+Wildcard ::= AnnotationStar '?'  WildcardBoundsOpt  
+
+WildcardBounds ::= 'extends'  ReferenceType  
+    |  'super'  ReferenceType  
+
+WildcardBoundsOpt ::= WildcardBounds  
+    |  #  
+
+YieldStatement ::= 'yield'  Expression ';'   
+
+openOpt ::= 'open'   
+    | #  

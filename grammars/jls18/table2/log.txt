@@ -1,0 +1,1305 @@
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>echo 22:39:29.86 
+22:39:29.86
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call grammarWrite jls18bnfV3.art 
+Print lexer, parser and token grammars corresponding to jls18bnfV3.art
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -Xss500m -classpath .;\csle\dev\art\art.jar uk.ac.rhul.cs.csle.art.v3.ARTV3 !grammarWrite jls18bnfV3.art 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call lexDFA ListViewTest.java 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>copy ListViewTest.java test.str 
+        1 file(s) copied.
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artv3 !lexDFA ARTLexerGrammar.art  
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -Xss500m -classpath .;\csle\dev\art\art.jar uk.ac.rhul.cs.csle.art.v3.ARTV3 !lexDFA ARTLexerGrammar.art 
+** !lexDFA NFA states: 11602, 5ms
+** !lexDFA DFA states: 2520, 1988ms
+** Accept test.str 64540 bytes in 1807ms, 35.72kbyte/s
+** Data DFA,Accept,test.str,64540,1807,35.72kbyte/s
+** Accept test.str 64540 bytes in 1550ms, 41.64kbyte/s
+** Data DFA,Accept,test.str,64540,1550,41.64kbyte/s
+** Accept test.str 64540 bytes in 1464ms, 44.08kbyte/s
+** Data DFA,Accept,test.str,64540,1464,44.08kbyte/s
+** Accept test.str 64540 bytes in 1310ms, 49.27kbyte/s
+** Data DFA,Accept,test.str,64540,1310,49.27kbyte/s
+** Accept test.str 64540 bytes in 1314ms, 49.12kbyte/s
+** Data DFA,Accept,test.str,64540,1314,49.12kbyte/s
+** Accept test.str 64540 bytes in 1277ms, 50.54kbyte/s
+** Data DFA,Accept,test.str,64540,1277,50.54kbyte/s
+** Accept test.str 64540 bytes in 1327ms, 48.64kbyte/s
+** Data DFA,Accept,test.str,64540,1327,48.64kbyte/s
+** Accept test.str 64540 bytes in 1353ms, 47.70kbyte/s
+** Data DFA,Accept,test.str,64540,1353,47.70kbyte/s
+** Accept test.str 64540 bytes in 1279ms, 50.46kbyte/s
+** Data DFA,Accept,test.str,64540,1279,50.46kbyte/s
+** Accept test.str 64540 bytes in 1315ms, 49.08kbyte/s
+** Data DFA,Accept,test.str,64540,1315,49.08kbyte/s
+** Accept test.str 64540 bytes in 1248ms, 51.71kbyte/s
+** Data DFA,Accept,test.str,64540,1248,51.71kbyte/s
+** Accept test.str 64540 bytes in 1342ms, 48.09kbyte/s
+** Data DFA,Accept,test.str,64540,1342,48.09kbyte/s
+** Accept test.str 64540 bytes in 1258ms, 51.30kbyte/s
+** Data DFA,Accept,test.str,64540,1258,51.30kbyte/s
+** Accept test.str 64540 bytes in 1278ms, 50.50kbyte/s
+** Data DFA,Accept,test.str,64540,1278,50.50kbyte/s
+** Accept test.str 64540 bytes in 1295ms, 49.84kbyte/s
+** Data DFA,Accept,test.str,64540,1295,49.84kbyte/s
+** Accept test.str 64540 bytes in 1293ms, 49.91kbyte/s
+** Data DFA,Accept,test.str,64540,1293,49.91kbyte/s
+** Accept test.str 64540 bytes in 1267ms, 50.94kbyte/s
+** Data DFA,Accept,test.str,64540,1267,50.94kbyte/s
+** Accept test.str 64540 bytes in 1257ms, 51.34kbyte/s
+** Data DFA,Accept,test.str,64540,1257,51.34kbyte/s
+** Accept test.str 64540 bytes in 1260ms, 51.22kbyte/s
+** Data DFA,Accept,test.str,64540,1260,51.22kbyte/s
+** Accept test.str 64540 bytes in 1378ms, 46.84kbyte/s
+** Data DFA,Accept,test.str,64540,1378,46.84kbyte/s
+** Accept test.str 64540 bytes in 1288ms, 50.11kbyte/s
+** Data DFA,Accept,test.str,64540,1288,50.11kbyte/s
+** Accept test.str 64540 bytes in 1300ms, 49.65kbyte/s
+** Data DFA,Accept,test.str,64540,1300,49.65kbyte/s
+** Accept test.str 64540 bytes in 1259ms, 51.26kbyte/s
+** Data DFA,Accept,test.str,64540,1259,51.26kbyte/s
+** Accept test.str 64540 bytes in 1282ms, 50.34kbyte/s
+** Data DFA,Accept,test.str,64540,1282,50.34kbyte/s
+** Accept test.str 64540 bytes in 1291ms, 49.99kbyte/s
+** Data DFA,Accept,test.str,64540,1291,49.99kbyte/s
+** Accept test.str 64540 bytes in 1257ms, 51.34kbyte/s
+** Data DFA,Accept,test.str,64540,1257,51.34kbyte/s
+** Accept test.str 64540 bytes in 1266ms, 50.98kbyte/s
+** Data DFA,Accept,test.str,64540,1266,50.98kbyte/s
+** Accept test.str 64540 bytes in 1262ms, 51.14kbyte/s
+** Data DFA,Accept,test.str,64540,1262,51.14kbyte/s
+** Accept test.str 64540 bytes in 1266ms, 50.98kbyte/s
+** Data DFA,Accept,test.str,64540,1266,50.98kbyte/s
+** Accept test.str 64540 bytes in 1257ms, 51.34kbyte/s
+** Data DFA,Accept,test.str,64540,1257,51.34kbyte/s
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call lexGLL ListViewTest.java !tweLongest !twePriority !tweDead 
+Use a GLL recogniser to build a TWE set
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -Xss500m -classpath .;\csle\dev\art\art.jar uk.ac.rhul.cs.csle.art.v3.ARTV3 artLexerGrammar.art artChooseLexTWE.art !gllTWEGeneratorPool 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artV3CompileGenerated 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>javac -classpath .;\csle\dev\art/art.jar ARTGeneratedParser.java ARTGeneratedLexer.java 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>rem call \csle\dev\art\artV3TestGenerated !tweDump ListViewTest.java !tweLongest !twePriority !tweDead       
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artV3TestGenerated !tweWrite ListViewTest.java !tweLongest !twePriority !tweDead       
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated !tweWrite ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+Writing TWE set
+TWE set output complete
+** Accept ListViewTest.java 64540 bytes in 2325ms, 27.76kByte/s with choose time 644ms
+** Data GLL,Accept,ListViewTest.java,64540,2325,27.76kByte/s,644
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2488ms, 25.94kByte/s with choose time 670ms
+** Data GLL,Accept,ListViewTest.java,64540,2488,25.94kByte/s,670
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2448ms, 26.36kByte/s with choose time 634ms
+** Data GLL,Accept,ListViewTest.java,64540,2448,26.36kByte/s,634
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2291ms, 28.17kByte/s with choose time 644ms
+** Data GLL,Accept,ListViewTest.java,64540,2291,28.17kByte/s,644
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2304ms, 28.01kByte/s with choose time 637ms
+** Data GLL,Accept,ListViewTest.java,64540,2304,28.01kByte/s,637
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2188ms, 29.50kByte/s with choose time 635ms
+** Data GLL,Accept,ListViewTest.java,64540,2188,29.50kByte/s,635
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2213ms, 29.16kByte/s with choose time 633ms
+** Data GLL,Accept,ListViewTest.java,64540,2213,29.16kByte/s,633
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2195ms, 29.40kByte/s with choose time 622ms
+** Data GLL,Accept,ListViewTest.java,64540,2195,29.40kByte/s,622
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2247ms, 28.72kByte/s with choose time 624ms
+** Data GLL,Accept,ListViewTest.java,64540,2247,28.72kByte/s,624
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2206ms, 29.26kByte/s with choose time 631ms
+** Data GLL,Accept,ListViewTest.java,64540,2206,29.26kByte/s,631
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2164ms, 29.82kByte/s with choose time 638ms
+** Data GLL,Accept,ListViewTest.java,64540,2164,29.82kByte/s,638
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2286ms, 28.23kByte/s with choose time 629ms
+** Data GLL,Accept,ListViewTest.java,64540,2286,28.23kByte/s,629
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2265ms, 28.49kByte/s with choose time 589ms
+** Data GLL,Accept,ListViewTest.java,64540,2265,28.49kByte/s,589
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2318ms, 27.84kByte/s with choose time 631ms
+** Data GLL,Accept,ListViewTest.java,64540,2318,27.84kByte/s,631
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2172ms, 29.71kByte/s with choose time 626ms
+** Data GLL,Accept,ListViewTest.java,64540,2172,29.71kByte/s,626
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2243ms, 28.77kByte/s with choose time 657ms
+** Data GLL,Accept,ListViewTest.java,64540,2243,28.77kByte/s,657
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2295ms, 28.12kByte/s with choose time 647ms
+** Data GLL,Accept,ListViewTest.java,64540,2295,28.12kByte/s,647
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2253ms, 28.65kByte/s with choose time 642ms
+** Data GLL,Accept,ListViewTest.java,64540,2253,28.65kByte/s,642
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2305ms, 28.00kByte/s with choose time 633ms
+** Data GLL,Accept,ListViewTest.java,64540,2305,28.00kByte/s,633
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2185ms, 29.54kByte/s with choose time 622ms
+** Data GLL,Accept,ListViewTest.java,64540,2185,29.54kByte/s,622
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2199ms, 29.35kByte/s with choose time 631ms
+** Data GLL,Accept,ListViewTest.java,64540,2199,29.35kByte/s,631
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2191ms, 29.46kByte/s with choose time 642ms
+** Data GLL,Accept,ListViewTest.java,64540,2191,29.46kByte/s,642
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2239ms, 28.83kByte/s with choose time 640ms
+** Data GLL,Accept,ListViewTest.java,64540,2239,28.83kByte/s,640
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2274ms, 28.38kByte/s with choose time 666ms
+** Data GLL,Accept,ListViewTest.java,64540,2274,28.38kByte/s,666
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2185ms, 29.54kByte/s with choose time 629ms
+** Data GLL,Accept,ListViewTest.java,64540,2185,29.54kByte/s,629
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2227ms, 28.98kByte/s with choose time 632ms
+** Data GLL,Accept,ListViewTest.java,64540,2227,28.98kByte/s,632
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2168ms, 29.77kByte/s with choose time 610ms
+** Data GLL,Accept,ListViewTest.java,64540,2168,29.77kByte/s,610
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2186ms, 29.52kByte/s with choose time 614ms
+** Data GLL,Accept,ListViewTest.java,64540,2186,29.52kByte/s,614
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2241ms, 28.80kByte/s with choose time 576ms
+** Data GLL,Accept,ListViewTest.java,64540,2241,28.80kByte/s,576
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 2229ms, 28.95kByte/s with choose time 564ms
+** Data GLL,Accept,ListViewTest.java,64540,2229,28.95kByte/s,564
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call parseMGLL  ListViewTest.java !parseCounts 
+Use an MGLL parser to build a multi-SPPF
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -Xss500m -classpath .;\csle\dev\art\art.jar uk.ac.rhul.cs.csle.art.v3.ARTV3 artParserGrammar.art artChooseParseSPPF.art artChooseParseTWE.art !mgllGeneratorPool 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artV3CompileGenerated 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>javac -classpath .;\csle\dev\art/art.jar ARTGeneratedParser.java ARTGeneratedLexer.java 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artV3TestGenerated ListViewTest.java !parseCounts 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !parseCounts 
+** Accept ListViewTest.java 64540 bytes in 932ms, 69.25kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,932,69.25kByte/s,
+ARTGeneratedParser,BNF,ListViewTest.java,accept,--,Tue Dec 20 22:42:18 GMT 2022,64539,MGLL Gen, Setup, 0.008, Lex, 0.399, Parse, 1.331, Derivation select, 0.000, Attribute evaluate, 0.000, eSOS interpret, 0.000,descriptor,0,2003859,sppfNode,0,162845,sppfPackedNode,0,139075,gssNode,0,317446,gssEdge,0,698737,popElement,0,235948,testRepepeat,0,0,clusterElement,0,0,sppfEpsilonNodes,17878,sppfTerminalNodes,0,sppfNonterminalNodes,244056,sppfIntermediateNodes,63754,sppfOtherNodes,2,sppfAmbiguityNodes,8952,poppingDescriptors,253958,nonpoppingDescriptors,1749901,primaryPops,0,contingentPops,0,softPageFaults,-1,hardPagefaults,-1,hashCollisions,306341,hashResizes,0,hash0,5366615,hash1,2134675,hash2,538713,hash3,95052,hash4,13150,hash5+,1576,descriptorH,0:1993766 1:1138375(56.81%) 2:321567(16.05%) 3:60855(3.04%) 4:8659(0.43%) 5:907(0.05%) 6:93(0.00%) 7:8(0.00%) ,sppfNodeH,0:221379 1:103615(63.63%) 2:23514(14.44%) 3:3498(2.15%) 4:380(0.23%) 5:34(0.02%) 6:3(0.00%) ,sppfPackedNodeH,0:237521 1:93675(67.36%) 2:18567(13.35%) 3:2395(1.72%) 4:244(0.18%) 5:21(0.02%) ,gssNodeH,0:449362 1:201946(63.62%) 2:46023(14.50%) 3:6679(2.10%) 4:769(0.24%) 5:61(0.02%) 6:6(0.00%) ,gssEdgeH,0:1563715 1:428394(61.31%) 2:100690(14.41%) 3:18476(2.64%) 4:2835(0.41%) 5:377(0.05%) 6:47(0.01%) 7:4(0.00%) ,popElementH,0:504397 1:168670(71.49%) 2:28352(12.02%) 3:3149(1.33%) 4:263(0.11%) 5:15(0.01%) ,testRepeatElementH,0:352423 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 878ms, 73.51kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,878,73.51kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 933ms, 69.17kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,933,69.17kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 979ms, 65.92kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,979,65.92kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 928ms, 69.55kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,928,69.55kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 939ms, 68.73kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,939,68.73kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 969ms, 66.60kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,969,66.60kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 939ms, 68.73kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,939,68.73kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 940ms, 68.66kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,940,68.66kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 881ms, 73.26kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,881,73.26kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 954ms, 67.65kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,954,67.65kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 979ms, 65.92kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,979,65.92kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 1009ms, 63.96kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,1009,63.96kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 933ms, 69.17kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,933,69.17kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 895ms, 72.11kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,895,72.11kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 1004ms, 64.28kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,1004,64.28kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 933ms, 69.17kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,933,69.17kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 1090ms, 59.21kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,1090,59.21kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 961ms, 67.16kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,961,67.16kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 951ms, 67.87kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,951,67.87kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 1034ms, 62.42kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,1034,62.42kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 1006ms, 64.16kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,1006,64.16kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 1034ms, 62.42kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,1034,62.42kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 1019ms, 63.34kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,1019,63.34kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 1047ms, 61.64kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,1047,61.64kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 1055ms, 61.18kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,1055,61.18kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 1022ms, 63.15kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,1022,63.15kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 1019ms, 63.34kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,1019,63.34kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 1187ms, 54.37kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,1187,54.37kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 1054ms, 61.23kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,1054,61.23kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call grammarWrite jls18bnfV3Iden.art 
+Print lexer, parser and token grammars corresponding to jls18bnfV3Iden.art
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -Xss500m -classpath .;\csle\dev\art\art.jar uk.ac.rhul.cs.csle.art.v3.ARTV3 !grammarWrite jls18bnfV3Iden.art 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call lexDFA ListViewTest.java 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>copy ListViewTest.java test.str 
+        1 file(s) copied.
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artv3 !lexDFA ARTLexerGrammar.art  
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -Xss500m -classpath .;\csle\dev\art\art.jar uk.ac.rhul.cs.csle.art.v3.ARTV3 !lexDFA ARTLexerGrammar.art 
+** !lexDFA NFA states: 10534, 6ms
+** !lexDFA DFA states: 2520, 1325ms
+** Accept test.str 64540 bytes in 901ms, 71.63kbyte/s
+** Data DFA,Accept,test.str,64540,901,71.63kbyte/s
+** Accept test.str 64540 bytes in 926ms, 69.70kbyte/s
+** Data DFA,Accept,test.str,64540,926,69.70kbyte/s
+** Accept test.str 64540 bytes in 744ms, 86.75kbyte/s
+** Data DFA,Accept,test.str,64540,744,86.75kbyte/s
+** Accept test.str 64540 bytes in 751ms, 85.94kbyte/s
+** Data DFA,Accept,test.str,64540,751,85.94kbyte/s
+** Accept test.str 64540 bytes in 738ms, 87.45kbyte/s
+** Data DFA,Accept,test.str,64540,738,87.45kbyte/s
+** Accept test.str 64540 bytes in 744ms, 86.75kbyte/s
+** Data DFA,Accept,test.str,64540,744,86.75kbyte/s
+** Accept test.str 64540 bytes in 729ms, 88.53kbyte/s
+** Data DFA,Accept,test.str,64540,729,88.53kbyte/s
+** Accept test.str 64540 bytes in 731ms, 88.29kbyte/s
+** Data DFA,Accept,test.str,64540,731,88.29kbyte/s
+** Accept test.str 64540 bytes in 726ms, 88.90kbyte/s
+** Data DFA,Accept,test.str,64540,726,88.90kbyte/s
+** Accept test.str 64540 bytes in 743ms, 86.86kbyte/s
+** Data DFA,Accept,test.str,64540,743,86.86kbyte/s
+** Accept test.str 64540 bytes in 758ms, 85.15kbyte/s
+** Data DFA,Accept,test.str,64540,758,85.15kbyte/s
+** Accept test.str 64540 bytes in 732ms, 88.17kbyte/s
+** Data DFA,Accept,test.str,64540,732,88.17kbyte/s
+** Accept test.str 64540 bytes in 741ms, 87.10kbyte/s
+** Data DFA,Accept,test.str,64540,741,87.10kbyte/s
+** Accept test.str 64540 bytes in 753ms, 85.71kbyte/s
+** Data DFA,Accept,test.str,64540,753,85.71kbyte/s
+** Accept test.str 64540 bytes in 724ms, 89.14kbyte/s
+** Data DFA,Accept,test.str,64540,724,89.14kbyte/s
+** Accept test.str 64540 bytes in 717ms, 90.01kbyte/s
+** Data DFA,Accept,test.str,64540,717,90.01kbyte/s
+** Accept test.str 64540 bytes in 691ms, 93.40kbyte/s
+** Data DFA,Accept,test.str,64540,691,93.40kbyte/s
+** Accept test.str 64540 bytes in 704ms, 91.68kbyte/s
+** Data DFA,Accept,test.str,64540,704,91.68kbyte/s
+** Accept test.str 64540 bytes in 684ms, 94.36kbyte/s
+** Data DFA,Accept,test.str,64540,684,94.36kbyte/s
+** Accept test.str 64540 bytes in 677ms, 95.33kbyte/s
+** Data DFA,Accept,test.str,64540,677,95.33kbyte/s
+** Accept test.str 64540 bytes in 680ms, 94.91kbyte/s
+** Data DFA,Accept,test.str,64540,680,94.91kbyte/s
+** Accept test.str 64540 bytes in 675ms, 95.61kbyte/s
+** Data DFA,Accept,test.str,64540,675,95.61kbyte/s
+** Accept test.str 64540 bytes in 675ms, 95.61kbyte/s
+** Data DFA,Accept,test.str,64540,675,95.61kbyte/s
+** Accept test.str 64540 bytes in 703ms, 91.81kbyte/s
+** Data DFA,Accept,test.str,64540,703,91.81kbyte/s
+** Accept test.str 64540 bytes in 738ms, 87.45kbyte/s
+** Data DFA,Accept,test.str,64540,738,87.45kbyte/s
+** Accept test.str 64540 bytes in 775ms, 83.28kbyte/s
+** Data DFA,Accept,test.str,64540,775,83.28kbyte/s
+** Accept test.str 64540 bytes in 706ms, 91.42kbyte/s
+** Data DFA,Accept,test.str,64540,706,91.42kbyte/s
+** Accept test.str 64540 bytes in 720ms, 89.64kbyte/s
+** Data DFA,Accept,test.str,64540,720,89.64kbyte/s
+** Accept test.str 64540 bytes in 719ms, 89.76kbyte/s
+** Data DFA,Accept,test.str,64540,719,89.76kbyte/s
+** Accept test.str 64540 bytes in 721ms, 89.51kbyte/s
+** Data DFA,Accept,test.str,64540,721,89.51kbyte/s
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call lexGLL ListViewTest.java !tweLongest !twePriority !tweDead 
+Use a GLL recogniser to build a TWE set
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -Xss500m -classpath .;\csle\dev\art\art.jar uk.ac.rhul.cs.csle.art.v3.ARTV3 artLexerGrammar.art artChooseLexTWE.art !gllTWEGeneratorPool 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artV3CompileGenerated 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>javac -classpath .;\csle\dev\art/art.jar ARTGeneratedParser.java ARTGeneratedLexer.java 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>rem call \csle\dev\art\artV3TestGenerated !tweDump ListViewTest.java !tweLongest !twePriority !tweDead       
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artV3TestGenerated !tweWrite ListViewTest.java !tweLongest !twePriority !tweDead       
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated !tweWrite ListViewTest.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+Writing TWE set
+TWE set output complete
+** Accept ListViewTest.java 64540 bytes in 1115ms, 57.88kByte/s with choose time 159ms
+** Data GLL,Accept,ListViewTest.java,64540,1115,57.88kByte/s,159
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1091ms, 59.16kByte/s with choose time 137ms
+** Data GLL,Accept,ListViewTest.java,64540,1091,59.16kByte/s,137
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1115ms, 57.88kByte/s with choose time 135ms
+** Data GLL,Accept,ListViewTest.java,64540,1115,57.88kByte/s,135
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1124ms, 57.42kByte/s with choose time 164ms
+** Data GLL,Accept,ListViewTest.java,64540,1124,57.42kByte/s,164
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1194ms, 54.05kByte/s with choose time 173ms
+** Data GLL,Accept,ListViewTest.java,64540,1194,54.05kByte/s,173
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1172ms, 55.07kByte/s with choose time 176ms
+** Data GLL,Accept,ListViewTest.java,64540,1172,55.07kByte/s,176
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1106ms, 58.35kByte/s with choose time 131ms
+** Data GLL,Accept,ListViewTest.java,64540,1106,58.35kByte/s,131
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1114ms, 57.94kByte/s with choose time 145ms
+** Data GLL,Accept,ListViewTest.java,64540,1114,57.94kByte/s,145
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1115ms, 57.88kByte/s with choose time 151ms
+** Data GLL,Accept,ListViewTest.java,64540,1115,57.88kByte/s,151
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1228ms, 52.56kByte/s with choose time 153ms
+** Data GLL,Accept,ListViewTest.java,64540,1228,52.56kByte/s,153
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1137ms, 56.76kByte/s with choose time 167ms
+** Data GLL,Accept,ListViewTest.java,64540,1137,56.76kByte/s,167
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1088ms, 59.32kByte/s with choose time 158ms
+** Data GLL,Accept,ListViewTest.java,64540,1088,59.32kByte/s,158
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1125ms, 57.37kByte/s with choose time 164ms
+** Data GLL,Accept,ListViewTest.java,64540,1125,57.37kByte/s,164
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1108ms, 58.25kByte/s with choose time 150ms
+** Data GLL,Accept,ListViewTest.java,64540,1108,58.25kByte/s,150
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1153ms, 55.98kByte/s with choose time 157ms
+** Data GLL,Accept,ListViewTest.java,64540,1153,55.98kByte/s,157
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1077ms, 59.93kByte/s with choose time 159ms
+** Data GLL,Accept,ListViewTest.java,64540,1077,59.93kByte/s,159
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1141ms, 56.56kByte/s with choose time 147ms
+** Data GLL,Accept,ListViewTest.java,64540,1141,56.56kByte/s,147
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1142ms, 56.51kByte/s with choose time 158ms
+** Data GLL,Accept,ListViewTest.java,64540,1142,56.51kByte/s,158
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1112ms, 58.04kByte/s with choose time 147ms
+** Data GLL,Accept,ListViewTest.java,64540,1112,58.04kByte/s,147
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1097ms, 58.83kByte/s with choose time 155ms
+** Data GLL,Accept,ListViewTest.java,64540,1097,58.83kByte/s,155
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1107ms, 58.30kByte/s with choose time 149ms
+** Data GLL,Accept,ListViewTest.java,64540,1107,58.30kByte/s,149
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1119ms, 57.68kByte/s with choose time 159ms
+** Data GLL,Accept,ListViewTest.java,64540,1119,57.68kByte/s,159
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1064ms, 60.66kByte/s with choose time 145ms
+** Data GLL,Accept,ListViewTest.java,64540,1064,60.66kByte/s,145
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1124ms, 57.42kByte/s with choose time 144ms
+** Data GLL,Accept,ListViewTest.java,64540,1124,57.42kByte/s,144
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1103ms, 58.51kByte/s with choose time 151ms
+** Data GLL,Accept,ListViewTest.java,64540,1103,58.51kByte/s,151
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1101ms, 58.62kByte/s with choose time 146ms
+** Data GLL,Accept,ListViewTest.java,64540,1101,58.62kByte/s,146
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1080ms, 59.76kByte/s with choose time 144ms
+** Data GLL,Accept,ListViewTest.java,64540,1080,59.76kByte/s,144
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1130ms, 57.12kByte/s with choose time 156ms
+** Data GLL,Accept,ListViewTest.java,64540,1130,57.12kByte/s,156
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1107ms, 58.30kByte/s with choose time 148ms
+** Data GLL,Accept,ListViewTest.java,64540,1107,58.30kByte/s,148
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !tweLongest !twePriority !tweDead   
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTest.java 64540 bytes in 1075ms, 60.04kByte/s with choose time 127ms
+** Data GLL,Accept,ListViewTest.java,64540,1075,60.04kByte/s,127
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call parseMGLL  ListViewTest.java !parseCounts 
+Use an MGLL parser to build a multi-SPPF
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -Xss500m -classpath .;\csle\dev\art\art.jar uk.ac.rhul.cs.csle.art.v3.ARTV3 artParserGrammar.art artChooseParseSPPF.art artChooseParseTWE.art !mgllGeneratorPool 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artV3CompileGenerated 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>javac -classpath .;\csle\dev\art/art.jar ARTGeneratedParser.java ARTGeneratedLexer.java 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artV3TestGenerated ListViewTest.java !parseCounts 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java !parseCounts 
+** Accept ListViewTest.java 64540 bytes in 776ms, 83.17kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,776,83.17kByte/s,
+ARTGeneratedParser,BNF,ListViewTest.java,accept,--,Tue Dec 20 22:44:42 GMT 2022,64539,MGLL Gen, Setup, 0.009, Lex, 0.351, Parse, 1.127, Derivation select, 0.000, Attribute evaluate, 0.000, eSOS interpret, 0.000,descriptor,0,1419114,sppfNode,0,170651,sppfPackedNode,0,150427,gssNode,0,333655,gssEdge,0,746174,popElement,0,242034,testRepepeat,0,0,clusterElement,0,0,sppfEpsilonNodes,17878,sppfTerminalNodes,0,sppfNonterminalNodes,252676,sppfIntermediateNodes,70746,sppfOtherNodes,2,sppfAmbiguityNodes,8952,poppingDescriptors,265729,nonpoppingDescriptors,1153385,primaryPops,0,contingentPops,0,softPageFaults,-1,hardPagefaults,-1,hashCollisions,143832,hashResizes,0,hash0,5667002,hash1,1984087,hash2,427275,hash3,63104,hash4,7529,hash5+,784,descriptorH,0:2355487 1:949979(66.94%) 2:190260(13.41%) 3:25627(1.81%) 4:2665(0.19%) 5:198(0.01%) 6:14(0.00%) ,sppfNodeH,0:216377 1:106347(62.32%) 2:25314(14.83%) 3:3902(2.29%) 4:448(0.26%) 5:32(0.02%) 6:3(0.00%) ,sppfPackedNodeH,0:230175 1:97822(65.03%) 2:21057(14.00%) 3:3009(2.00%) 4:337(0.22%) 5:22(0.01%) 6:1(0.00%) ,gssNodeH,0:439819 1:206421(61.87%) 2:49724(14.90%) 3:7832(2.35%) 4:968(0.29%) 5:74(0.02%) 6:8(0.00%) ,gssEdgeH,0:1528340 1:452453(60.64%) 2:111227(14.91%) 3:19266(2.58%) 4:2833(0.38%) 5:379(0.05%) 6:38(0.01%) 7:2(0.00%) ,popElementH,0:500329 1:171065(70.68%) 2:29693(12.27%) 3:3468(1.43%) 4:278(0.11%) 5:11(0.00%) 6:2(0.00%) ,testRepeatElementH,0:352423 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 802ms, 80.47kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,802,80.47kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 722ms, 89.39kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,722,89.39kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 757ms, 85.26kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,757,85.26kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 812ms, 79.48kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,812,79.48kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 896ms, 72.03kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,896,72.03kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 815ms, 79.19kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,815,79.19kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 769ms, 83.93kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,769,83.93kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 860ms, 75.05kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,860,75.05kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 849ms, 76.02kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,849,76.02kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 841ms, 76.74kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,841,76.74kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 743ms, 86.86kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,743,86.86kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 846ms, 76.29kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,846,76.29kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 763ms, 84.59kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,763,84.59kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 824ms, 78.33kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,824,78.33kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 772ms, 83.60kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,772,83.60kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 768ms, 84.04kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,768,84.04kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 834ms, 77.39kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,834,77.39kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 829ms, 77.85kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,829,77.85kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 851ms, 75.84kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,851,75.84kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 795ms, 81.18kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,795,81.18kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 755ms, 85.48kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,755,85.48kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 793ms, 81.39kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,793,81.39kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 759ms, 85.03kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,759,85.03kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 944ms, 68.37kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,944,68.37kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 874ms, 73.84kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,874,73.84kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 911ms, 70.85kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,911,70.85kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 878ms, 73.51kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,878,73.51kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 827ms, 78.04kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,827,78.04kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTest.java  
+** Accept ListViewTest.java 64540 bytes in 760ms, 84.92kByte/s
+** Data GLL,Accept,ListViewTest.java,64540,760,84.92kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call grammarWrite jls18bnfV3IdenLA.art 
+Print lexer, parser and token grammars corresponding to jls18bnfV3IdenLA.art
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -Xss500m -classpath .;\csle\dev\art\art.jar uk.ac.rhul.cs.csle.art.v3.ARTV3 !grammarWrite jls18bnfV3IdenLA.art 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call lexDFA ListViewTestGTfix.java  
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>copy ListViewTestGTfix.java test.str 
+        1 file(s) copied.
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artv3 !lexDFA ARTLexerGrammar.art  
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -Xss500m -classpath .;\csle\dev\art\art.jar uk.ac.rhul.cs.csle.art.v3.ARTV3 !lexDFA ARTLexerGrammar.art 
+** !lexDFA NFA states: 10534, 6ms
+** !lexDFA DFA states: 2520, 1391ms
+** Accept test.str 64547 bytes in 776ms, 83.18kbyte/s
+** Data DFA,Accept,test.str,64547,776,83.18kbyte/s
+** Accept test.str 64547 bytes in 847ms, 76.21kbyte/s
+** Data DFA,Accept,test.str,64547,847,76.21kbyte/s
+** Accept test.str 64547 bytes in 713ms, 90.53kbyte/s
+** Data DFA,Accept,test.str,64547,713,90.53kbyte/s
+** Accept test.str 64547 bytes in 711ms, 90.78kbyte/s
+** Data DFA,Accept,test.str,64547,711,90.78kbyte/s
+** Accept test.str 64547 bytes in 711ms, 90.78kbyte/s
+** Data DFA,Accept,test.str,64547,711,90.78kbyte/s
+** Accept test.str 64547 bytes in 710ms, 90.91kbyte/s
+** Data DFA,Accept,test.str,64547,710,90.91kbyte/s
+** Accept test.str 64547 bytes in 709ms, 91.04kbyte/s
+** Data DFA,Accept,test.str,64547,709,91.04kbyte/s
+** Accept test.str 64547 bytes in 700ms, 92.21kbyte/s
+** Data DFA,Accept,test.str,64547,700,92.21kbyte/s
+** Accept test.str 64547 bytes in 709ms, 91.04kbyte/s
+** Data DFA,Accept,test.str,64547,709,91.04kbyte/s
+** Accept test.str 64547 bytes in 705ms, 91.56kbyte/s
+** Data DFA,Accept,test.str,64547,705,91.56kbyte/s
+** Accept test.str 64547 bytes in 702ms, 91.95kbyte/s
+** Data DFA,Accept,test.str,64547,702,91.95kbyte/s
+** Accept test.str 64547 bytes in 699ms, 92.34kbyte/s
+** Data DFA,Accept,test.str,64547,699,92.34kbyte/s
+** Accept test.str 64547 bytes in 701ms, 92.08kbyte/s
+** Data DFA,Accept,test.str,64547,701,92.08kbyte/s
+** Accept test.str 64547 bytes in 650ms, 99.30kbyte/s
+** Data DFA,Accept,test.str,64547,650,99.30kbyte/s
+** Accept test.str 64547 bytes in 664ms, 97.21kbyte/s
+** Data DFA,Accept,test.str,64547,664,97.21kbyte/s
+** Accept test.str 64547 bytes in 654ms, 98.70kbyte/s
+** Data DFA,Accept,test.str,64547,654,98.70kbyte/s
+** Accept test.str 64547 bytes in 674ms, 95.77kbyte/s
+** Data DFA,Accept,test.str,64547,674,95.77kbyte/s
+** Accept test.str 64547 bytes in 734ms, 87.94kbyte/s
+** Data DFA,Accept,test.str,64547,734,87.94kbyte/s
+** Accept test.str 64547 bytes in 698ms, 92.47kbyte/s
+** Data DFA,Accept,test.str,64547,698,92.47kbyte/s
+** Accept test.str 64547 bytes in 702ms, 91.95kbyte/s
+** Data DFA,Accept,test.str,64547,702,91.95kbyte/s
+** Accept test.str 64547 bytes in 702ms, 91.95kbyte/s
+** Data DFA,Accept,test.str,64547,702,91.95kbyte/s
+** Accept test.str 64547 bytes in 702ms, 91.95kbyte/s
+** Data DFA,Accept,test.str,64547,702,91.95kbyte/s
+** Accept test.str 64547 bytes in 695ms, 92.87kbyte/s
+** Data DFA,Accept,test.str,64547,695,92.87kbyte/s
+** Accept test.str 64547 bytes in 696ms, 92.74kbyte/s
+** Data DFA,Accept,test.str,64547,696,92.74kbyte/s
+** Accept test.str 64547 bytes in 699ms, 92.34kbyte/s
+** Data DFA,Accept,test.str,64547,699,92.34kbyte/s
+** Accept test.str 64547 bytes in 692ms, 93.28kbyte/s
+** Data DFA,Accept,test.str,64547,692,93.28kbyte/s
+** Accept test.str 64547 bytes in 661ms, 97.65kbyte/s
+** Data DFA,Accept,test.str,64547,661,97.65kbyte/s
+** Accept test.str 64547 bytes in 691ms, 93.41kbyte/s
+** Data DFA,Accept,test.str,64547,691,93.41kbyte/s
+** Accept test.str 64547 bytes in 690ms, 93.55kbyte/s
+** Data DFA,Accept,test.str,64547,690,93.55kbyte/s
+** Accept test.str 64547 bytes in 700ms, 92.21kbyte/s
+** Data DFA,Accept,test.str,64547,700,92.21kbyte/s
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call lexGLL ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Use a GLL recogniser to build a TWE set
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -Xss500m -classpath .;\csle\dev\art\art.jar uk.ac.rhul.cs.csle.art.v3.ARTV3 artLexerGrammar.art artChooseLexTWE.art !gllTWEGeneratorPool 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artV3CompileGenerated 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>javac -classpath .;\csle\dev\art/art.jar ARTGeneratedParser.java ARTGeneratedLexer.java 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>rem call \csle\dev\art\artV3TestGenerated !tweDump ListViewTestGTfix.java !tweLongest !twePriority !tweDead       
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artV3TestGenerated !tweWrite ListViewTestGTfix.java !tweLongest !twePriority !tweDead       
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated !tweWrite ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+Writing TWE set
+TWE set output complete
+** Accept ListViewTestGTfix.java 64547 bytes in 1224ms, 52.73kByte/s with choose time 162ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1224,52.73kByte/s,162
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1261ms, 51.19kByte/s with choose time 172ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1261,51.19kByte/s,172
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1234ms, 52.31kByte/s with choose time 184ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1234,52.31kByte/s,184
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1239ms, 52.10kByte/s with choose time 191ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1239,52.10kByte/s,191
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1148ms, 56.23kByte/s with choose time 189ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1148,56.23kByte/s,189
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1134ms, 56.92kByte/s with choose time 173ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1134,56.92kByte/s,173
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1309ms, 49.31kByte/s with choose time 184ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1309,49.31kByte/s,184
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1199ms, 53.83kByte/s with choose time 173ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1199,53.83kByte/s,173
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1126ms, 57.32kByte/s with choose time 170ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1126,57.32kByte/s,170
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1130ms, 57.12kByte/s with choose time 171ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1130,57.12kByte/s,171
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1122ms, 57.53kByte/s with choose time 177ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1122,57.53kByte/s,177
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1141ms, 56.57kByte/s with choose time 176ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1141,56.57kByte/s,176
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1119ms, 57.68kByte/s with choose time 165ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1119,57.68kByte/s,165
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1110ms, 58.15kByte/s with choose time 179ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1110,58.15kByte/s,179
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1108ms, 58.26kByte/s with choose time 177ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1108,58.26kByte/s,177
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1119ms, 57.68kByte/s with choose time 171ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1119,57.68kByte/s,171
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1245ms, 51.84kByte/s with choose time 193ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1245,51.84kByte/s,193
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1227ms, 52.61kByte/s with choose time 176ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1227,52.61kByte/s,176
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1129ms, 57.17kByte/s with choose time 173ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1129,57.17kByte/s,173
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1120ms, 57.63kByte/s with choose time 180ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1120,57.63kByte/s,180
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1178ms, 54.79kByte/s with choose time 187ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1178,54.79kByte/s,187
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1207ms, 53.48kByte/s with choose time 161ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1207,53.48kByte/s,161
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1149ms, 56.18kByte/s with choose time 166ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1149,56.18kByte/s,166
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1191ms, 54.20kByte/s with choose time 157ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1191,54.20kByte/s,157
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1184ms, 54.52kByte/s with choose time 181ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1184,54.52kByte/s,181
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1136ms, 56.82kByte/s with choose time 176ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1136,56.82kByte/s,176
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1118ms, 57.73kByte/s with choose time 168ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1118,57.73kByte/s,168
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1133ms, 56.97kByte/s with choose time 188ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1133,56.97kByte/s,188
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1132ms, 57.02kByte/s with choose time 169ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1132,57.02kByte/s,169
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !tweLongest !twePriority !tweDead 
+Longest match
+Priority
+Suppressing dead paths
+** Accept ListViewTestGTfix.java 64547 bytes in 1131ms, 57.07kByte/s with choose time 180ms
+** Data GLL,Accept,ListViewTestGTfix.java,64547,1131,57.07kByte/s,180
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call parseMGLL  ListViewTestGTfix.java !parseCounts 
+Use an MGLL parser to build a multi-SPPF
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -Xss500m -classpath .;\csle\dev\art\art.jar uk.ac.rhul.cs.csle.art.v3.ARTV3 artParserGrammar.art artChooseParseSPPF.art artChooseParseTWE.art !mgllGeneratorPool 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artV3CompileGenerated 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>javac -classpath .;\csle\dev\art/art.jar ARTGeneratedParser.java ARTGeneratedLexer.java 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>call \csle\dev\art\artV3TestGenerated ListViewTestGTfix.java !parseCounts 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java !parseCounts 
+** Accept ListViewTestGTfix.java 64547 bytes in 720ms, 89.65kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,720,89.65kByte/s,
+ARTGeneratedParser,BNF,ListViewTestGTfix.java,accept,--,Tue Dec 20 22:47:03 GMT 2022,64546,MGLL Gen, Setup, 0.009, Lex, 0.356, Parse, 1.076, Derivation select, 0.000, Attribute evaluate, 0.000, eSOS interpret, 0.000,descriptor,0,1233158,sppfNode,0,156320,sppfPackedNode,0,136828,gssNode,0,293624,gssEdge,0,648984,popElement,0,211805,testRepepeat,0,0,clusterElement,0,0,sppfEpsilonNodes,17016,sppfTerminalNodes,0,sppfNonterminalNodes,229298,sppfIntermediateNodes,66324,sppfOtherNodes,2,sppfAmbiguityNodes,7936,poppingDescriptors,233260,nonpoppingDescriptors,999898,primaryPops,0,contingentPops,0,softPageFaults,-1,hardPagefaults,-1,hashCollisions,106729,hashResizes,0,hash0,5924660,hash1,1826500,hash2,347456,hash3,45877,hash4,4814,hash5+,474,descriptorH,0:2483333 1:870017(70.55%) 2:151342(12.27%) 3:17818(1.44%) 4:1602(0.13%) 5:113(0.01%) 6:5(0.00%) ,sppfNodeH,0:225621 1:101232(64.76%) 2:21990(14.07%) 3:3243(2.07%) 4:309(0.20%) 5:25(0.02%) 6:3(0.00%) ,sppfPackedNodeH,0:238862 1:93062(68.01%) 2:17982(13.14%) 3:2290(1.67%) 4:207(0.15%) 5:17(0.01%) 6:2(0.00%) 7:1(0.00%) ,gssNodeH,0:465559 1:192137(65.44%) 2:40694(13.86%) 3:5787(1.97%) 4:613(0.21%) 5:50(0.02%) 6:6(0.00%) ,gssEdgeH,0:1593107 1:412868(63.62%) 2:92006(14.18%) 3:14400(2.22%) 4:1911(0.29%) 5:217(0.03%) 6:28(0.00%) 7:1(0.00%) ,popElementH,0:521703 1:157184(74.21%) 2:23442(11.07%) 3:2339(1.10%) 4:172(0.08%) 5:4(0.00%) 6:2(0.00%) ,testRepeatElementH,0:352423 
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 761ms, 84.82kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,761,84.82kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 756ms, 85.38kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,756,85.38kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 737ms, 87.58kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,737,87.58kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 715ms, 90.28kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,715,90.28kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 690ms, 93.55kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,690,93.55kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 665ms, 97.06kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,665,97.06kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 764ms, 84.49kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,764,84.49kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 718ms, 89.90kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,718,89.90kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 744ms, 86.76kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,744,86.76kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 854ms, 75.58kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,854,75.58kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 802ms, 80.48kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,802,80.48kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 824ms, 78.33kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,824,78.33kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 767ms, 84.16kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,767,84.16kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 708ms, 91.17kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,708,91.17kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 756ms, 85.38kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,756,85.38kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 791ms, 81.60kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,791,81.60kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 776ms, 83.18kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,776,83.18kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 755ms, 85.49kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,755,85.49kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 857ms, 75.32kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,857,75.32kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 698ms, 92.47kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,698,92.47kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 707ms, 91.30kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,707,91.30kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 748ms, 86.29kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,748,86.29kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 718ms, 89.90kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,718,89.90kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 764ms, 84.49kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,764,84.49kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 754ms, 85.61kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,754,85.61kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 739ms, 87.34kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,739,87.34kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 836ms, 77.21kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,836,77.21kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 802ms, 80.48kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,802,80.48kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>java -classpath .;\csle\dev\art/art.jar ARTV3TestGenerated ListViewTestGTfix.java  
+** Accept ListViewTestGTfix.java 64547 bytes in 798ms, 80.89kByte/s
+** Data GLL,Accept,ListViewTestGTfix.java,64547,798,80.89kByte/s,
+
+C:\csle\pub\journals\toplas_lexerParser\GitHubExperiments\grammars\jls18\table2>echo 22:47:44.09 
+22:47:44.09

@@ -1,0 +1,1722 @@
+(* Lexical grammar *)
+
+!element
+ `\t,
+ `\n,
+ `\r,
+ ` ,
+ `!,
+ `\",
+ `#,
+ `$,
+ `%,
+ `&,
+ `',
+ `(,
+ `),
+ `*,
+ `+,
+ `,,
+ `-,
+ `.,
+ `/,
+ `0,
+ `1,
+ `2,
+ `3,
+ `4,
+ `5,
+ `6,
+ `7,
+ `8,
+ `9,
+ `:,
+ `;,
+ `<,
+ `=,
+ `>,
+ `?,
+ `@,
+ `A,
+ `B,
+ `C,
+ `D,
+ `E,
+ `F,
+ `G,
+ `H,
+ `I,
+ `J,
+ `K,
+ `L,
+ `M,
+ `N,
+ `O,
+ `P,
+ `Q,
+ `R,
+ `S,
+ `T,
+ `U,
+ `V,
+ `W,
+ `X,
+ `Y,
+ `Z,
+ `[,
+ `\\,
+ `],
+ `^,
+ `_,
+ ``,
+ `a,
+ `b,
+ `c,
+ `d,
+ `e,
+ `f,
+ `g,
+ `h,
+ `i,
+ `j,
+ `k,
+ `l,
+ `m,
+ `n,
+ `o,
+ `p,
+ `q,
+ `r,
+ `s,
+ `t,
+ `u,
+ `v,
+ `w,
+ `x,
+ `y,
+ `z,
+ `{,
+ `|,
+ `},
+ `~,
+ ART_CSP__SHREIK,
+ ART_CSP__SHREIK_EQUAL,
+ ART_CSP__PERCENT,
+ ART_CSP__PERCENT_EQUAL,
+ ART_CSP__AMPERSAND,
+ ART_CSP__AMPERSAND_AMPERSAND,
+ ART_CSP__AMPERSAND_EQUAL,
+ ART_CSP__LPAR,
+ ART_CSP__RPAR,
+ ART_CSP__STAR,
+ ART_CSP__STAR_EQUAL,
+ ART_CSP__PLUS,
+ ART_CSP__PLUS_PLUS,
+ ART_CSP__PLUS_EQUAL,
+ ART_CSP__COMMA,
+ ART_CSP__MINUS,
+ ART_CSP__MINUS_MINUS,
+ ART_CSP__MINUS_EQUAL,
+ ART_CSP__MINUS_GT,
+ ART_CSP__PERIOD,
+ ART_CSP__PERIOD_PERIOD_PERIOD,
+ ART_CSP__SLASH,
+ ART_CSP__SLASH_EQUAL,
+ ART_CSP__COLON,
+ ART_CSP__COLON_COLON,
+ ART_CSP__SEMICOLON,
+ ART_CSP__LT,
+ ART_CSP__LT_LT,
+ ART_CSP__LT_LT_EQUAL,
+ ART_CSP__LT_EQUAL,
+ ART_CSP__LT_GT,
+ ART_CSP__EQUAL,
+ ART_CSP__EQUAL_EQUAL,
+ ART_CSP__GT,
+ ART_CSP__GT_EQUAL,
+ ART_CSP__GT_GT,
+ ART_CSP__GT_GT_EQUAL,
+ ART_CSP__GT_GT_GT,
+ ART_CSP__GT_GT_GT_EQUAL,
+ ART_CSP__QUERY,
+ ART_CSP__AT,
+ ART_CSP_VariableAccess,
+ ART_CSP__LBRACK,
+ ART_CSP__RBRACK,
+ ART_CSP__UPARROW,
+ ART_CSP__UPARROW_EQUAL,
+ ART_CSP_abstract,
+ ART_CSP_assert,
+ ART_CSP_boolean,
+ ART_CSP_break,
+ ART_CSP_byte,
+ ART_CSP_case,
+ ART_CSP_catch,
+ ART_CSP_char,
+ ART_CSP_class,
+ ART_CSP_const,
+ ART_CSP_continue,
+ ART_CSP_default,
+ ART_CSP_do,
+ ART_CSP_double,
+ ART_CSP_else,
+ ART_CSP_enum,
+ ART_CSP_exports,
+ ART_CSP_extends,
+ ART_CSP_final,
+ ART_CSP_finally,
+ ART_CSP_float,
+ ART_CSP_for,
+ ART_CSP_goto,
+ ART_CSP_if,
+ ART_CSP_implements,
+ ART_CSP_import,
+ ART_CSP_instanceof,
+ ART_CSP_int,
+ ART_CSP_interface,
+ ART_CSP_long,
+ ART_CSP_module,
+ ART_CSP_native,
+ ART_CSP_new,
+ ART_CSP_non_MINUSsealed,
+ ART_CSP_open,
+ ART_CSP_opens,
+ ART_CSP_package,
+ ART_CSP_permits,
+ ART_CSP_private,
+ ART_CSP_protected,
+ ART_CSP_provides,
+ ART_CSP_public,
+ ART_CSP_record,
+ ART_CSP_requires,
+ ART_CSP_return,
+ ART_CSP_sealed,
+ ART_CSP_short,
+ ART_CSP_static,
+ ART_CSP_strictfp,
+ ART_CSP_super,
+ ART_CSP_switch,
+ ART_CSP_synchronized,
+ ART_CSP_this,
+ ART_CSP_throw,
+ ART_CSP_throws,
+ ART_CSP_to,
+ ART_CSP_transient,
+ ART_CSP_transitive,
+ ART_CSP_try,
+ ART_CSP_uses,
+ ART_CSP_var,
+ ART_CSP_void,
+ ART_CSP_volatile,
+ ART_CSP_while,
+ ART_CSP_with,
+ ART_CSP_yield,
+ ART_CSP__LBRACE,
+ ART_CSP__BAR,
+ ART_CSP__BAR_EQUAL,
+ ART_CSP__BAR_BAR,
+ ART_CSP__RBRACE,
+ ART_CSP__TILDE,
+ AdditionalBound,
+ AdditionalBoundStar,
+ AdditiveExpression,
+ AmbiguousName,
+ AndExpression,
+ Annotation,
+ AnnotationInterfaceBody,
+ AnnotationInterfaceDeclaration,
+ AnnotationInterfaceElementDeclaration,
+ AnnotationInterfaceElementModifier,
+ AnnotationInterfaceElementModifierStar,
+ AnnotationInterfaceMemberDeclaration,
+ AnnotationInterfaceMemberDeclarationStar,
+ AnnotationStar,
+ AnnotationStarBracketStar,
+ ArgumentList,
+ ArgumentListOpt,
+ ArrayAccess,
+ ArrayCreationExpression,
+ ArrayCreationExpressionWithInitializer,
+ ArrayCreationExpressionWithoutInitializer,
+ ArrayInitializer,
+ ArrayType,
+ AssertStatement,
+ Assignment,
+ AssignmentExpression,
+ AssignmentOperator,
+ BarClassTypeStar,
+ BasicForStatement,
+ BasicForStatementNoShortIf,
+ BinaryDigit,
+ BinaryDigitOrUnderscore,
+ BinaryDigits,
+ BinaryDigitsAndUnderscores,
+ BinaryExponent,
+ BinaryExponentIndicator,
+ BinaryIntegerLiteral,
+ BinaryNumeral,
+ Block,
+ BlockStatement,
+ BlockStatementStar,
+ BlockStatements,
+ BlockStatementsOpt,
+ BooleanLiteral,
+ BracketsStar,
+ BreakStatement,
+ CaseConstant,
+ CastExpression,
+ CatchClause,
+ CatchClauseStar,
+ CatchFormalParameter,
+ CatchType,
+ Catches,
+ CatchesOpt,
+ CharacterLiteral,
+ ClassBody,
+ ClassBodyDeclaration,
+ ClassBodyDeclarationStar,
+ ClassBodyOpt,
+ ClassDeclaration,
+ ClassExtends,
+ ClassExtendsOpt,
+ ClassImplements,
+ ClassImplementsOpt,
+ ClassInstanceCreationExpression,
+ ClassLiteral,
+ ClassMemberDeclaration,
+ ClassModifier,
+ ClassModifierStar,
+ ClassOrInterfaceType,
+ ClassOrInterfaceTypeToInstantiate,
+ ClassPermits,
+ ClassPermitsOpt,
+ ClassType,
+ CommaCaseConstantStar,
+ CommaElementValuePairStar,
+ CommaElementValueStar,
+ CommaEnumConstantStar,
+ CommaExceptionTypeStar,
+ CommaExpressionStar,
+ CommaFormalParameterStar,
+ CommaIdentifierStar,
+ CommaInterfaceTypeStar,
+ CommaLambdaParameterStar,
+ CommaModuleNameOpt,
+ CommaOpt,
+ CommaRecordComponentStar,
+ CommaStatementExpressionStar,
+ CommaTypeArgumentStar,
+ CommaTypeNameStar,
+ CommaTypeParameterStar,
+ CommaVariableDeclaratorStar,
+ CommaVariableInitializerStar,
+ CompactConstructorDeclaration,
+ CompilationUnit,
+ ConditionalAndExpression,
+ ConditionalExpression,
+ ConditionalOrExpression,
+ ConstantDeclaration,
+ ConstantModifier,
+ ConstantModifierStar,
+ ConstructorBody,
+ ConstructorDeclaration,
+ ConstructorDeclarator,
+ ConstructorModifier,
+ ConstructorModifierStar,
+ ContinueStatement,
+ DecimalFloatingPointLiteral,
+ DecimalIntegerLiteral,
+ DecimalNumeral,
+ DefaultValue,
+ DefaultValueOpt,
+ Digit,
+ DigitOrUnderscore,
+ Digits,
+ DigitsAndUnderscores,
+ DimExpr,
+ DimExprStar,
+ DimExprs,
+ Dims,
+ DimsOpt,
+ DoStatement,
+ DotAnnotationStarIdentifierStar,
+ DotIdentifierStar,
+ DummyRuleEAS,
+ ElementValue,
+ ElementValueArrayInitializer,
+ ElementValueList,
+ ElementValueListOpt,
+ ElementValuePair,
+ ElementValuePairList,
+ ElementValuePairListOpt,
+ EmptyStatement,
+ EnhancedForStatement,
+ EnhancedForStatementNoShortIf,
+ EnumBody,
+ EnumBodyDeclarations,
+ EnumBodyDeclarationsOpt,
+ EnumConstant,
+ EnumConstantList,
+ EnumConstantListOpt,
+ EnumConstantModifier,
+ EnumConstantModifierStar,
+ EnumDeclaration,
+ EqualVariableInitializerOpt,
+ EqualityExpression,
+ EscapeSequence,
+ ExceptionType,
+ ExceptionTypeList,
+ ExclusiveOrExpression,
+ ExplicitConstructorInvocation,
+ ExplicitConstructorInvocationOpt,
+ ExponentIndicator,
+ ExponentPart,
+ Expression,
+ ExpressionName,
+ ExpressionOpt,
+ ExpressionStatement,
+ FieldAccess,
+ FieldDeclaration,
+ FieldModifier,
+ FieldModifierStar,
+ Finally,
+ FinallyOpt,
+ FloatTypeSuffix,
+ FloatingPointLiteral,
+ FloatingPointType,
+ ForInit,
+ ForInitOpt,
+ ForStatement,
+ ForStatementNoShortIf,
+ ForUpdate,
+ ForUpdateOpt,
+ FormalParameter,
+ FormalParameterList,
+ FormalParameterListOpt,
+ HexDigit,
+ HexDigitOrUnderscore,
+ HexDigits,
+ HexDigitsAndUnderscores,
+ HexIntegerLiteral,
+ HexNumeral,
+ HexSignificand,
+ HexadecimalFloatingPointLiteral,
+ Identifier,
+ IdentifierChars,
+ IdentifierDotOpt,
+ IdentifierOpt,
+ IfThenElseStatement,
+ IfThenElseStatementNoShortIf,
+ IfThenStatement,
+ ImportDeclaration,
+ ImportDeclarationStar,
+ InclusiveOrExpression,
+ InstanceInitializer,
+ InstanceofExpression,
+ IntegerLiteral,
+ IntegerTypeSuffix,
+ IntegralType,
+ InterfaceBody,
+ InterfaceDeclaration,
+ InterfaceExtends,
+ InterfaceExtendsOpt,
+ InterfaceMemberDeclaration,
+ InterfaceMemberDeclarationStar,
+ InterfaceMethodDeclaration,
+ InterfaceMethodModifier,
+ InterfaceMethodModifierStar,
+ InterfaceModifier,
+ InterfaceModifierStar,
+ InterfacePermits,
+ InterfacePermitsOpt,
+ InterfaceType,
+ InterfaceTypeList,
+ JavaLetterNoUS,
+ JavaLetterOrDigit,
+ LabeledStatement,
+ LabeledStatementNoShortIf,
+ LambdaBody,
+ LambdaExpression,
+ LambdaParameter,
+ LambdaParameterList,
+ LambdaParameterListOpt,
+ LambdaParameterType,
+ LambdaParameters,
+ LeftHandSide,
+ LineTerminator,
+ Literal,
+ LocalClassOrInterfaceDeclaration,
+ LocalVariableDeclaration,
+ LocalVariableDeclarationStatement,
+ LocalVariableType,
+ MarkerAnnotation,
+ MethodBody,
+ MethodDeclaration,
+ MethodDeclarator,
+ MethodHeader,
+ MethodInvocation,
+ MethodModifier,
+ MethodModifierStar,
+ MethodName,
+ MethodReference,
+ ModularCompilationUnit,
+ ModuleDeclaration,
+ ModuleDirective,
+ ModuleDirectiveStar,
+ ModuleName,
+ MultiplicativeExpression,
+ NonZeroDigit,
+ NormalAnnotation,
+ NormalClassDeclaration,
+ NormalInterfaceDeclaration,
+ NullLiteral,
+ NumericType,
+ OctalDigit,
+ OctalDigitOrUnderscore,
+ OctalDigits,
+ OctalDigitsAndUnderscores,
+ OctalEscape,
+ OctalIntegerLiteral,
+ OctalNumeral,
+ OrdinaryCompilationUnit,
+ PackageDeclaration,
+ PackageDeclarationOpt,
+ PackageModifier,
+ PackageModifierStar,
+ PackageName,
+ PackageOrTypeName,
+ ParanArgumentListOptStar,
+ Pattern,
+ PostDecrementExpression,
+ PostIncrementExpression,
+ PostfixExpression,
+ PreDecrementExpression,
+ PreIncrementExpression,
+ Primary,
+ PrimaryNoNewArray,
+ PrimitiveType,
+ ReceiverParameter,
+ ReceiverParameterCommaOpt,
+ RecordBody,
+ RecordBodyDeclaration,
+ RecordBodyDeclarationStar,
+ RecordComponent,
+ RecordComponentList,
+ RecordComponentListOpt,
+ RecordComponentModifier,
+ RecordComponentModifierStar,
+ RecordDeclaration,
+ RecordHeader,
+ ReferenceType,
+ RelationalExpression,
+ RequiresModifier,
+ RequiresModifierStar,
+ Resource,
+ ResourceList,
+ ResourceSpecification,
+ Result,
+ ReturnStatement,
+ SemicolonOpt,
+ SemicolonResourceStar,
+ ShiftExpression,
+ Sign,
+ SignedInteger,
+ SimpleTypeName,
+ SingleCharacter,
+ SingleElementAnnotation,
+ SingleStaticImportDeclaration,
+ SingleTypeImportDeclaration,
+ Statement,
+ StatementExpression,
+ StatementExpressionList,
+ StatementNoShortIf,
+ StatementWithoutTrailingSubstatement,
+ StaticImportOnDemandDeclaration,
+ StaticInitializer,
+ StringCharacter,
+ StringLiteral,
+ SwitchBlock,
+ SwitchBlockStatementGroup,
+ SwitchBlockStatementGroupStar,
+ SwitchExpression,
+ SwitchLabel,
+ SwitchLabelColonStar,
+ SwitchRule,
+ SwitchRuleStar,
+ SwitchStatement,
+ SynchronizedStatement,
+ TextBlock,
+ TextBlockCharacter,
+ TextBlockWhiteSpace,
+ ThrowStatement,
+ Throws,
+ ThrowsOpt,
+ ToModuleNameCommaModuleNameOptStar,
+ TopLevelClassOrInterfaceDeclaration,
+ TopLevelClassOrInterfaceDeclarationStar,
+ TryStatement,
+ TryWithResourcesStatement,
+ TypeArgument,
+ TypeArgumentList,
+ TypeArguments,
+ TypeArgumentsOpt,
+ TypeArgumentsOrDiamond,
+ TypeArgumentsOrDiamondOpt,
+ TypeBound,
+ TypeBoundOpt,
+ TypeIdentifier,
+ TypeImportOnDemandDeclaration,
+ TypeName,
+ TypeParameter,
+ TypeParameterList,
+ TypeParameterModifier,
+ TypeParameterModifierStar,
+ TypeParameters,
+ TypeParametersOpt,
+ TypePattern,
+ TypeVariable,
+ UnannArrayType,
+ UnannClassOrInterfaceType,
+ UnannClassType,
+ UnannInterfaceType,
+ UnannPrimitiveType,
+ UnannReferenceType,
+ UnannType,
+ UnannTypeVariable,
+ UnaryExpression,
+ UnaryExpressionNotPlusMinus,
+ Underscores,
+ UnicodeEscape,
+ UnicodeMarker,
+ UnqualifiedClassInstanceCreationExpression,
+ UnqualifiedMethodIdentifier,
+ VariableArityParameter,
+ VariableArityRecordComponent,
+ VariableDeclarator,
+ VariableDeclaratorId,
+ VariableDeclaratorList,
+ VariableInitializer,
+ VariableInitializerList,
+ VariableInitializerListOpt,
+ VariableModifier,
+ VariableModifierStar,
+ WhileStatement,
+ WhileStatementNoShortIf,
+ WhiteSpace,
+ Wildcard,
+ WildcardBounds,
+ WildcardBoundsOpt,
+ YieldStatement,
+ ZeroToThree,
+ openOpt,
+ ARTLexerStart
+
+!paraterminal
+ ART_CSP__SHREIK = "!",
+ ART_CSP__SHREIK_EQUAL = "!=",
+ ART_CSP__PERCENT = "%",
+ ART_CSP__PERCENT_EQUAL = "%=",
+ ART_CSP__AMPERSAND = "&",
+ ART_CSP__AMPERSAND_AMPERSAND = "&&",
+ ART_CSP__AMPERSAND_EQUAL = "&=",
+ ART_CSP__LPAR = "(",
+ ART_CSP__RPAR = ")",
+ ART_CSP__STAR = "*",
+ ART_CSP__STAR_EQUAL = "*=",
+ ART_CSP__PLUS = "+",
+ ART_CSP__PLUS_PLUS = "++",
+ ART_CSP__PLUS_EQUAL = "+=",
+ ART_CSP__COMMA = ",",
+ ART_CSP__MINUS = "-",
+ ART_CSP__MINUS_MINUS = "--",
+ ART_CSP__MINUS_EQUAL = "-=",
+ ART_CSP__MINUS_GT = "->",
+ ART_CSP__PERIOD = ".",
+ ART_CSP__PERIOD_PERIOD_PERIOD = "...",
+ ART_CSP__SLASH = "/",
+ ART_CSP__SLASH_EQUAL = "/=",
+ ART_CSP__COLON = ":",
+ ART_CSP__COLON_COLON = "::",
+ ART_CSP__SEMICOLON = ";",
+ ART_CSP__LT = "<",
+ ART_CSP__LT_LT = "<<",
+ ART_CSP__LT_LT_EQUAL = "<<=",
+ ART_CSP__LT_EQUAL = "<=",
+ ART_CSP__LT_GT = "<>",
+ ART_CSP__EQUAL = "=",
+ ART_CSP__EQUAL_EQUAL = "==",
+ ART_CSP__GT = ">",
+ ART_CSP__GT_EQUAL = ">=",
+ ART_CSP__GT_GT = ">>",
+ ART_CSP__GT_GT_EQUAL = ">>=",
+ ART_CSP__GT_GT_GT = ">>>",
+ ART_CSP__GT_GT_GT_EQUAL = ">>>=",
+ ART_CSP__QUERY = "?",
+ ART_CSP__AT = "@",
+ ART_CSP_VariableAccess = "VariableAccess",
+ ART_CSP__LBRACK = "[",
+ ART_CSP__RBRACK = "]",
+ ART_CSP__UPARROW = "^",
+ ART_CSP__UPARROW_EQUAL = "^=",
+ ART_CSP_abstract = "abstract",
+ ART_CSP_assert = "assert",
+ ART_CSP_boolean = "boolean",
+ ART_CSP_break = "break",
+ ART_CSP_byte = "byte",
+ ART_CSP_case = "case",
+ ART_CSP_catch = "catch",
+ ART_CSP_char = "char",
+ ART_CSP_class = "class",
+ ART_CSP_const = "const",
+ ART_CSP_continue = "continue",
+ ART_CSP_default = "default",
+ ART_CSP_do = "do",
+ ART_CSP_double = "double",
+ ART_CSP_else = "else",
+ ART_CSP_enum = "enum",
+ ART_CSP_exports = "exports",
+ ART_CSP_extends = "extends",
+ ART_CSP_final = "final",
+ ART_CSP_finally = "finally",
+ ART_CSP_float = "float",
+ ART_CSP_for = "for",
+ ART_CSP_goto = "goto",
+ ART_CSP_if = "if",
+ ART_CSP_implements = "implements",
+ ART_CSP_import = "import",
+ ART_CSP_instanceof = "instanceof",
+ ART_CSP_int = "int",
+ ART_CSP_interface = "interface",
+ ART_CSP_long = "long",
+ ART_CSP_module = "module",
+ ART_CSP_native = "native",
+ ART_CSP_new = "new",
+ ART_CSP_non_MINUSsealed = "non-sealed",
+ ART_CSP_open = "open",
+ ART_CSP_opens = "opens",
+ ART_CSP_package = "package",
+ ART_CSP_permits = "permits",
+ ART_CSP_private = "private",
+ ART_CSP_protected = "protected",
+ ART_CSP_provides = "provides",
+ ART_CSP_public = "public",
+ ART_CSP_record = "record",
+ ART_CSP_requires = "requires",
+ ART_CSP_return = "return",
+ ART_CSP_sealed = "sealed",
+ ART_CSP_short = "short",
+ ART_CSP_static = "static",
+ ART_CSP_strictfp = "strictfp",
+ ART_CSP_super = "super",
+ ART_CSP_switch = "switch",
+ ART_CSP_synchronized = "synchronized",
+ ART_CSP_this = "this",
+ ART_CSP_throw = "throw",
+ ART_CSP_throws = "throws",
+ ART_CSP_to = "to",
+ ART_CSP_transient = "transient",
+ ART_CSP_transitive = "transitive",
+ ART_CSP_try = "try",
+ ART_CSP_uses = "uses",
+ ART_CSP_var = "var",
+ ART_CSP_void = "void",
+ ART_CSP_volatile = "volatile",
+ ART_CSP_while = "while",
+ ART_CSP_with = "with",
+ ART_CSP_yield = "yield",
+ ART_CSP__LBRACE = "{",
+ ART_CSP__BAR = "|",
+ ART_CSP__BAR_EQUAL = "|=",
+ ART_CSP__BAR_BAR = "||",
+ ART_CSP__RBRACE = "}",
+ ART_CSP__TILDE = "~",
+ BooleanLiteral,
+ CharacterLiteral,
+ FloatingPointLiteral,
+ Identifier,
+ IntegerLiteral,
+ NullLiteral,
+ StringLiteral,
+ TextBlock,
+ TypeIdentifier,
+ UnqualifiedMethodIdentifier
+
+!start ARTLexerStart
+
+ARTLexerStart ::=
+ ( ART_CSP__SHREIK
+ | ART_CSP__SHREIK_EQUAL
+ | ART_CSP__PERCENT
+ | ART_CSP__PERCENT_EQUAL
+ | ART_CSP__AMPERSAND
+ | ART_CSP__AMPERSAND_AMPERSAND
+ | ART_CSP__AMPERSAND_EQUAL
+ | ART_CSP__LPAR
+ | ART_CSP__RPAR
+ | ART_CSP__STAR
+ | ART_CSP__STAR_EQUAL
+ | ART_CSP__PLUS
+ | ART_CSP__PLUS_PLUS
+ | ART_CSP__PLUS_EQUAL
+ | ART_CSP__COMMA
+ | ART_CSP__MINUS
+ | ART_CSP__MINUS_MINUS
+ | ART_CSP__MINUS_EQUAL
+ | ART_CSP__MINUS_GT
+ | ART_CSP__PERIOD
+ | ART_CSP__PERIOD_PERIOD_PERIOD
+ | ART_CSP__SLASH
+ | ART_CSP__SLASH_EQUAL
+ | ART_CSP__COLON
+ | ART_CSP__COLON_COLON
+ | ART_CSP__SEMICOLON
+ | ART_CSP__LT
+ | ART_CSP__LT_LT
+ | ART_CSP__LT_LT_EQUAL
+ | ART_CSP__LT_EQUAL
+ | ART_CSP__LT_GT
+ | ART_CSP__EQUAL
+ | ART_CSP__EQUAL_EQUAL
+ | ART_CSP__GT
+ | ART_CSP__GT_EQUAL
+ | ART_CSP__GT_GT
+ | ART_CSP__GT_GT_EQUAL
+ | ART_CSP__GT_GT_GT
+ | ART_CSP__GT_GT_GT_EQUAL
+ | ART_CSP__QUERY
+ | ART_CSP__AT
+ | ART_CSP_VariableAccess
+ | ART_CSP__LBRACK
+ | ART_CSP__RBRACK
+ | ART_CSP__UPARROW
+ | ART_CSP__UPARROW_EQUAL
+ | ART_CSP_abstract
+ | ART_CSP_assert
+ | ART_CSP_boolean
+ | ART_CSP_break
+ | ART_CSP_byte
+ | ART_CSP_case
+ | ART_CSP_catch
+ | ART_CSP_char
+ | ART_CSP_class
+ | ART_CSP_const
+ | ART_CSP_continue
+ | ART_CSP_default
+ | ART_CSP_do
+ | ART_CSP_double
+ | ART_CSP_else
+ | ART_CSP_enum
+ | ART_CSP_exports
+ | ART_CSP_extends
+ | ART_CSP_final
+ | ART_CSP_finally
+ | ART_CSP_float
+ | ART_CSP_for
+ | ART_CSP_goto
+ | ART_CSP_if
+ | ART_CSP_implements
+ | ART_CSP_import
+ | ART_CSP_instanceof
+ | ART_CSP_int
+ | ART_CSP_interface
+ | ART_CSP_long
+ | ART_CSP_module
+ | ART_CSP_native
+ | ART_CSP_new
+ | ART_CSP_non_MINUSsealed
+ | ART_CSP_open
+ | ART_CSP_opens
+ | ART_CSP_package
+ | ART_CSP_permits
+ | ART_CSP_private
+ | ART_CSP_protected
+ | ART_CSP_provides
+ | ART_CSP_public
+ | ART_CSP_record
+ | ART_CSP_requires
+ | ART_CSP_return
+ | ART_CSP_sealed
+ | ART_CSP_short
+ | ART_CSP_static
+ | ART_CSP_strictfp
+ | ART_CSP_super
+ | ART_CSP_switch
+ | ART_CSP_synchronized
+ | ART_CSP_this
+ | ART_CSP_throw
+ | ART_CSP_throws
+ | ART_CSP_to
+ | ART_CSP_transient
+ | ART_CSP_transitive
+ | ART_CSP_try
+ | ART_CSP_uses
+ | ART_CSP_var
+ | ART_CSP_void
+ | ART_CSP_volatile
+ | ART_CSP_while
+ | ART_CSP_with
+ | ART_CSP_yield
+ | ART_CSP__LBRACE
+ | ART_CSP__BAR
+ | ART_CSP__BAR_EQUAL
+ | ART_CSP__BAR_BAR
+ | ART_CSP__RBRACE
+ | ART_CSP__TILDE
+ | BooleanLiteral
+ | CharacterLiteral
+ | FloatingPointLiteral
+ | Identifier
+ | IntegerLiteral
+ | NullLiteral
+ | StringLiteral
+ | TextBlock
+ | TypeIdentifier
+ | UnqualifiedMethodIdentifier
+ )*
+
+ART_CSP__SHREIK ::= `! ( `\n | `\r | `\t | ` )*
+
+ART_CSP__SHREIK_EQUAL ::= `! `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PERCENT ::= `% ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PERCENT_EQUAL ::= `% `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__AMPERSAND ::= `& ( `\n | `\r | `\t | ` )*
+
+ART_CSP__AMPERSAND_AMPERSAND ::= `& `& ( `\n | `\r | `\t | ` )*
+
+ART_CSP__AMPERSAND_EQUAL ::= `& `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LPAR ::= `( ( `\n | `\r | `\t | ` )*
+
+ART_CSP__RPAR ::= `) ( `\n | `\r | `\t | ` )*
+
+ART_CSP__STAR ::= `* ( `\n | `\r | `\t | ` )*
+
+ART_CSP__STAR_EQUAL ::= `* `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PLUS ::= `+ ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PLUS_PLUS ::= `+ `+ ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PLUS_EQUAL ::= `+ `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__COMMA ::= `, ( `\n | `\r | `\t | ` )*
+
+ART_CSP__MINUS ::= `- ( `\n | `\r | `\t | ` )*
+
+ART_CSP__MINUS_MINUS ::= `- `- ( `\n | `\r | `\t | ` )*
+
+ART_CSP__MINUS_EQUAL ::= `- `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__MINUS_GT ::= `- `> ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PERIOD ::= `. ( `\n | `\r | `\t | ` )*
+
+ART_CSP__PERIOD_PERIOD_PERIOD ::= `. `. `. ( `\n | `\r | `\t | ` )*
+
+ART_CSP__SLASH ::= `/ ( `\n | `\r | `\t | ` )*
+
+ART_CSP__SLASH_EQUAL ::= `/ `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__COLON ::= `: ( `\n | `\r | `\t | ` )*
+
+ART_CSP__COLON_COLON ::= `: `: ( `\n | `\r | `\t | ` )*
+
+ART_CSP__SEMICOLON ::= `; ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LT ::= `< ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LT_LT ::= `< `< ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LT_LT_EQUAL ::= `< `< `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LT_EQUAL ::= `< `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LT_GT ::= `< `> ( `\n | `\r | `\t | ` )*
+
+ART_CSP__EQUAL ::= `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__EQUAL_EQUAL ::= `= `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__GT ::= `> ( `\n | `\r | `\t | ` )*
+
+ART_CSP__GT_EQUAL ::= `> `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__GT_GT ::= `> `> ( `\n | `\r | `\t | ` )*
+
+ART_CSP__GT_GT_EQUAL ::= `> `> `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__GT_GT_GT ::= `> `> `> ( `\n | `\r | `\t | ` )*
+
+ART_CSP__GT_GT_GT_EQUAL ::= `> `> `> `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__QUERY ::= `? ( `\n | `\r | `\t | ` )*
+
+ART_CSP__AT ::= `@ ( `\n | `\r | `\t | ` )*
+
+ART_CSP_VariableAccess ::= `V `a `r `i `a `b `l `e `A `c `c `e `s `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LBRACK ::= `[ ( `\n | `\r | `\t | ` )*
+
+ART_CSP__RBRACK ::= `] ( `\n | `\r | `\t | ` )*
+
+ART_CSP__UPARROW ::= `^ ( `\n | `\r | `\t | ` )*
+
+ART_CSP__UPARROW_EQUAL ::= `^ `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP_abstract ::= `a `b `s `t `r `a `c `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_assert ::= `a `s `s `e `r `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_boolean ::= `b `o `o `l `e `a `n ( `\n | `\r | `\t | ` )*
+
+ART_CSP_break ::= `b `r `e `a `k ( `\n | `\r | `\t | ` )*
+
+ART_CSP_byte ::= `b `y `t `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_case ::= `c `a `s `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_catch ::= `c `a `t `c `h ( `\n | `\r | `\t | ` )*
+
+ART_CSP_char ::= `c `h `a `r ( `\n | `\r | `\t | ` )*
+
+ART_CSP_class ::= `c `l `a `s `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_const ::= `c `o `n `s `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_continue ::= `c `o `n `t `i `n `u `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_default ::= `d `e `f `a `u `l `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_do ::= `d `o ( `\n | `\r | `\t | ` )*
+
+ART_CSP_double ::= `d `o `u `b `l `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_else ::= `e `l `s `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_enum ::= `e `n `u `m ( `\n | `\r | `\t | ` )*
+
+ART_CSP_exports ::= `e `x `p `o `r `t `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_extends ::= `e `x `t `e `n `d `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_final ::= `f `i `n `a `l ( `\n | `\r | `\t | ` )*
+
+ART_CSP_finally ::= `f `i `n `a `l `l `y ( `\n | `\r | `\t | ` )*
+
+ART_CSP_float ::= `f `l `o `a `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_for ::= `f `o `r ( `\n | `\r | `\t | ` )*
+
+ART_CSP_goto ::= `g `o `t `o ( `\n | `\r | `\t | ` )*
+
+ART_CSP_if ::= `i `f ( `\n | `\r | `\t | ` )*
+
+ART_CSP_implements ::= `i `m `p `l `e `m `e `n `t `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_import ::= `i `m `p `o `r `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_instanceof ::= `i `n `s `t `a `n `c `e `o `f ( `\n | `\r | `\t | ` )*
+
+ART_CSP_int ::= `i `n `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_interface ::= `i `n `t `e `r `f `a `c `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_long ::= `l `o `n `g ( `\n | `\r | `\t | ` )*
+
+ART_CSP_module ::= `m `o `d `u `l `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_native ::= `n `a `t `i `v `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_new ::= `n `e `w ( `\n | `\r | `\t | ` )*
+
+ART_CSP_non_MINUSsealed ::= `n `o `n `- `s `e `a `l `e `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP_open ::= `o `p `e `n ( `\n | `\r | `\t | ` )*
+
+ART_CSP_opens ::= `o `p `e `n `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_package ::= `p `a `c `k `a `g `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_permits ::= `p `e `r `m `i `t `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_private ::= `p `r `i `v `a `t `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_protected ::= `p `r `o `t `e `c `t `e `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP_provides ::= `p `r `o `v `i `d `e `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_public ::= `p `u `b `l `i `c ( `\n | `\r | `\t | ` )*
+
+ART_CSP_record ::= `r `e `c `o `r `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP_requires ::= `r `e `q `u `i `r `e `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_return ::= `r `e `t `u `r `n ( `\n | `\r | `\t | ` )*
+
+ART_CSP_sealed ::= `s `e `a `l `e `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP_short ::= `s `h `o `r `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_static ::= `s `t `a `t `i `c ( `\n | `\r | `\t | ` )*
+
+ART_CSP_strictfp ::= `s `t `r `i `c `t `f `p ( `\n | `\r | `\t | ` )*
+
+ART_CSP_super ::= `s `u `p `e `r ( `\n | `\r | `\t | ` )*
+
+ART_CSP_switch ::= `s `w `i `t `c `h ( `\n | `\r | `\t | ` )*
+
+ART_CSP_synchronized ::= `s `y `n `c `h `r `o `n `i `z `e `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP_this ::= `t `h `i `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_throw ::= `t `h `r `o `w ( `\n | `\r | `\t | ` )*
+
+ART_CSP_throws ::= `t `h `r `o `w `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_to ::= `t `o ( `\n | `\r | `\t | ` )*
+
+ART_CSP_transient ::= `t `r `a `n `s `i `e `n `t ( `\n | `\r | `\t | ` )*
+
+ART_CSP_transitive ::= `t `r `a `n `s `i `t `i `v `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_try ::= `t `r `y ( `\n | `\r | `\t | ` )*
+
+ART_CSP_uses ::= `u `s `e `s ( `\n | `\r | `\t | ` )*
+
+ART_CSP_var ::= `v `a `r ( `\n | `\r | `\t | ` )*
+
+ART_CSP_void ::= `v `o `i `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP_volatile ::= `v `o `l `a `t `i `l `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_while ::= `w `h `i `l `e ( `\n | `\r | `\t | ` )*
+
+ART_CSP_with ::= `w `i `t `h ( `\n | `\r | `\t | ` )*
+
+ART_CSP_yield ::= `y `i `e `l `d ( `\n | `\r | `\t | ` )*
+
+ART_CSP__LBRACE ::= `{ ( `\n | `\r | `\t | ` )*
+
+ART_CSP__BAR ::= `| ( `\n | `\r | `\t | ` )*
+
+ART_CSP__BAR_EQUAL ::= `| `= ( `\n | `\r | `\t | ` )*
+
+ART_CSP__BAR_BAR ::= `| `| ( `\n | `\r | `\t | ` )*
+
+ART_CSP__RBRACE ::= `} ( `\n | `\r | `\t | ` )*
+
+ART_CSP__TILDE ::= `~ ( `\n | `\r | `\t | ` )*
+
+BinaryDigit ::= `0   
+    |  `1   
+
+BinaryDigitOrUnderscore ::= BinaryDigit  
+    |  `_   
+
+BinaryDigits ::= BinaryDigit  
+    |  BinaryDigit ( BinaryDigitsAndUnderscores )? BinaryDigit  
+
+BinaryDigitsAndUnderscores ::= BinaryDigitOrUnderscore ( BinaryDigitOrUnderscore )*  
+
+BinaryExponent ::= BinaryExponentIndicator SignedInteger  
+
+BinaryExponentIndicator ::= `p   
+    |  `P   
+
+BinaryIntegerLiteral ::= BinaryNumeral ( IntegerTypeSuffix )?  
+
+BinaryNumeral ::= `0  `b  BinaryDigits  
+    |  `0  `B  BinaryDigits  
+
+BooleanLiteral ::= `t  `r  `u  `e   ( `\n | `\r | `\t | ` )*
+    |  `f  `a  `l  `s  `e   ( `\n | `\r | `\t | ` )*
+
+CharacterLiteral ::= `'  SingleCharacter `'   ( `\n | `\r | `\t | ` )*
+    |  `'  EscapeSequence `'   ( `\n | `\r | `\t | ` )*
+
+DecimalFloatingPointLiteral ::= Digits `.  ( Digits )? ( ExponentPart )? ( FloatTypeSuffix )?  
+    |  `.  Digits ( ExponentPart )? ( FloatTypeSuffix )?  
+    |  Digits ExponentPart ( FloatTypeSuffix )?  
+    |  Digits ( ExponentPart )? FloatTypeSuffix  
+
+DecimalIntegerLiteral ::= DecimalNumeral ( IntegerTypeSuffix )?  
+
+DecimalNumeral ::= `0   
+    |  NonZeroDigit ( Digits )?  
+    |  NonZeroDigit Underscores Digits  
+
+Digit ::= `0   
+    |  NonZeroDigit  
+
+DigitOrUnderscore ::= Digit  
+    |  `_   
+
+Digits ::= Digit  
+    |  Digit ( DigitsAndUnderscores )? Digit  
+
+DigitsAndUnderscores ::= DigitOrUnderscore ( DigitOrUnderscore )*  
+
+EscapeSequence ::= `\\  `b   
+    |  `\\  `s   
+    |  `\\  `t   
+    |  `\\  `n   
+    |  `\\  `f   
+    |  `\\  `r   
+    |  `\\  LineTerminator  
+    |  `\\  `\"   
+    |  `\\  `'   
+    |  `\\  `\\   
+    |  OctalEscape  
+
+ExponentIndicator ::= `e   
+    |  `E   
+
+ExponentPart ::= ExponentIndicator SignedInteger  
+
+FloatTypeSuffix ::= `f   
+    |  `F   
+    |  `d   
+    |  `D   
+
+FloatingPointLiteral ::= DecimalFloatingPointLiteral  ( `\n | `\r | `\t | ` )*
+    |  HexadecimalFloatingPointLiteral  ( `\n | `\r | `\t | ` )*
+
+HexDigit ::= `0   
+    |  `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+    |  `8   
+    |  `9   
+    |  `a   
+    |  `b   
+    |  `c   
+    |  `d   
+    |  `e   
+    |  `f   
+    |  `A   
+    |  `B   
+    |  `C   
+    |  `D   
+    |  `E   
+    |  `F   
+
+HexDigitOrUnderscore ::= HexDigit  
+    |  `_   
+
+HexDigits ::= HexDigit  
+    |  HexDigit ( HexDigitsAndUnderscores )? HexDigit  
+
+HexDigitsAndUnderscores ::= HexDigitOrUnderscore ( HexDigitOrUnderscore )*  
+
+HexIntegerLiteral ::= HexNumeral ( IntegerTypeSuffix )?  
+
+HexNumeral ::= `0  `x  HexDigits  
+    |  `0  `X  HexDigits  
+
+HexSignificand ::= HexNumeral ( `.  )?  
+    |  `0  `x  ( HexDigits )? `.  HexDigits  
+    |  `0  `X  ( HexDigits )? `.  HexDigits  
+
+HexadecimalFloatingPointLiteral ::= HexSignificand BinaryExponent ( FloatTypeSuffix )?  
+
+Identifier ::= IdentifierChars  ( `\n | `\r | `\t | ` )*
+
+IdentifierChars ::= JavaLetterNoUS ( JavaLetterOrDigit )*  
+    |  `_  JavaLetterOrDigit ( JavaLetterOrDigit )*  
+
+IntegerLiteral ::= DecimalIntegerLiteral  ( `\n | `\r | `\t | ` )*
+    |  HexIntegerLiteral  ( `\n | `\r | `\t | ` )*
+    |  OctalIntegerLiteral  ( `\n | `\r | `\t | ` )*
+    |  BinaryIntegerLiteral  ( `\n | `\r | `\t | ` )*
+
+IntegerTypeSuffix ::= `l   
+    |  `L   
+
+JavaLetterNoUS ::= `$   
+    |  `A   
+    |  `B   
+    |  `C   
+    |  `D   
+    |  `E   
+    |  `F   
+    |  `G   
+    |  `H   
+    |  `I   
+    |  `J   
+    |  `K   
+    |  `L   
+    |  `M   
+    |  `N   
+    |  `O   
+    |  `P   
+    |  `Q   
+    |  `R   
+    |  `S   
+    |  `T   
+    |  `U   
+    |  `V   
+    |  `W   
+    |  `X   
+    |  `Y   
+    |  `Z   
+    |  `a   
+    |  `b   
+    |  `c   
+    |  `d   
+    |  `e   
+    |  `f   
+    |  `g   
+    |  `h   
+    |  `i   
+    |  `j   
+    |  `k   
+    |  `l   
+    |  `m   
+    |  `n   
+    |  `o   
+    |  `p   
+    |  `q   
+    |  `r   
+    |  `s   
+    |  `t   
+    |  `u   
+    |  `v   
+    |  `w   
+    |  `x   
+    |  `y   
+    |  `z   
+
+JavaLetterOrDigit ::= `$   
+    |  `0   
+    |  `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+    |  `8   
+    |  `9   
+    |  `A   
+    |  `B   
+    |  `C   
+    |  `D   
+    |  `E   
+    |  `F   
+    |  `G   
+    |  `H   
+    |  `I   
+    |  `J   
+    |  `K   
+    |  `L   
+    |  `M   
+    |  `N   
+    |  `O   
+    |  `P   
+    |  `Q   
+    |  `R   
+    |  `S   
+    |  `T   
+    |  `U   
+    |  `V   
+    |  `W   
+    |  `X   
+    |  `Y   
+    |  `Z   
+    |  `_   
+    |  `a   
+    |  `b   
+    |  `c   
+    |  `d   
+    |  `e   
+    |  `f   
+    |  `g   
+    |  `h   
+    |  `i   
+    |  `j   
+    |  `k   
+    |  `l   
+    |  `m   
+    |  `n   
+    |  `o   
+    |  `p   
+    |  `q   
+    |  `r   
+    |  `s   
+    |  `t   
+    |  `u   
+    |  `v   
+    |  `w   
+    |  `x   
+    |  `y   
+    |  `z   
+
+LineTerminator ::= `\n   
+    |  `\r   
+    |  `\r  `\n   
+
+NonZeroDigit ::= `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+    |  `8   
+    |  `9   
+
+NullLiteral ::= `n  `u  `l  `l   ( `\n | `\r | `\t | ` )*
+
+OctalDigit ::= `0   
+    |  `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+
+OctalDigitOrUnderscore ::= OctalDigit  
+    |  `_   
+
+OctalDigits ::= OctalDigit  
+    |  OctalDigit ( OctalDigitsAndUnderscores )? OctalDigit  
+
+OctalDigitsAndUnderscores ::= OctalDigitOrUnderscore ( OctalDigitOrUnderscore )*  
+
+OctalEscape ::= `\\  OctalDigit  
+    |  `\\  OctalDigit OctalDigit  
+    |  `\\  ZeroToThree OctalDigit OctalDigit  
+
+OctalIntegerLiteral ::= OctalNumeral ( IntegerTypeSuffix )?  
+
+OctalNumeral ::= `0  OctalDigits  
+    |  `0  Underscores OctalDigits  
+
+Sign ::= `+   
+    |  `-   
+
+SignedInteger ::= ( Sign )? Digits  
+
+SingleCharacter ::= `    
+    |  `!   
+    |  `\"   
+    |  `#   
+    |  `$   
+    |  `%   
+    |  `&   
+    |  `(   
+    |  `)   
+    |  `*   
+    |  `+   
+    |  `,   
+    |  `-   
+    |  `.   
+    |  `/   
+    |  `0   
+    |  `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+    |  `8   
+    |  `9   
+    |  `:   
+    |  `;   
+    |  `<   
+    |  `=   
+    |  `>   
+    |  `?   
+    |  `@   
+    |  `A   
+    |  `B   
+    |  `C   
+    |  `D   
+    |  `E   
+    |  `F   
+    |  `G   
+    |  `H   
+    |  `I   
+    |  `J   
+    |  `K   
+    |  `L   
+    |  `M   
+    |  `N   
+    |  `O   
+    |  `P   
+    |  `Q   
+    |  `R   
+    |  `S   
+    |  `T   
+    |  `U   
+    |  `V   
+    |  `W   
+    |  `X   
+    |  `Y   
+    |  `Z   
+    |  `[   
+    |  `]   
+    |  `^   
+    |  `_   
+    |  ``   
+    |  `a   
+    |  `b   
+    |  `c   
+    |  `d   
+    |  `e   
+    |  `f   
+    |  `g   
+    |  `h   
+    |  `i   
+    |  `j   
+    |  `k   
+    |  `l   
+    |  `m   
+    |  `n   
+    |  `o   
+    |  `p   
+    |  `q   
+    |  `r   
+    |  `s   
+    |  `t   
+    |  `u   
+    |  `v   
+    |  `w   
+    |  `x   
+    |  `y   
+    |  `z   
+    |  `{   
+    |  `|   
+    |  `}   
+    |  `~   
+    |  EscapeSequence  
+    |  UnicodeEscape  
+
+StringCharacter ::= `    
+    |  `!   
+    |  `#   
+    |  `$   
+    |  `%   
+    |  `&   
+    |  `'   
+    |  `(   
+    |  `)   
+    |  `*   
+    |  `+   
+    |  `,   
+    |  `-   
+    |  `.   
+    |  `/   
+    |  `0   
+    |  `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+    |  `8   
+    |  `9   
+    |  `:   
+    |  `;   
+    |  `<   
+    |  `=   
+    |  `>   
+    |  `?   
+    |  `@   
+    |  `A   
+    |  `B   
+    |  `C   
+    |  `D   
+    |  `E   
+    |  `F   
+    |  `G   
+    |  `H   
+    |  `I   
+    |  `J   
+    |  `K   
+    |  `L   
+    |  `M   
+    |  `N   
+    |  `O   
+    |  `P   
+    |  `Q   
+    |  `R   
+    |  `S   
+    |  `T   
+    |  `U   
+    |  `V   
+    |  `W   
+    |  `X   
+    |  `Y   
+    |  `Z   
+    |  `[   
+    |  `]   
+    |  `^   
+    |  `_   
+    |  ``   
+    |  `a   
+    |  `b   
+    |  `c   
+    |  `d   
+    |  `e   
+    |  `f   
+    |  `g   
+    |  `h   
+    |  `i   
+    |  `j   
+    |  `k   
+    |  `l   
+    |  `m   
+    |  `n   
+    |  `o   
+    |  `p   
+    |  `q   
+    |  `r   
+    |  `s   
+    |  `t   
+    |  `u   
+    |  `v   
+    |  `w   
+    |  `x   
+    |  `y   
+    |  `z   
+    |  `{   
+    |  `|   
+    |  `}   
+    |  `~   
+    |  EscapeSequence  
+    |  UnicodeEscape  
+
+StringLiteral ::= `\"  ( StringCharacter )* `\"   ( `\n | `\r | `\t | ` )*
+
+TextBlock ::= `\"  `\"  `\"  ( TextBlockWhiteSpace )* LineTerminator ( TextBlockCharacter )* `\"  `\"  `\"   ( `\n | `\r | `\t | ` )*
+
+TextBlockCharacter ::= `    
+    |  `!   
+    |  `\"   
+    |  `#   
+    |  `$   
+    |  `%   
+    |  `&   
+    |  `'   
+    |  `(   
+    |  `)   
+    |  `*   
+    |  `+   
+    |  `,   
+    |  `-   
+    |  `.   
+    |  `/   
+    |  `0   
+    |  `1   
+    |  `2   
+    |  `3   
+    |  `4   
+    |  `5   
+    |  `6   
+    |  `7   
+    |  `8   
+    |  `9   
+    |  `:   
+    |  `;   
+    |  `<   
+    |  `=   
+    |  `>   
+    |  `?   
+    |  `@   
+    |  `A   
+    |  `B   
+    |  `C   
+    |  `D   
+    |  `E   
+    |  `F   
+    |  `G   
+    |  `H   
+    |  `I   
+    |  `J   
+    |  `K   
+    |  `L   
+    |  `M   
+    |  `N   
+    |  `O   
+    |  `P   
+    |  `Q   
+    |  `R   
+    |  `S   
+    |  `T   
+    |  `U   
+    |  `V   
+    |  `W   
+    |  `X   
+    |  `Y   
+    |  `Z   
+    |  `[   
+    |  `]   
+    |  `^   
+    |  `_   
+    |  ``   
+    |  `a   
+    |  `b   
+    |  `c   
+    |  `d   
+    |  `e   
+    |  `f   
+    |  `g   
+    |  `h   
+    |  `i   
+    |  `j   
+    |  `k   
+    |  `l   
+    |  `m   
+    |  `n   
+    |  `o   
+    |  `p   
+    |  `q   
+    |  `r   
+    |  `s   
+    |  `t   
+    |  `u   
+    |  `v   
+    |  `w   
+    |  `x   
+    |  `y   
+    |  `z   
+    |  `{   
+    |  `|   
+    |  `}   
+    |  `~   
+    |  EscapeSequence  
+    |  LineTerminator  
+    |  UnicodeEscape  
+
+TextBlockWhiteSpace ::= WhiteSpace  
+
+TypeIdentifier ::= IdentifierChars  ( `\n | `\r | `\t | ` )*
+
+Underscores ::= `_  ( `_  )*  
+
+UnicodeEscape ::= `\\  UnicodeMarker HexDigit HexDigit HexDigit HexDigit  
+
+UnicodeMarker ::= `u  ( `u  )*  
+
+UnqualifiedMethodIdentifier ::= IdentifierChars  ( `\n | `\r | `\t | ` )*
+
+WhiteSpace ::= `    
+    |  `\t   
+    |  `f   
+    |  LineTerminator  
+
+ZeroToThree ::= `0   
+    |  `1   
+    |  `2   
+    |  `3   
